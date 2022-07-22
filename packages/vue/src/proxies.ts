@@ -797,3 +797,20 @@ export const IonVirtualScroll = /*@__PURE__*/ defineContainer<JSX.IonVirtualScro
   'domRender'
 ]);
 
+
+export const MedType = /*@__PURE__*/ defineContainer<JSX.MedType>('med-type', [
+  'dsColor',
+  'token',
+  'tag'
+]);
+
+
+export const TpInputContainer = /*@__PURE__*/ defineContainer<JSX.TpInputContainer>('tp-input-container', [
+  'dsColor',
+  'dsName',
+  'disabled',
+  'feedback',
+  'hasButton',
+  'hasIcon'
+]);
+

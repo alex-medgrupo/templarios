@@ -56,7 +56,12 @@ export const config: Config = {
   plugins: [
     // templarios
     sass({
-      injectGlobalPaths: ['src/themes/ionic.skip-warns.scss', 'src/@templarios/styles/variables.scss']
+      injectGlobalPaths: [
+        'src/themes/ionic.skip-warns.scss',
+        'src/@templarios/styles/variables/_components.scss',
+        'src/@templarios/styles/functions/_color-ionic.scss',
+        'templarios/scss/mixins/_typography.scss'
+      ]
     })
   ],
   outputTargets: [

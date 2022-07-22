@@ -1,12 +1,15 @@
 //
 // abstracts
 //
-@import './variables';
-@import './functions';
-@import './mixins';
+@import './variables/color-ionic';
+@import './variables/components';
+
+@import './functions/color-ionic';
+
+@import './mixins/color-ionic';
 
 //
-// components ionic
+// components
 //
 // accordion
 // @import './components/ionic/accordion/accordion';

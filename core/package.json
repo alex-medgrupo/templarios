@@ -116,7 +116,7 @@
     "tp:copy:sass": "shx cp -r src/@templarios/styles/functions src/@templarios/styles/mixins src/@templarios/styles/variables templarios/scss",
     "tp:minify:css": "cleancss -O2 --format --with-rebase --source-map --source-map-inline-sources --output templarios/css --batch --batch-suffix .min templarios/css/**/*.css",
     "tp:start": "npm-run-all tp:clean:css --parallel tp:watch:sass tp:watch:stencil tp:start:storybook",
-    "tp:build": "npm-run-all tp:clean:css tp:clean:sass tp:copy:sass tp:build:sass tp:minify:css"
+    "tp:build": "npm-run-all tp:clean:css tp:clean:sass tp:copy:sass tp:build:sass tp:minify:css build"
   },
   "author": "Ionic Team",
   "license": "MIT",

@@ -1,0 +1,7 @@
+ion-list {
+  --ion-item-background: hsl(var(--med-color-neutral-2));
+
+  &.list-ios {
+    background: transparent;
+  }
+}

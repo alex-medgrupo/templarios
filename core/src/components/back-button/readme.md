@@ -373,13 +373,11 @@ export default defineComponent({
 
 ### Depends on
 
-- ion-icon
 - [ion-ripple-effect](../ripple-effect)
 
 ### Graph
 ```mermaid
 graph TD;
-  ion-back-button --> ion-icon
   ion-back-button --> ion-ripple-effect
   style ion-back-button fill:#f9f,stroke:#333,stroke-width:4px
 ```

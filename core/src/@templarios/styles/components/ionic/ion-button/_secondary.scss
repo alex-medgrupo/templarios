@@ -1,5 +1,6 @@
 ion-button[shape] {
   --background: red;
+  content: "esse atributo não deve ser atribuido ao componente templarios!"
 }
 
 ion-button[fill='outline'] {

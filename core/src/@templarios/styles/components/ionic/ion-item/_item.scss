@@ -20,8 +20,45 @@ ion-item {
     .sc-ion-label-ios-h {
       --color: hsl(var(--med-color-neutral-10));
 
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 16px;
       margin-top: 0;
       margin-bottom: 0;
     }
+  }
+}
+
+// slotted checkbox
+ion-item {
+  ion-checkbox[slot="start"] {
+    margin: 0 8px 0 0;
+  }
+
+  ion-checkbox[slot="end"] {
+    margin: 0 0 0 8px;
+  }
+}
+
+
+// slotted radio
+ion-item {
+  ion-radio[slot="start"] {
+    margin: 0 8px 0 0;
+  }
+
+  ion-radio[slot="end"] {
+    margin: 0 0 0 8px;
+  }
+}
+
+// slotted toggle
+ion-item {
+  ion-toggle[slot="start"] {
+    padding: 0 8px 0 0;
+  }
+
+  ion-toggle[slot="end"] {
+    padding: 0 0 0 8px;
   }
 }

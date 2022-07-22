@@ -12,14 +12,13 @@ const Template = ({ 'ds-color': dsColor, 'ds-size': dsSize, disabled, expand }) 
       <ion-content>
         <ion-back-button
           mode="ios"
-          fill="clear"
-          icon-only
+          text=""
           ${dsColor ? `ds-color=${dsColor}` : ''}
           ${dsSize ? `ds-size=${dsSize}` : ''}
           ${disabled ? `disabled=${disabled}` : ''}
           ${expand !== 'none' ? `expand=${expand}` : ''}
           >
-          <ion-icon slot="icon-only" class="med-icon" name="med-star-filled"></ion-icon>
+          <ion-icon class="med-icon" name="med-esquerda"></ion-icon>
         </ion-back-button>
       </ion-content>
     </ion-app>

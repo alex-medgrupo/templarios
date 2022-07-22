@@ -1,0 +1,48 @@
+ion-toggle {
+  --background: hsl(var(--med-color-neutral-4));
+  --background-checked: hsl(var(--med-color-brand-3));
+
+  --handle-width: 18px;
+  --handle-height: 18px;
+
+  width: 34px;
+  height: 22px;
+
+  &.toggle-disabled {
+    opacity: 0.5;
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-toggle, $color, $i) {
+      --background-checked: #{tp-color($color, $i)};
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-toggle, neutral-#{$i}, $i) {
+    --background-checked: #{tp-neutral($i)};
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-toggle, neutral-#{$i}#{5}, $i) {
+    --background-checked: #{tp-neutral($i, 5)};
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-toggle, fb-#{$color}, $color) {
+    --background-checked: #{tp-feedback($color)};
+  }
+}

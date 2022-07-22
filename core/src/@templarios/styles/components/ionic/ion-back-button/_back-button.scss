@@ -1,0 +1,181 @@
+
+ion-back-button {
+  --background-focused: hsla(var(--med-color-neutral-10), 0.16);
+  --background-hover: hsla(var(--med-color-neutral-10), 0.08);
+  --color: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+  --border-radius: 50%;
+
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+
+  --min-width: 48px;
+  --min-height: 48px;
+
+  display: inline-block;
+
+  ion-icon {
+    font-size: 32px;
+    stroke: var(--color);
+  }
+
+  &[disabled] {
+    --color: hsl(var(--med-color-neutral-5));
+  }
+
+  &.ion-activated {
+    ion-icon {
+      stroke: var(--color-focused);
+    }
+  }
+
+  &.ion-focused {
+    ion-icon {
+      stroke: var(--color-focused);
+    }
+  }
+
+  &:hover {
+    ion-icon {
+      stroke: var(--color-hover);
+    }
+  }
+
+  &[ds-size='lg'] {
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+
+    --min-width: 64px;
+    --min-height: 64px;
+
+    ion-icon {
+      font-size: 48px;
+    }
+  }
+
+  &[ds-size='sm'] {
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+
+    --min-width: 40px;
+    --min-height: 40px;
+  }
+
+  &[ds-size='xs'] {
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+
+    --min-width: 32px;
+    --min-height: 32px;
+
+    ion-icon {
+      font-size: 24px;
+    }
+  }
+
+  &[ds-size='xxs'] {
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+
+    --min-width: 24px;
+    --min-height: 24px;
+
+    ion-icon {
+      font-size: 24px;
+    }
+  }
+
+  &[ds-size='xxxs'] {
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+
+    --min-width: 16px;
+    --min-height: 16px;
+
+    ion-icon {
+      font-size: 16px;
+    }
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-back-button, $color, $i) {
+      &[fill='clear'] {
+        --color-focused: #{tp-color($color, 3)};
+        --color-hover: #{tp-color($color, 3)};
+
+        &[disabled] {
+          --background: transparent;
+          --color: hsl(var(--med-color-neutral-5));
+        }
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-back-button, neutral-#{$i}, $i) {
+    &[fill='clear'] {
+      --color: #{tp-neutral($i)};
+      --color-focused: #{tp-neutral($i)};
+      --color-hover: #{tp-neutral($i)};
+
+      &[disabled] {
+        --background: transparent;
+        --color: hsl(var(--med-color-neutral-5));
+      }
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-back-button, neutral-#{$i}#{5}, $i) {
+    &[fill='clear'] {
+      --color: #{tp-neutral($i, 5)};
+      --color-focused: #{tp-neutral($i, 5)};
+      --color-hover: #{tp-neutral($i, 5)};
+
+      &[disabled] {
+        --background: transparent;
+        --color: hsl(var(--med-color-neutral-5));
+      }
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-back-button, fb-#{$color}, $color) {
+    &[fill='clear'] {
+      --color: #{tp-feedback($color)};
+      --color-focused: #{tp-feedback($color)};
+      --color-hover: #{tp-feedback($color)};
+
+      &[disabled] {
+        --background: transparent;
+        --color: hsl(var(--med-color-neutral-5));
+      }
+    }
+  }
+}

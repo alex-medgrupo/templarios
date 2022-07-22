@@ -150,6 +150,12 @@
   user-select: none;
   z-index: 0;
   appearance: none;
+
+  // templarios
+  &::after {
+    @include border-radius(var(--border-radius));
+  }
+  // !templarios
 }
 
 .button-inner {

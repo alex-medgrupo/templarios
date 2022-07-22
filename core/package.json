@@ -54,7 +54,7 @@
     "@types/swiper": "5.4.0",
     "aws-sdk": "^2.738.0",
     "babel-loader": "^8.2.5",
-    "clean-css-cli": "^4.1.11",
+    "clean-css-cli": "^5.6.1",
     "domino": "^2.1.6",
     "fs-extra": "^9.0.1",
     "jest": "^26.4.1",
@@ -114,8 +114,9 @@
     "tp:clean:css": "shx rm -rf templarios/css",
     "tp:clean:sass": "shx rm -rf templarios/scss/functions templarios/scss/mixins templarios/scss/variables",
     "tp:copy:sass": "shx cp -r src/@templarios/styles/functions src/@templarios/styles/mixins src/@templarios/styles/variables templarios/scss",
+    "tp:minify:css": "cleancss -O2 --format --with-rebase --source-map --source-map-inline-sources --output templarios/css --batch --batch-suffix .min templarios/css/**/*.css",
     "tp:start": "npm-run-all tp:clean:css --parallel tp:watch:sass tp:watch:stencil tp:start:storybook",
-    "tp:build": "npm-run-all tp:clean:css tp:clean:sass tp:copy:sass tp:build:sass"
+    "tp:build": "npm-run-all tp:clean:css tp:clean:sass tp:copy:sass tp:build:sass tp:minify:css"
   },
   "author": "Ionic Team",
   "license": "MIT",

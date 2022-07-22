@@ -1,12 +1,16 @@
 //
 // abstracts
 //
+@import './variables/breakpoints';
 @import './variables/color-ionic';
 @import './variables/components';
 
+@import './functions/breakpoints';
 @import './functions/color-ionic';
 
+@import './mixins/breakpoints';
 @import './mixins/color-ionic';
+@import './mixins/devices';
 
 //
 // components
@@ -54,3 +58,36 @@
 
 // textarea
 @import './components/ionic/textarea/textarea';
+
+//
+// components legado
+//
+// Utils
+@import "./components/utils/utils";
+
+// Global
+@import "./components/global/datetime";
+@import "./components/global/dialog";
+@import "./components/global/font-zoom-popover";
+@import "./components/global/intro-tooltip";
+@import "./components/global/picker";
+@import "./components/global/scrollbar";
+@import "./components/global/sheet";
+@import "./components/global/time-stamp";
+
+// Compositions
+@import "./components/compositions/accordion-list";
+@import "./components/compositions/card-assuntos-temas";
+@import "./components/compositions/chart-bar";
+@import "./components/compositions/context-menu";
+@import "./components/compositions/dialog";
+@import "./components/compositions/filtro-dashboard-modal";
+@import "./components/compositions/filtro-dashboard";
+@import "./components/compositions/header-counter";
+@import "./components/compositions/menu-mobile";
+@import "./components/compositions/tabs";
+
+// Monta Provas
+@import "./components/monta-provas/accordion-chart-monta-provas";
+@import "./components/monta-provas/filtros-monta-provas";
+@import "./components/monta-provas/footer-monta-provas";

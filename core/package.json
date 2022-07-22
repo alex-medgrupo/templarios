@@ -112,8 +112,10 @@
     "tp:watch:sass": "sass src/@templarios/styles:templarios/css --watch",
     "tp:build:sass": "sass src/@templarios/styles:templarios/css",
     "tp:clean:css": "shx rm -rf templarios/css",
+    "tp:clean:sass": "shx rm -rf templarios/scss/functions templarios/scss/mixins templarios/scss/variables",
+    "tp:copy:sass": "shx cp -r src/@templarios/styles/functions src/@templarios/styles/mixins src/@templarios/styles/variables templarios/scss",
     "tp:start": "npm-run-all tp:clean:css --parallel tp:watch:sass tp:watch:stencil tp:start:storybook",
-    "tp:build": "npm-run-all tp:clean:css tp:build:sass build"
+    "tp:build": "npm-run-all tp:clean:css tp:clean:sass tp:copy:sass tp:build:sass"
   },
   "author": "Ionic Team",
   "license": "MIT",

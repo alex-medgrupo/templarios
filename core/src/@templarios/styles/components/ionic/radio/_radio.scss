@@ -1,0 +1,170 @@
+ion-radio {
+  --color: hsl(var(--med-color-brand-4));
+  --color-checked: hsl(var(--med-color-brand-4));
+
+  &:hover,
+  &:focus {
+    --color: hsl(var(--med-color-brand-5));
+    --color-checked: hsl(var(--med-color-brand-5));
+  }
+
+  &.radio-disabled {
+    opacity: 0.5;
+  }
+}
+
+//
+// name
+//
+ion-radio[ds-name='secondary'] {
+  --color: transparent;
+  --color-checked: transparent;
+
+  width: 16px;
+  height: 16px;
+  background: hsl(var(--med-color-neutral-10));
+  border-radius: 50%;
+
+  &.radio-checked::before {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: hsl(var(--med-color-brand-4));
+    border-radius: 50%;
+    transform: translate(3px, 3px);
+    content: '';
+  }
+
+  &:hover,
+  &:focus {
+    &.radio-checked::before {
+      background-color: hsl(var(--med-color-brand-5));
+    }
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-radio, $color, $i) {
+      --color: #{tp-color($color, 4)};
+      --color-checked: #{tp-color($color, 4)};
+
+      &:hover,
+      &:focus {
+        --color: #{tp-color($color, 5)};
+        --color-checked: #{tp-color($color, 5)};
+      }
+
+      &[ds-name='secondary'] {
+        --color: transparent;
+        --color-checked: transparent;
+
+        &.radio-checked::before {
+          background-color: #{tp-color($color, 4)};
+        }
+
+        &:hover,
+        &:focus {
+          &.radio-checked::before {
+            background-color: #{tp-color($color, 5)};
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-radio, neutral-#{$i}, $i) {
+    --color: #{tp-neutral($i)};
+    --color-checked: #{tp-neutral($i)};
+
+    &:hover,
+    &:focus {
+      --color: #{tp-neutral($i)};
+      --color-checked: #{tp-neutral($i)};
+    }
+
+    &[ds-name='secondary'] {
+      --color: transparent;
+      --color-checked: transparent;
+
+      &.radio-checked::before {
+        background-color: #{tp-neutral($i)};
+      }
+
+      &:hover,
+      &:focus {
+        &.radio-checked::before {
+          background-color: #{tp-neutral($i)};
+        }
+      }
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-radio, neutral-#{$i}#{5}, $i) {
+    --color: #{tp-neutral($i, 5)};
+    --color-checked: #{tp-neutral($i, 5)};
+
+    &:hover,
+    &:focus {
+      --color: #{tp-neutral($i, 5)};
+      --color-checked: #{tp-neutral($i, 5)};
+    }
+
+    &[ds-name='secondary'] {
+      --color: transparent;
+      --color-checked: transparent;
+
+      &.radio-checked::before {
+        background-color: #{tp-neutral($i, 5)};
+      }
+
+      &:hover,
+      &:focus {
+        &.radio-checked::before {
+          background-color: #{tp-neutral($i, 5)};
+        }
+      }
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-radio, fb-#{$color}, $color) {
+    --color: #{tp-feedback($color)};
+    --color-checked: #{tp-feedback($color)};
+
+    &:hover,
+    &:focus {
+      --color: #{tp-feedback($color)};
+      --color-checked: #{tp-feedback($color)};
+    }
+
+    &[ds-name='secondary'] {
+      --color: transparent;
+      --color-checked: transparent;
+
+      &.radio-checked::before {
+        background-color: #{tp-feedback($color)};
+      }
+
+      &:hover,
+      &:focus {
+        &.radio-checked::before {
+          background-color: #{tp-feedback($color)};
+        }
+      }
+    }
+  }
+}

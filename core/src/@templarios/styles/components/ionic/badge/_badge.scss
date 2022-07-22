@@ -1,0 +1,106 @@
+ion-badge {
+  --background: hsl(var(--med-color-brand-3));
+  --padding-top: 6px;
+  --padding-bottom: 6px;
+  --padding-start: 8px;
+  --padding-end: 8px;
+
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+//
+// size
+//
+ion-badge {
+  &[ds-size='md'] {
+    --padding-top: 8px;
+    --padding-bottom: 8px;
+    --padding-start: 12px;
+    --padding-end: 12px;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    border: 1px solid transparent;
+  }
+}
+
+//
+// fill
+//
+ion-badge {
+  &[fill='outline'] {
+    --background: transparent;
+    --color: hsl(var(--med-color-brand-3));
+
+    border: 1px solid hsl(var(--med-color-brand-3));
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-badge, $color, $i) {
+      --background: #{tp-color($color, $i)};
+      --color: #{tp-contrast-color($i)};
+
+      &[fill='outline'] {
+        --background: transparent;
+        --color: #{tp-color($color, $i)};
+
+        border: 1px solid #{tp-color($color, $i)};
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-badge, neutral-#{$i}, $i) {
+    --background: #{tp-neutral($i)};
+    --color: #{tp-contrast-neutral($i)};
+
+    &[fill='outline'] {
+      --background: transparent;
+      --color: #{tp-neutral($i)};
+
+      border: 1px solid #{tp-neutral($i)};
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-badge, neutral-#{$i}#{5}, $i) {
+    --background: #{tp-neutral($i, 5)};
+    --color: #{tp-contrast-neutral($i)};
+
+    &[fill='outline'] {
+      --background: transparent;
+      --color: #{tp-neutral($i, 5)};
+
+      border: 1px solid #{tp-neutral($i, 5)};
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-badge, fb-#{$color}, $color) {
+    --background: #{tp-feedback($color)};
+    --color: hsl(var(--med-color-neutral-1));
+
+    &[fill='outline'] {
+      --background: transparent;
+      --color: #{tp-feedback($color)};
+
+      border: 1px solid #{tp-feedback($color)};
+    }
+  }
+}

@@ -1,0 +1,79 @@
+ion-textarea {
+  &.sc-ion-textarea-md-h {
+    --background: hsl(var(--med-color-neutral-2));
+    --color: hsl(var(--med-color-neutral-10));
+    --padding-end: 16px;
+    --padding-start: 16px;
+    --padding-bottom: 12px;
+    --padding-top: 12px;
+    --placeholder-color: hsl(var(--med-color-neutral-5));
+    --placeholder-opacity: 1;
+
+    margin-top: 0px;
+    font-size: 14px;
+    border-radius: 8px;
+
+    .sc-ion-textarea-md {
+      min-height: 80px;
+    }
+  }
+}
+
+//
+// name
+//
+ion-textarea[ds-name='secondary'] {
+  &.sc-ion-textarea-md-h {
+    --background: hsl(var(--med-color-neutral-3));
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-textarea, $color, $i) {
+      &.sc-ion-textarea-md-h {
+        --background: #{tp-color($color, $i)};
+        --color: #{tp-contrast-color($i)};
+        --placeholder-color: #{tp-contrast-color($i)};
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-textarea, neutral-#{$i}, $i) {
+    &.sc-ion-textarea-md-h {
+      --background: #{tp-neutral($i)};
+      --color: #{tp-contrast-neutral($i)};
+      --placeholder-color: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-textarea, neutral-#{$i}#{5}, $i) {
+    &.sc-ion-textarea-md-h {
+      --background: #{tp-neutral($i, 5)};
+      --color: #{tp-contrast-neutral($i)};
+      --placeholder-color: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-textarea, fb-#{$color}, $color) {
+    &.sc-ion-textarea-md-h {
+      --background: #{tp-feedback($color)};
+      --color: hsl(var(--med-color-neutral-1));
+      --placeholder-color: hsl(var(--med-color-neutral-1));
+    }
+  }
+}

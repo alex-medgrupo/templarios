@@ -1,0 +1,27 @@
+ion-item {
+  --background: transparent;
+  --background-activated: transparent;
+  --background-focused: transparent;
+  --background-hover: transparent;
+  --background-activated-opacity: 1;
+  --background-focused-opacity: 1;
+  --background-hover-opacity: 1;
+  --border-color: transparent;
+  --padding-top: 10px;
+  --padding-end: 16px;
+  --padding-bottom: 10px;
+  --padding-start: 16px;
+  --min-height: auto;
+}
+
+// slotted label
+ion-item {
+  &.item {
+    .sc-ion-label-ios-h {
+      --color: hsl(var(--med-color-neutral-10));
+
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}

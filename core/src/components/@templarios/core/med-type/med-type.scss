@@ -1,0 +1,52 @@
+:host {
+  --font-size: 16px;
+  --font-weight: 400;
+  --line-height: 16px;
+  --color: #{color('neutral', '10')};
+}
+
+:host {
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: var(--color) !important;
+  font-weight: var(--font-weight) !important;
+  font-size: var(--font-size) !important;
+  line-height: var(--line-height) !important;
+}
+
+:host * {
+  margin: 0;
+  padding: 0;
+  color: var(--color) !important;
+  font-weight: var(--font-weight) !important;
+  font-size: var(--font-size) !important;
+  line-height: var(--line-height) !important;
+}
+
+//
+// color
+//
+:host(.med-color) {
+  --color: #{curr-color('color', '3')};
+}
+
+:host(.med-color-neutral) {
+  --color: #{curr-color('neutral')};
+}
+
+:host(.med-color-feedback) {
+  --color: #{curr-color('feedback')};
+}
+
+//
+// token
+//
+// $tp-type in src/@templarios/styles/_variables.scss
+@each $type-value, $type in $tp-type {
+  :host(.med-type--#{$type-value}) {
+    @each $property, $value in $type {
+      --#{$property}: #{$value};
+    }
+  }
+}

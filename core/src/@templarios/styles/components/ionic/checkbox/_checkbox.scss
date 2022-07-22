@@ -1,0 +1,93 @@
+ion-checkbox {
+  --background: transparent;
+  --border-color: hsl(var(--med-color-brand-4));
+  --border-color-checked: hsl(var(--med-color-brand-4));
+  --background-checked: hsl(var(--med-color-brand-4));
+  --checkmark-color: hsl(var(--med-color-neutral-2));
+  --border-radius: 4px;
+  --size: 20px;
+  --transition: background-color 300ms ease-out, border-color 300ms ease-out;
+
+  &:hover,
+  &:focus {
+    --border-color: hsl(var(--med-color-brand-5));
+    --border-color-checked: hsl(var(--med-color-brand-5));
+    --background-checked: hsl(var(--med-color-brand-5));
+  }
+
+  &.checkbox-disabled {
+    opacity: 0.5;
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-checkbox, $color, $i) {
+      --border-color: #{tp-color($color, 4)};
+      --border-color-checked: #{tp-color($color, 4)};
+      --background-checked: #{tp-color($color, 4)};
+
+      &:hover,
+      &:focus {
+        --border-color: #{tp-color($color, 5)};
+        --border-color-checked: #{tp-color($color, 5)};
+        --background-checked: #{tp-color($color, 5)};
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-checkbox, neutral-#{$i}, $i) {
+    --border-color: #{tp-neutral($i)};
+    --border-color-checked: #{tp-neutral($i)};
+    --background-checked: #{tp-neutral($i)};
+    --checkmark-color: #{tp-contrast-neutral($i)};
+
+    &:hover,
+    &:focus {
+      --border-color: #{tp-neutral($i)};
+      --border-color-checked: #{tp-neutral($i)};
+      --background-checked: #{tp-neutral($i)};
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-checkbox, neutral-#{$i}#{5}, $i) {
+    --border-color: #{tp-neutral($i, 5)};
+    --border-color-checked: #{tp-neutral($i, 5)};
+    --background-checked: #{tp-neutral($i, 5)};
+    --checkmark-color: #{tp-contrast-neutral($i)};
+
+    &:hover,
+    &:focus {
+      --border-color: #{tp-neutral($i, 5)};
+      --border-color-checked: #{tp-neutral($i, 5)};
+      --background-checked: #{tp-neutral($i, 5)};
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-checkbox, fb-#{$color}, $color) {
+    --border-color: #{tp-feedback($color)};
+    --border-color-checked: #{tp-feedback($color)};
+    --background-checked: #{tp-feedback($color)};
+
+    &:hover,
+    &:focus {
+      --border-color: #{tp-feedback($color)};
+      --border-color-checked: #{tp-feedback($color)};
+      --background-checked: #{tp-feedback($color)};
+    }
+  }
+}

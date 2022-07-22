@@ -1,0 +1,186 @@
+ion-button[shape] {
+  --background: red;
+}
+
+ion-button[fill='outline'] {
+  --background: transparent;
+  --background-activated: transparent;
+  --background-focused: transparent;
+  --background-hover: transparent;
+  --border-color: hsl(var(--med-color-brand-3));
+  --color: hsl(var(--med-color-brand-3));
+  --color-activated: hsl(var(--med-color-brand-3));
+  --color-focused: hsl(var(--med-color-brand-3));
+  --color-hover: hsl(var(--med-color-brand-3));
+
+  &[disabled] {
+    --border-color: hsl(var(--med-color-neutral-3));
+    --color: hsl(var(--med-color-neutral-5));
+  }
+
+  &.ion-activated {
+    --border-color: hsl(var(--med-color-brand-2));
+  }
+
+  &.ion-focused {
+    --border-color: hsl(var(--med-color-brand-2));
+  }
+
+  &:hover {
+    --border-color: hsl(var(--med-color-brand-2));
+  }
+}
+
+//
+// icon-only
+//
+ion-button[fill='outline'][icon-only] {
+  --border-width: 2px;
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-button, $color, $i) {
+      &[fill='outline'] {
+        --background: transparent;
+        --background-activated: transparent;
+        --background-focused: transparent;
+        --background-hover: transparent;
+        --border-color: #{tp-color($color, $i)};
+        --color: #{tp-color($color, $i)};
+        --color-activated: #{tp-color($color, 3)};
+        --color-focused: #{tp-color($color, 3)};
+        --color-hover: #{tp-color($color, 3)};
+
+        &[disabled] {
+          --border-color: hsl(var(--med-color-neutral-3));
+          --color: hsl(var(--med-color-neutral-5));
+        }
+
+        &.ion-activated {
+          --border-color: #{tp-color($color, 2)};
+        }
+
+        &.ion-focused {
+          --border-color: #{tp-color($color, 2)};
+        }
+
+        &:hover {
+          --border-color: #{tp-color($color, 2)};
+        }
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-button, neutral-#{$i}, $i) {
+    &[fill='outline'] {
+      --background: transparent;
+      --background-activated: transparent;
+      --background-focused: transparent;
+      --background-hover: transparent;
+      --border-color: #{tp-neutral($i)};
+      --color: #{tp-neutral($i)};
+      --color-activated: #{tp-neutral($i)};
+      --color-focused: #{tp-neutral($i)};
+      --color-hover: #{tp-neutral($i)};
+
+      &[disabled] {
+        --border-color: hsl(var(--med-color-neutral-3));
+        --color: hsl(var(--med-color-neutral-5));
+      }
+
+      &.ion-activated {
+        --border-color: var(--color-activated);
+      }
+
+      &.ion-focused {
+        --border-color: var(--color-focused);
+      }
+
+      &:hover {
+        --border-color: var(--color-hover);
+      }
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-button, neutral-#{$i}#{5}, $i) {
+    &[fill='outline'] {
+      --background: transparent;
+      --background-activated: transparent;
+      --background-focused: transparent;
+      --background-hover: transparent;
+      --border-color: #{tp-neutral($i, 5)};
+      --color: #{tp-neutral($i, 5)};
+      --color-activated: #{tp-neutral($i, 5)};
+      --color-focused: #{tp-neutral($i, 5)};
+      --color-hover: #{tp-neutral($i, 5)};
+
+      &[disabled] {
+        --border-color: hsl(var(--med-color-neutral-3));
+        --color: hsl(var(--med-color-neutral-5));
+      }
+
+      &.ion-activated {
+        --border-color: var(--color-activated);
+      }
+
+      &.ion-focused {
+        --border-color: var(--color-focused);
+      }
+
+      &:hover {
+        --border-color: var(--color-hover);
+      }
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-button, fb-#{$color}, $color) {
+    &[fill='outline'] {
+      --background: transparent;
+      --background-activated: transparent;
+      --background-focused: transparent;
+      --background-hover: transparent;
+      --border-color: #{tp-feedback($color)};
+      --color: #{tp-feedback($color)};
+      --color-activated: #{tp-feedback($color)};
+      --color-focused: #{tp-feedback($color)};
+      --color-hover: #{tp-feedback($color)};
+
+      ion-icon {
+        stroke: #{tp-feedback($color)};
+      }
+
+      &[disabled] {
+        --background: transparent;
+        --border-color: hsl(var(--med-color-neutral-3));
+        --color: hsl(var(--med-color-neutral-5));
+      }
+
+      &.ion-activated {
+        --border-color: var(--color-activated);
+      }
+
+      &.ion-focused {
+        --border-color: var(--color-focused);
+      }
+
+      &:hover {
+        --border-color: var(--color-hover);
+      }
+    }
+  }
+}

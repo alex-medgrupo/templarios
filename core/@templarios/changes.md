@@ -1,5 +1,10 @@
 # changes
 
+## stylessheets
+
+1. atualizar imports no medsoft
+2. atualizar imports no medeletro
+
 ## ion-icon
 
 1. Remover `class="med-icon"` em todos icons;

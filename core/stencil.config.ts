@@ -58,9 +58,8 @@ export const config: Config = {
     sass({
       injectGlobalPaths: [
         'src/themes/ionic.skip-warns.scss',
-        'src/@templarios/styles/variables/_components.scss',
-        'src/@templarios/styles/functions/_color-ionic.scss',
-        'templarios/scss/mixins/_typography.scss'
+        'src/@templarios/styles/variables/components.scss',
+        'src/@templarios/styles/functions/color-stencil.scss',
       ]
     })
   ],

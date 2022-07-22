@@ -1,5 +1,22 @@
 // refatorar
 
+@function split-str($string, $separator: null) {
+  @if ($separator) {
+    $index : str-index($string,  $separator);
+    @return str-slice($string, 1, $index - 1);
+  }
+
+  @return $string;
+}
+
+@function hsl($args...) {
+  @return #{'hsl(#{$args})'};
+}
+
+@function hsla($args...) {
+  @return hsl($args...);
+}
+
 /// default
 /// color('neutral', 5);
 /// color('feedback', 'success');
@@ -178,12 +195,4 @@
   }
 
   @return 'fuck!';
-}
-
-@function hsl($args...) {
-  @return #{'hsl(#{$args})'};
-}
-
-@function hsla($args...) {
-  @return hsl($args...);
 }

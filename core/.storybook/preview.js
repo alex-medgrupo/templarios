@@ -15,6 +15,9 @@ import '../css/typography.css';
 
 defineCustomElements();
 
+// storybook
+import './assets/fsemeric.css';
+
 // templarios
 import '../templarios/css/themes/default.css';
 import '../templarios/css/themes/medsoft.css';

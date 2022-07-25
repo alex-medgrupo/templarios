@@ -1,0 +1,76 @@
+ion-tab-button {
+  ion-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-tab-button, $color, $i) {
+      --background: #{tp-color($color, $i)};
+      --color: #{tp-contrast-color($i)};
+
+      ion-icon {
+        stroke: #{tp-contrast-color($i)};
+      }
+
+      ion-label {
+        color: #{tp-contrast-color($i)};
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-tab-button, neutral-#{$i}, $i) {
+    --background: #{tp-neutral($i)};
+    --color: #{tp-contrast-neutral($i)};
+
+    ion-icon {
+      stroke: #{tp-contrast-neutral($i)};
+    }
+
+    ion-label {
+      color: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-tab-button, neutral-#{$i}#{5}, $i) {
+    --background: #{tp-neutral($i, 5)};
+    --color: #{tp-contrast-neutral($i)};
+
+    ion-icon {
+      stroke: #{tp-contrast-neutral($i)};
+    }
+
+    ion-label {
+      color: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-tab-button, fb-#{$color}, $color) {
+    --background: #{tp-feedback($color)};
+    --color: hsl(var(--med-color-neutral-1));
+
+    ion-icon {
+      stroke: hsl(var(--med-color-neutral-1));
+    }
+
+    ion-label {
+      color: hsl(var(--med-color-neutral-1));
+    }
+  }
+}

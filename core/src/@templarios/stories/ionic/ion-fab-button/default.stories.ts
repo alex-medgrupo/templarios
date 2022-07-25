@@ -1,18 +1,18 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
-import { TemplariosBadgeSize, MedColors } from '../../../templarios';
+import { MedColors } from '../../../templarios';
 
 export default {
   title: 'Components/Ionic/Fab Button',
   decorators: [withDesign],
 };
 
-const Template = ({ }) => {
+const Template = ({ 'ds-color': dsColor }) => {
   return html`
     <ion-app>
       <ion-content>
         <ion-fab vertical="center" horizontal="center" slot="fixed">
-          <ion-fab-button>
+          <ion-fab-button ds-color=${dsColor}>
             <ion-icon class="med-icon" name="med-mais"></ion-icon>
           </ion-fab-button>
           <ion-fab-list side="top">
@@ -43,4 +43,14 @@ Default.parameters = {
   },
 };
 Default.argTypes = {
+  'ds-color': {
+    options: [undefined, ...Object.values(MedColors)],
+    control: { type: 'select' },
+    description: 'Define a cor do componente.',
+    defaultValue: undefined,
+    table: {
+      type: { summary: Object.values(MedColors).join(' |') },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
 };

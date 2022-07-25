@@ -128,6 +128,15 @@ ion-back-button[ds-color=revalida][fill=clear][disabled] {
   --color: hsl(var(--med-color-neutral-5));
 }
 
+ion-back-button[ds-color=provas][fill=clear] {
+  --color-focused: hsl(var(--med-color-provas-3));
+  --color-hover: hsl(var(--med-color-provas-3));
+}
+ion-back-button[ds-color=provas][fill=clear][disabled] {
+  --background: transparent;
+  --color: hsl(var(--med-color-neutral-5));
+}
+
 ion-back-button[ds-color=neutral-1][fill=clear] {
   --color: hsl(var(--med-color-neutral-1));
   --color-focused: hsl(var(--med-color-neutral-1));
@@ -434,6 +443,16 @@ ion-badge[ds-color=revalida][fill=outline] {
   --background: transparent;
   --color: hsl(var(--med-color-revalida-3));
   border: 1px solid hsl(var(--med-color-revalida-3));
+}
+
+ion-badge[ds-color=provas] {
+  --background: hsl(var(--med-color-provas-3));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-badge[ds-color=provas][fill=outline] {
+  --background: transparent;
+  --color: hsl(var(--med-color-provas-3));
+  border: 1px solid hsl(var(--med-color-provas-3));
 }
 
 ion-badge[ds-color=neutral-1] {
@@ -907,6 +926,33 @@ ion-button[ds-color=revalida].ion-focused ion-icon {
   stroke: var(--color-focused);
 }
 ion-button[ds-color=revalida]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-button[ds-color=provas] {
+  --background: hsl(var(--med-color-provas-3));
+  --background-activated: hsl(var(--med-color-provas-2));
+  --background-focused: hsl(var(--med-color-provas-2));
+  --background-hover: hsl(var(--med-color-provas-2));
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-button[ds-color=provas][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-button[ds-color=provas][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-button[ds-color=provas].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-button[ds-color=provas].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-button[ds-color=provas]:hover ion-icon {
   stroke: var(--color-hover);
 }
 
@@ -1723,6 +1769,31 @@ ion-button[ds-color=revalida][fill=outline]:hover {
   --border-color: hsl(var(--med-color-revalida-2));
 }
 
+ion-button[ds-color=provas][fill=outline] {
+  --background: transparent;
+  --background-activated: transparent;
+  --background-focused: transparent;
+  --background-hover: transparent;
+  --border-color: hsl(var(--med-color-provas-3));
+  --color: hsl(var(--med-color-provas-3));
+  --color-activated: hsl(var(--med-color-provas-3));
+  --color-focused: hsl(var(--med-color-provas-3));
+  --color-hover: hsl(var(--med-color-provas-3));
+}
+ion-button[ds-color=provas][fill=outline][disabled] {
+  --border-color: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-button[ds-color=provas][fill=outline].ion-activated {
+  --border-color: hsl(var(--med-color-provas-2));
+}
+ion-button[ds-color=provas][fill=outline].ion-focused {
+  --border-color: hsl(var(--med-color-provas-2));
+}
+ion-button[ds-color=provas][fill=outline]:hover {
+  --border-color: hsl(var(--med-color-provas-2));
+}
+
 ion-button[ds-color=neutral-1][fill=outline] {
   --background: transparent;
   --background-activated: transparent;
@@ -2475,6 +2546,16 @@ ion-button[ds-color=revalida][fill=clear][disabled] {
   --color: hsl(var(--med-color-neutral-5));
 }
 
+ion-button[ds-color=provas][fill=clear] {
+  --color-activated: hsl(var(--med-color-provas-3));
+  --color-focused: hsl(var(--med-color-provas-3));
+  --color-hover: hsl(var(--med-color-provas-3));
+}
+ion-button[ds-color=provas][fill=clear][disabled] {
+  --background: transparent;
+  --color: hsl(var(--med-color-neutral-5));
+}
+
 ion-button[ds-color=neutral-1][fill=clear] {
   --color: hsl(var(--med-color-neutral-1));
   --color-activated: hsl(var(--med-color-neutral-1));
@@ -2802,6 +2883,17 @@ ion-checkbox[ds-color=revalida]:hover, ion-checkbox[ds-color=revalida]:focus {
   --background-checked: hsl(var(--med-color-revalida-5));
 }
 
+ion-checkbox[ds-color=provas] {
+  --border-color: hsl(var(--med-color-provas-4));
+  --border-color-checked: hsl(var(--med-color-provas-4));
+  --background-checked: hsl(var(--med-color-provas-4));
+}
+ion-checkbox[ds-color=provas]:hover, ion-checkbox[ds-color=provas]:focus {
+  --border-color: hsl(var(--med-color-provas-5));
+  --border-color-checked: hsl(var(--med-color-provas-5));
+  --background-checked: hsl(var(--med-color-provas-5));
+}
+
 ion-checkbox[ds-color=neutral-1] {
   --border-color: hsl(var(--med-color-neutral-1));
   --border-color-checked: hsl(var(--med-color-neutral-1));
@@ -3092,6 +3184,834 @@ ion-fab-button {
 ion-fab-button ion-icon {
   stroke: var(--color);
 }
+ion-fab-button[disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+  opacity: 1;
+}
+ion-fab-button[disabled] ion-icon {
+  stroke: var(--color);
+}
+
+ion-fab-button.button {
+  background-color: transparent !important;
+}
+
+ion-fab-button[ds-color=brand] {
+  --background: hsl(var(--med-color-brand-3));
+  --background-activated: hsl(var(--med-color-brand-2));
+  --background-focused: hsl(var(--med-color-brand-2));
+  --background-hover: hsl(var(--med-color-brand-2));
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-fab-button[ds-color=brand][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=brand][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=brand].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=brand].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=brand]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=aula] {
+  --background: hsl(var(--med-color-aula-3));
+  --background-activated: hsl(var(--med-color-aula-2));
+  --background-focused: hsl(var(--med-color-aula-2));
+  --background-hover: hsl(var(--med-color-aula-2));
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-fab-button[ds-color=aula][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=aula][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=aula].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=aula].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=aula]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=material] {
+  --background: hsl(var(--med-color-material-3));
+  --background-activated: hsl(var(--med-color-material-2));
+  --background-focused: hsl(var(--med-color-material-2));
+  --background-hover: hsl(var(--med-color-material-2));
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-fab-button[ds-color=material][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=material][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=material].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=material].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=material]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=questoes] {
+  --background: hsl(var(--med-color-questoes-3));
+  --background-activated: hsl(var(--med-color-questoes-2));
+  --background-focused: hsl(var(--med-color-questoes-2));
+  --background-hover: hsl(var(--med-color-questoes-2));
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-fab-button[ds-color=questoes][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=questoes][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=questoes].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=questoes].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=questoes]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=revalida] {
+  --background: hsl(var(--med-color-revalida-3));
+  --background-activated: hsl(var(--med-color-revalida-2));
+  --background-focused: hsl(var(--med-color-revalida-2));
+  --background-hover: hsl(var(--med-color-revalida-2));
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-fab-button[ds-color=revalida][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=revalida][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=revalida].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=revalida].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=revalida]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=provas] {
+  --background: hsl(var(--med-color-provas-3));
+  --background-activated: hsl(var(--med-color-provas-2));
+  --background-focused: hsl(var(--med-color-provas-2));
+  --background-hover: hsl(var(--med-color-provas-2));
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-fab-button[ds-color=provas][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=provas][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=provas].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=provas].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=provas]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-1] {
+  --background: hsl(var(--med-color-neutral-1));
+  --background-activated: hsla(var(--med-color-neutral-10), 0.08);
+  --background-focused: hsla(var(--med-color-neutral-10), 0.08);
+  --background-hover: hsla(var(--med-color-neutral-10), 0.08);
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-fab-button[ds-color=neutral-1] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-1][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-1][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-1].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-1].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-1]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-2] {
+  --background: hsl(var(--med-color-neutral-2));
+  --background-activated: hsla(var(--med-color-neutral-10), 0.08);
+  --background-focused: hsla(var(--med-color-neutral-10), 0.08);
+  --background-hover: hsla(var(--med-color-neutral-10), 0.08);
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-fab-button[ds-color=neutral-2] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-2][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-2][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-2].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-2].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-2]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-3] {
+  --background: hsl(var(--med-color-neutral-3));
+  --background-activated: hsla(var(--med-color-neutral-10), 0.08);
+  --background-focused: hsla(var(--med-color-neutral-10), 0.08);
+  --background-hover: hsla(var(--med-color-neutral-10), 0.08);
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-fab-button[ds-color=neutral-3] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-3][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-3][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-3].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-3].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-3]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-4] {
+  --background: hsl(var(--med-color-neutral-4));
+  --background-activated: hsla(var(--med-color-neutral-10), 0.08);
+  --background-focused: hsla(var(--med-color-neutral-10), 0.08);
+  --background-hover: hsla(var(--med-color-neutral-10), 0.08);
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-fab-button[ds-color=neutral-4] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-4][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-4][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-4].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-4].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-4]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-5] {
+  --background: hsl(var(--med-color-neutral-5));
+  --background-activated: hsla(var(--med-color-neutral-10), 0.08);
+  --background-focused: hsla(var(--med-color-neutral-10), 0.08);
+  --background-hover: hsla(var(--med-color-neutral-10), 0.08);
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-fab-button[ds-color=neutral-5] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-5][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-5][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-5].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-5].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-5]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-6] {
+  --background: hsl(var(--med-color-neutral-6));
+  --background-activated: hsl(var(--med-color-neutral-1), 0.08);
+  --background-focused: hsl(var(--med-color-neutral-1), 0.08);
+  --background-hover: hsl(var(--med-color-neutral-1), 0.08);
+  --color: hsl(var(--med-color-neutral-1));
+  --color-activated: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
+  --color-hover: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=neutral-6] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-6][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-6][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-6].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-6].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-6]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-7] {
+  --background: hsl(var(--med-color-neutral-7));
+  --background-activated: hsl(var(--med-color-neutral-1), 0.08);
+  --background-focused: hsl(var(--med-color-neutral-1), 0.08);
+  --background-hover: hsl(var(--med-color-neutral-1), 0.08);
+  --color: hsl(var(--med-color-neutral-1));
+  --color-activated: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
+  --color-hover: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=neutral-7] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-7][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-7][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-7].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-7].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-7]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-8] {
+  --background: hsl(var(--med-color-neutral-8));
+  --background-activated: hsl(var(--med-color-neutral-1), 0.08);
+  --background-focused: hsl(var(--med-color-neutral-1), 0.08);
+  --background-hover: hsl(var(--med-color-neutral-1), 0.08);
+  --color: hsl(var(--med-color-neutral-1));
+  --color-activated: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
+  --color-hover: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=neutral-8] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-8][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-8][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-8].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-8].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-8]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-9] {
+  --background: hsl(var(--med-color-neutral-9));
+  --background-activated: hsl(var(--med-color-neutral-1), 0.08);
+  --background-focused: hsl(var(--med-color-neutral-1), 0.08);
+  --background-hover: hsl(var(--med-color-neutral-1), 0.08);
+  --color: hsl(var(--med-color-neutral-1));
+  --color-activated: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
+  --color-hover: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=neutral-9] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-9][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-9][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-9].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-9].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-9]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-10] {
+  --background: hsl(var(--med-color-neutral-10));
+  --background-activated: hsl(var(--med-color-neutral-1), 0.08);
+  --background-focused: hsl(var(--med-color-neutral-1), 0.08);
+  --background-hover: hsl(var(--med-color-neutral-1), 0.08);
+  --color: hsl(var(--med-color-neutral-1));
+  --color-activated: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
+  --color-hover: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=neutral-10] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-10][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-10][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-10].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-10].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-10]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-15] {
+  --background: hsl(var(--med-color-neutral-15));
+  --background-activated: hsla(var(--med-color-neutral-10), 0.08);
+  --background-focused: hsla(var(--med-color-neutral-10), 0.08);
+  --background-hover: hsla(var(--med-color-neutral-10), 0.08);
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-fab-button[ds-color=neutral-15] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-15][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-15][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-15].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-15].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-15]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-25] {
+  --background: hsl(var(--med-color-neutral-25));
+  --background-activated: hsla(var(--med-color-neutral-10), 0.08);
+  --background-focused: hsla(var(--med-color-neutral-10), 0.08);
+  --background-hover: hsla(var(--med-color-neutral-10), 0.08);
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-fab-button[ds-color=neutral-25] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-25][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-25][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-25].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-25].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-25]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-35] {
+  --background: hsl(var(--med-color-neutral-35));
+  --background-activated: hsla(var(--med-color-neutral-10), 0.08);
+  --background-focused: hsla(var(--med-color-neutral-10), 0.08);
+  --background-hover: hsla(var(--med-color-neutral-10), 0.08);
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-fab-button[ds-color=neutral-35] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-35][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-35][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-35].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-35].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-35]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-45] {
+  --background: hsl(var(--med-color-neutral-45));
+  --background-activated: hsla(var(--med-color-neutral-10), 0.08);
+  --background-focused: hsla(var(--med-color-neutral-10), 0.08);
+  --background-hover: hsla(var(--med-color-neutral-10), 0.08);
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-fab-button[ds-color=neutral-45] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-45][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-45][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-45].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-45].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-45]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-55] {
+  --background: hsl(var(--med-color-neutral-55));
+  --background-activated: hsla(var(--med-color-neutral-10), 0.08);
+  --background-focused: hsla(var(--med-color-neutral-10), 0.08);
+  --background-hover: hsla(var(--med-color-neutral-10), 0.08);
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+}
+ion-fab-button[ds-color=neutral-55] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-55][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-55][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-55].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-55].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-55]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-65] {
+  --background: hsl(var(--med-color-neutral-65));
+  --background-activated: hsl(var(--med-color-neutral-1), 0.08);
+  --background-focused: hsl(var(--med-color-neutral-1), 0.08);
+  --background-hover: hsl(var(--med-color-neutral-1), 0.08);
+  --color: hsl(var(--med-color-neutral-1));
+  --color-activated: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
+  --color-hover: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=neutral-65] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-65][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-65][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-65].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-65].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-65]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-75] {
+  --background: hsl(var(--med-color-neutral-75));
+  --background-activated: hsl(var(--med-color-neutral-1), 0.08);
+  --background-focused: hsl(var(--med-color-neutral-1), 0.08);
+  --background-hover: hsl(var(--med-color-neutral-1), 0.08);
+  --color: hsl(var(--med-color-neutral-1));
+  --color-activated: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
+  --color-hover: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=neutral-75] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-75][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-75][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-75].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-75].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-75]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-85] {
+  --background: hsl(var(--med-color-neutral-85));
+  --background-activated: hsl(var(--med-color-neutral-1), 0.08);
+  --background-focused: hsl(var(--med-color-neutral-1), 0.08);
+  --background-hover: hsl(var(--med-color-neutral-1), 0.08);
+  --color: hsl(var(--med-color-neutral-1));
+  --color-activated: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
+  --color-hover: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=neutral-85] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-85][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-85][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-85].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-85].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-85]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=neutral-95] {
+  --background: hsl(var(--med-color-neutral-95));
+  --background-activated: hsl(var(--med-color-neutral-1), 0.08);
+  --background-focused: hsl(var(--med-color-neutral-1), 0.08);
+  --background-hover: hsl(var(--med-color-neutral-1), 0.08);
+  --color: hsl(var(--med-color-neutral-1));
+  --color-activated: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
+  --color-hover: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=neutral-95] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-95][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=neutral-95][disabled] ion-icon {
+  stroke: var(--color);
+}
+ion-fab-button[ds-color=neutral-95].ion-activated ion-icon {
+  stroke: var(--color-activated);
+}
+ion-fab-button[ds-color=neutral-95].ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-fab-button[ds-color=neutral-95]:hover ion-icon {
+  stroke: var(--color-hover);
+}
+
+ion-fab-button[ds-color=fb-attention] {
+  --background: hsl(var(--med-color-fb-attention));
+  --background-activated: hsla(var(--med-color-neutral-1), 0.08);
+  --background-focused: hsla(var(--med-color-neutral-1), 0.08);
+  --background-hover: hsla(var(--med-color-neutral-1), 0.08);
+  --color: hsl(var(--med-color-neutral-1));
+  --color-activated: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
+  --color-hover: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=fb-attention] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=fb-attention][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=fb-attention][disabled] ion-icon {
+  stroke: hsl(var(--med-color-neutral-5));
+}
+
+ion-fab-button[ds-color=fb-caution] {
+  --background: hsl(var(--med-color-fb-caution));
+  --background-activated: hsla(var(--med-color-neutral-1), 0.08);
+  --background-focused: hsla(var(--med-color-neutral-1), 0.08);
+  --background-hover: hsla(var(--med-color-neutral-1), 0.08);
+  --color: hsl(var(--med-color-neutral-1));
+  --color-activated: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
+  --color-hover: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=fb-caution] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=fb-caution][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=fb-caution][disabled] ion-icon {
+  stroke: hsl(var(--med-color-neutral-5));
+}
+
+ion-fab-button[ds-color=fb-warning] {
+  --background: hsl(var(--med-color-fb-warning));
+  --background-activated: hsla(var(--med-color-neutral-1), 0.08);
+  --background-focused: hsla(var(--med-color-neutral-1), 0.08);
+  --background-hover: hsla(var(--med-color-neutral-1), 0.08);
+  --color: hsl(var(--med-color-neutral-1));
+  --color-activated: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
+  --color-hover: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=fb-warning] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=fb-warning][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=fb-warning][disabled] ion-icon {
+  stroke: hsl(var(--med-color-neutral-5));
+}
+
+ion-fab-button[ds-color=fb-success] {
+  --background: hsl(var(--med-color-fb-success));
+  --background-activated: hsla(var(--med-color-neutral-1), 0.08);
+  --background-focused: hsla(var(--med-color-neutral-1), 0.08);
+  --background-hover: hsla(var(--med-color-neutral-1), 0.08);
+  --color: hsl(var(--med-color-neutral-1));
+  --color-activated: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
+  --color-hover: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=fb-success] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-fab-button[ds-color=fb-success][disabled] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-5));
+}
+ion-fab-button[ds-color=fb-success][disabled] ion-icon {
+  stroke: hsl(var(--med-color-neutral-5));
+}
 
 ion-fab-list {
   min-width: 48px;
@@ -3157,6 +4077,12 @@ ion-input[ds-color=questoes].sc-ion-input-md-h {
 
 ion-input[ds-color=revalida].sc-ion-input-md-h {
   --background: hsl(var(--med-color-revalida-3));
+  --color: hsl(var(--med-color-neutral-10));
+  --placeholder-color: hsl(var(--med-color-neutral-10));
+}
+
+ion-input[ds-color=provas].sc-ion-input-md-h {
+  --background: hsl(var(--med-color-provas-3));
   --color: hsl(var(--med-color-neutral-10));
   --placeholder-color: hsl(var(--med-color-neutral-10));
 }
@@ -3479,6 +4405,10 @@ ion-label[ds-color=revalida] {
   color: hsl(var(--med-color-revalida-3)) !important;
 }
 
+ion-label[ds-color=provas] {
+  color: hsl(var(--med-color-provas-3)) !important;
+}
+
 ion-label[ds-color=neutral-1] {
   color: hsl(var(--med-color-neutral-1)) !important;
 }
@@ -3704,6 +4634,25 @@ ion-radio[ds-color=revalida][ds-name=secondary].radio-checked::before {
 }
 ion-radio[ds-color=revalida][ds-name=secondary]:hover.radio-checked::before, ion-radio[ds-color=revalida][ds-name=secondary]:focus.radio-checked::before {
   background-color: hsl(var(--med-color-revalida-5));
+}
+
+ion-radio[ds-color=provas] {
+  --color: hsl(var(--med-color-provas-4));
+  --color-checked: hsl(var(--med-color-provas-4));
+}
+ion-radio[ds-color=provas]:hover, ion-radio[ds-color=provas]:focus {
+  --color: hsl(var(--med-color-provas-5));
+  --color-checked: hsl(var(--med-color-provas-5));
+}
+ion-radio[ds-color=provas][ds-name=secondary] {
+  --color: transparent;
+  --color-checked: transparent;
+}
+ion-radio[ds-color=provas][ds-name=secondary].radio-checked::before {
+  background-color: hsl(var(--med-color-provas-4));
+}
+ion-radio[ds-color=provas][ds-name=secondary]:hover.radio-checked::before, ion-radio[ds-color=provas][ds-name=secondary]:focus.radio-checked::before {
+  background-color: hsl(var(--med-color-provas-5));
 }
 
 ion-radio[ds-color=neutral-1] {
@@ -4217,6 +5166,17 @@ ion-select[ds-color=revalida][ds-name=secondary] {
   background: hsl(var(--med-color-revalida-3));
 }
 
+ion-select[ds-color=provas] {
+  --placeholder-color: hsl(var(--med-color-neutral-10));
+  color: hsl(var(--med-color-neutral-10));
+  background: hsl(var(--med-color-provas-3));
+}
+ion-select[ds-color=provas][ds-name=secondary] {
+  --placeholder-color: hsl(var(--med-color-neutral-10));
+  color: hsl(var(--med-color-neutral-10));
+  background: hsl(var(--med-color-provas-3));
+}
+
 ion-select[ds-color=neutral-1] {
   --placeholder-color: hsl(var(--med-color-neutral-10));
   color: hsl(var(--med-color-neutral-10));
@@ -4470,6 +5430,659 @@ ion-select[ds-color=fb-success][ds-name=secondary] {
   background: hsl(var(--med-color-fb-success));
 }
 
+ion-tab-bar {
+  --background: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=brand] {
+  --background: hsl(var(--med-color-brand-3));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=brand] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=brand] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=aula] {
+  --background: hsl(var(--med-color-aula-3));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=aula] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=aula] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=material] {
+  --background: hsl(var(--med-color-material-3));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=material] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=material] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=questoes] {
+  --background: hsl(var(--med-color-questoes-3));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=questoes] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=questoes] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=revalida] {
+  --background: hsl(var(--med-color-revalida-3));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=revalida] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=revalida] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=provas] {
+  --background: hsl(var(--med-color-provas-3));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=provas] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=provas] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=neutral-1] {
+  --background: hsl(var(--med-color-neutral-1));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-1] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-1] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=neutral-2] {
+  --background: hsl(var(--med-color-neutral-2));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-2] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-2] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=neutral-3] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-3] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-3] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=neutral-4] {
+  --background: hsl(var(--med-color-neutral-4));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-4] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-4] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=neutral-5] {
+  --background: hsl(var(--med-color-neutral-5));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-5] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-5] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=neutral-6] {
+  --background: hsl(var(--med-color-neutral-6));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-6] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-6] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-bar[ds-color=neutral-7] {
+  --background: hsl(var(--med-color-neutral-7));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-7] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-7] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-bar[ds-color=neutral-8] {
+  --background: hsl(var(--med-color-neutral-8));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-8] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-8] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-bar[ds-color=neutral-9] {
+  --background: hsl(var(--med-color-neutral-9));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-9] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-9] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-bar[ds-color=neutral-10] {
+  --background: hsl(var(--med-color-neutral-10));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-10] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-10] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-bar[ds-color=neutral-15] {
+  --background: hsl(var(--med-color-neutral-15));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-15] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-15] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=neutral-25] {
+  --background: hsl(var(--med-color-neutral-25));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-25] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-25] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=neutral-35] {
+  --background: hsl(var(--med-color-neutral-35));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-35] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-35] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=neutral-45] {
+  --background: hsl(var(--med-color-neutral-45));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-45] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-45] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=neutral-55] {
+  --background: hsl(var(--med-color-neutral-55));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-55] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-55] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-bar[ds-color=neutral-65] {
+  --background: hsl(var(--med-color-neutral-65));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-65] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-65] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-bar[ds-color=neutral-75] {
+  --background: hsl(var(--med-color-neutral-75));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-75] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-75] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-bar[ds-color=neutral-85] {
+  --background: hsl(var(--med-color-neutral-85));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-85] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-85] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-bar[ds-color=neutral-95] {
+  --background: hsl(var(--med-color-neutral-95));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-95] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-95] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-bar[ds-color=fb-attention] {
+  --background: hsl(var(--med-color-fb-attention));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=fb-attention] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=fb-attention] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-bar[ds-color=fb-caution] {
+  --background: hsl(var(--med-color-fb-caution));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=fb-caution] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=fb-caution] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-bar[ds-color=fb-warning] {
+  --background: hsl(var(--med-color-fb-warning));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=fb-warning] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=fb-warning] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-bar[ds-color=fb-success] {
+  --background: hsl(var(--med-color-fb-success));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=fb-success] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=fb-success] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-button ion-icon {
+  width: 24px;
+  height: 24px;
+}
+
+ion-tab-button[ds-color=brand] {
+  --background: hsl(var(--med-color-brand-3));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=brand] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=brand] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-button[ds-color=aula] {
+  --background: hsl(var(--med-color-aula-3));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=aula] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=aula] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-button[ds-color=material] {
+  --background: hsl(var(--med-color-material-3));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=material] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=material] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-button[ds-color=questoes] {
+  --background: hsl(var(--med-color-questoes-3));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=questoes] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=questoes] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-button[ds-color=revalida] {
+  --background: hsl(var(--med-color-revalida-3));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=revalida] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=revalida] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-button[ds-color=provas] {
+  --background: hsl(var(--med-color-provas-3));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=provas] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=provas] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-button[ds-color=neutral-1] {
+  --background: hsl(var(--med-color-neutral-1));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-1] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-1] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-button[ds-color=neutral-2] {
+  --background: hsl(var(--med-color-neutral-2));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-2] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-2] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-button[ds-color=neutral-3] {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-3] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-3] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-button[ds-color=neutral-4] {
+  --background: hsl(var(--med-color-neutral-4));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-4] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-4] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-button[ds-color=neutral-5] {
+  --background: hsl(var(--med-color-neutral-5));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-5] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-5] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-button[ds-color=neutral-6] {
+  --background: hsl(var(--med-color-neutral-6));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-6] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-6] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-button[ds-color=neutral-7] {
+  --background: hsl(var(--med-color-neutral-7));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-7] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-7] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-button[ds-color=neutral-8] {
+  --background: hsl(var(--med-color-neutral-8));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-8] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-8] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-button[ds-color=neutral-9] {
+  --background: hsl(var(--med-color-neutral-9));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-9] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-9] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-button[ds-color=neutral-10] {
+  --background: hsl(var(--med-color-neutral-10));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-10] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-10] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-button[ds-color=neutral-15] {
+  --background: hsl(var(--med-color-neutral-15));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-15] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-15] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-button[ds-color=neutral-25] {
+  --background: hsl(var(--med-color-neutral-25));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-25] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-25] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-button[ds-color=neutral-35] {
+  --background: hsl(var(--med-color-neutral-35));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-35] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-35] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-button[ds-color=neutral-45] {
+  --background: hsl(var(--med-color-neutral-45));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-45] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-45] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-button[ds-color=neutral-55] {
+  --background: hsl(var(--med-color-neutral-55));
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-55] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+ion-tab-button[ds-color=neutral-55] ion-label {
+  color: hsl(var(--med-color-neutral-10));
+}
+
+ion-tab-button[ds-color=neutral-65] {
+  --background: hsl(var(--med-color-neutral-65));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-65] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-65] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-button[ds-color=neutral-75] {
+  --background: hsl(var(--med-color-neutral-75));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-75] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-75] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-button[ds-color=neutral-85] {
+  --background: hsl(var(--med-color-neutral-85));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-85] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-85] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-button[ds-color=neutral-95] {
+  --background: hsl(var(--med-color-neutral-95));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-95] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=neutral-95] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-button[ds-color=fb-attention] {
+  --background: hsl(var(--med-color-fb-attention));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=fb-attention] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=fb-attention] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-button[ds-color=fb-caution] {
+  --background: hsl(var(--med-color-fb-caution));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=fb-caution] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=fb-caution] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-button[ds-color=fb-warning] {
+  --background: hsl(var(--med-color-fb-warning));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=fb-warning] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=fb-warning] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
+ion-tab-button[ds-color=fb-success] {
+  --background: hsl(var(--med-color-fb-success));
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=fb-success] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+ion-tab-button[ds-color=fb-success] ion-label {
+  color: hsl(var(--med-color-neutral-1));
+}
+
 ion-textarea.sc-ion-textarea-md-h {
   --background: hsl(var(--med-color-neutral-2));
   --color: hsl(var(--med-color-neutral-10));
@@ -4517,6 +6130,12 @@ ion-textarea[ds-color=questoes].sc-ion-textarea-md-h {
 
 ion-textarea[ds-color=revalida].sc-ion-textarea-md-h {
   --background: hsl(var(--med-color-revalida-3));
+  --color: hsl(var(--med-color-neutral-10));
+  --placeholder-color: hsl(var(--med-color-neutral-10));
+}
+
+ion-textarea[ds-color=provas].sc-ion-textarea-md-h {
+  --background: hsl(var(--med-color-provas-3));
   --color: hsl(var(--med-color-neutral-10));
   --placeholder-color: hsl(var(--med-color-neutral-10));
 }
@@ -4689,6 +6308,10 @@ ion-toggle[ds-color=questoes] {
 
 ion-toggle[ds-color=revalida] {
   --background-checked: hsl(var(--med-color-revalida-3));
+}
+
+ion-toggle[ds-color=provas] {
+  --background-checked: hsl(var(--med-color-provas-3));
 }
 
 ion-toggle[ds-color=neutral-1] {

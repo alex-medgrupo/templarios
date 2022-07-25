@@ -8,6 +8,7 @@
   align-items: center;
   background-color: var(--background);
   border-radius: 8px;
+  height: 40px;
 }
 
 ::slotted(ion-button[slot='start']),

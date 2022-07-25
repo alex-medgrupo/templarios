@@ -1,0 +1,22 @@
+ion-fab-list {
+  min-width: 48px;
+  min-height: 48px;
+
+  ion-fab-button {
+    --background: hsl(var(--med-color-neutral-10));
+    --background-activated: hsla(var(--med-color-neutral-1), 0.08);
+    --background-focused: hsla(var(--med-color-neutral-1), 0.08);
+    --background-hover: hsla(var(--med-color-neutral-1), 0.08);
+    --color: hsl(var(--med-color-neutral-1));
+    --color-activated: hsl(var(--med-color-neutral-1));
+    --color-focused: hsl(var(--med-color-neutral-1));
+    --color-hover: hsl(var(--med-color-neutral-1));
+
+    width: 40px;
+    height: 40px;
+
+    ion-icon {
+      stroke: var(--color);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+ion-fab-button {
+  --background: hsl(var(--med-color-brand-3));
+  --background-activated: hsl(var(--med-color-brand-2));
+  --background-focused: hsl(var(--med-color-brand-2));
+  --background-hover: hsl(var(--med-color-brand-2));
+  --background-activated-opacity: 1;
+  --background-focused-opacity: 1;
+  --background-hover-opacity: 1;
+  --color: hsl(var(--med-color-neutral-10));
+  --color-activated: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
+  --color-hover: hsl(var(--med-color-neutral-10));
+
+  width: 48px;
+  height: 48px;
+
+  ion-icon {
+    stroke: var(--color);
+  }
+}

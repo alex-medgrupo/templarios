@@ -7,7 +7,7 @@ ion-label {
   @each $type-value, $type in $tp-type {
     &[token='#{$type-value}'] {
       @each $property, $value in $type {
-        #{$property}: #{$value} !important;
+        #{$property}: #{$value};
       }
     }
   }
@@ -29,7 +29,7 @@ ion-label ~ .sc-tp-input-container-h {
 @each $color in $tp-color {
   @for $i from 1 through 5 {
     @include generate-component-color(ion-label, $color, $i) {
-      color: #{tp-color($color, $i)} !important;
+      color: #{tp-color($color, $i)};
     }
   }
 }
@@ -39,12 +39,12 @@ ion-label ~ .sc-tp-input-container-h {
 //
 @for $i from 1 through 10 {
   @include generate-component-neutral(ion-label, neutral-#{$i}, $i) {
-    color: #{tp-neutral($i)} !important;
+    color: #{tp-neutral($i)};
   }
 }
 @for $i from 1 through 9 {
   @include generate-component-neutral(ion-label, neutral-#{$i}#{5}, $i) {
-    color: #{tp-neutral($i, 5)} !important;
+    color: #{tp-neutral($i, 5)};
   }
 }
 
@@ -53,6 +53,6 @@ ion-label ~ .sc-tp-input-container-h {
 //
 @each $color in $tp-feedback {
   @include generate-component-feedback(ion-label, fb-#{$color}, $color) {
-    color: #{tp-feedback($color)} !important;
+    color: #{tp-feedback($color)};
   }
 }

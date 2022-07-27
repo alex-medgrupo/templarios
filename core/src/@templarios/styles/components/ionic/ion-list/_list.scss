@@ -1,7 +1,152 @@
 ion-list {
   --ion-item-background: hsl(var(--med-color-neutral-2));
+  border-radius: 8px;
+
+  &.list-md {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
   &.list-ios {
     background: transparent;
+  }
+
+  // slotted item/label
+  ion-item.item .sc-ion-label-ios-h {
+    --color: hsl(var(--med-color-neutral-10));
+  }
+}
+
+//
+// radius
+//
+// $tp-base-radius in src/@templarios/styles/variables/_components.scss
+@each $radius-value, $radius in $tp-base-radius {
+  ion-list[radius='#{$radius-value}'] {
+    border-radius: #{$radius};
+  }
+}
+
+//
+// spacing
+//
+// $tp-base-spacing in src/@templarios/styles/variables/_components.scss
+@each $spacing-value, $spacing in $tp-base-spacing {
+  // slotted item
+  ion-list[spacing-v='#{$spacing-value}'] {
+    ion-item {
+      --padding-bottom: #{$spacing};
+      --padding-top: #{$spacing};
+    }
+  }
+  // slotted item
+  ion-list[spacing-h='#{$spacing-value}'] {
+    ion-item {
+      --padding-end: #{$spacing};
+      --padding-start: #{$spacing};
+    }
+  }
+}
+
+//
+// gap
+//
+// $tp-base-gap in src/@templarios/styles/variables/_components.scss
+@each $gap-value, $gap in $tp-base-gap {
+  // slotted checkbox/radio/toggle
+  ion-list[gap='#{$gap-value}'] {
+    ion-item {
+      ion-checkbox[slot="start"],
+      ion-radio[slot="start"],
+      ion-toggle[slot="start"],
+      ion-icon[slot="start"],
+      ion-button[slot="start"] {
+        margin: 0 $gap 0 0;
+      }
+    }
+
+    ion-item {
+      ion-checkbox[slot="end"],
+      ion-radio[slot="end"],
+      ion-toggle[slot="end"],
+      ion-icon[slot="end"],
+      ion-button[slot="end"] {
+        margin: 0 0 0 $gap;
+      }
+    }
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-list, $color, $i) {
+      --ion-item-background: #{tp-color($color, $i)};
+
+      // slotted item/label
+      ion-item.item .sc-ion-label-ios-h {
+        --color: #{tp-contrast-color($i)};
+      }
+
+      // slotted item/icon
+      ion-item ion-icon {
+        stroke: #{tp-contrast-color($i)};
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-list, neutral-#{$i}, $i) {
+    --ion-item-background: #{tp-neutral($i)};
+
+    // slotted item/label
+    ion-item.item .sc-ion-label-ios-h {
+      --color: #{tp-contrast-neutral($i)};
+    }
+
+    // slotted item/icon
+    ion-item ion-icon {
+      stroke: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-list, neutral-#{$i}#{5}, $i) {
+    --ion-item-background: #{tp-neutral($i, 5)};
+
+    // slotted item/label
+    ion-item.item .sc-ion-label-ios-h {
+      --color: #{tp-contrast-neutral($i)};
+    }
+
+    // slotted item/icon
+    ion-item ion-icon {
+      stroke: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-list, fb-#{$color}, $color) {
+    --ion-item-background: #{tp-feedback($color)};
+
+    // slotted item/label
+    ion-item.item .sc-ion-label-ios-h {
+      --color: hsl(var(--med-color-neutral-1));
+    }
+
+    // slotted item/icon
+    ion-item ion-icon {
+      stroke: hsl(var(--med-color-neutral-1));
+    }
   }
 }

@@ -12,18 +12,13 @@ const Template = ({ 'ds-color': dsColor, disabled }) => {
     <ion-app>
       <ion-content>
         <ion-item mode="ios">
-          <ion-label ds-color="neutral-10">Value 1</ion-label>
+          <ion-label>Value 1</ion-label>
           <ion-checkbox ds-color=${dsColor} .disabled=${disabled} slot="start" value="value-1" mode="md"></ion-checkbox>
         </ion-item>
 
         <ion-item mode="ios">
-          <ion-label ds-color="neutral-10">Value 2</ion-label>
-          <ion-checkbox ds-color=${dsColor} .disabled=${disabled} slot="start" value="value-2" mode="md"></ion-checkbox>
-        </ion-item>
-
-        <ion-item mode="ios">
-          <ion-label ds-color="neutral-10">Value 3</ion-label>
-          <ion-checkbox ds-color=${dsColor} .disabled=${disabled} slot="start" value="value-3" mode="md"></ion-checkbox>
+          <ion-label>Value 2</ion-label>
+          <ion-checkbox ds-color=${dsColor} .disabled=${disabled} slot="end" value="value-2" mode="md"></ion-checkbox>
         </ion-item>
       </ion-content>
     </ion-app>

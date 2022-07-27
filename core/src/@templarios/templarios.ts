@@ -1,4 +1,5 @@
 export * from './enums/badge.enum';
+export * from './enums/base.enum';
 export * from './enums/button.enum';
 export * from './enums/color.enum';
 export * from './enums/font-size.enum';

@@ -1,23 +1,244 @@
 import { withDesign } from 'storybook-addon-designs';
-import { MedColors } from '../../../templarios';
+import { BaseGap, BaseRadius, BaseSpacing, MedColors } from '../../../templarios';
 
 export default {
   title: 'Components/Ionic/Item',
   decorators: [withDesign],
 };
 
-const Template = ({ 'ds-color': dsColor }) => {
+const Template = ({
+  'ds-color': dsColor,
+  radius,
+  gap,
+  'spacing-v': spacingV,
+  'spacing-h': spacingH,
+}) => {
   return `
     <ion-app>
       <ion-content>
 
-        <ion-item-group>
-          <ion-item ds-color=${dsColor} mode="ios" lines="none">
-            <ion-label token="p14x">
-              Texto Primario
-            </ion-label>
-          </ion-item>
-        </ion-item-group>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+
+              <ion-label token="h24">Default</ion-label>
+
+              <ion-item
+                ds-color=${dsColor}
+                radius=${radius}
+                gap=${gap}
+                spacing-v=${spacingV}
+                spacing-h=${spacingH}
+                mode="ios"
+                lines="none">
+                <ion-label>Texto Primario</ion-label>
+              </ion-item>
+
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+
+              <ion-label token="h24">Icon</ion-label>
+
+              <ion-item
+                ds-color=${dsColor}
+                radius=${radius}
+                gap=${gap}
+                spacing-v=${spacingV}
+                spacing-h=${spacingH}
+                mode="ios"
+                lines="none"
+                detail="false"
+                button>
+                <ion-icon class="med-icon" slot="start" name="med-direita"></ion-icon>
+                <ion-label>Texto Primario</ion-label>
+              </ion-item>
+
+              <ion-item
+                ds-color=${dsColor}
+                radius=${radius}
+                gap=${gap}
+                spacing-v=${spacingV}
+                spacing-h=${spacingH}
+                mode="ios"
+                lines="none"
+                detail="false"
+                button>
+                <ion-icon class="med-icon" slot="start" name="med-direita"></ion-icon>
+                <ion-label>Texto Primario</ion-label>
+                <ion-icon class="med-icon" slot="end" name="med-direita"></ion-icon>
+              </ion-item>
+
+              <ion-item
+                ds-color=${dsColor}
+                radius=${radius}
+                gap=${gap}
+                spacing-v=${spacingV}
+                spacing-h=${spacingH}
+                mode="ios"
+                lines="none"
+                detail="false"
+                button>
+                <ion-label>Texto Primario</ion-label>
+                <ion-icon class="med-icon" slot="end" name="med-direita"></ion-icon>
+              </ion-item>
+
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+
+              <ion-label token="h24">Button</ion-label>
+
+              <ion-item
+                ds-color=${dsColor}
+                radius=${radius}
+                gap=${gap}
+                spacing-v=${spacingV}
+                spacing-h=${spacingH}
+                mode="ios"
+                lines="none">
+                <ion-button slot="start" ds-size="xxs" mode="ios" fill="clear" icon-only>
+                  <ion-icon class="med-icon" slot="icon-only" name="med-direita"></ion-icon>
+                </ion-button>
+                <ion-label>Texto Primario</ion-label>
+              </ion-item>
+
+              <ion-item
+                ds-color=${dsColor}
+                radius=${radius}
+                gap=${gap}
+                spacing-v=${spacingV}
+                spacing-h=${spacingH}
+                mode="ios"
+                lines="none">
+                <ion-button slot="start" ds-size="xxs" mode="ios" fill="clear" icon-only>
+                  <ion-icon class="med-icon" slot="icon-only" name="med-direita"></ion-icon>
+                </ion-button>
+                <ion-label>Texto Primario</ion-label>
+                <ion-button slot="end" ds-size="xxs" mode="ios" fill="clear" icon-only>
+                  <ion-icon class="med-icon" slot="icon-only" name="med-direita"></ion-icon>
+                </ion-button>
+              </ion-item>
+
+              <ion-item
+                ds-color=${dsColor}
+                radius=${radius}
+                gap=${gap}
+                spacing-v=${spacingV}
+                spacing-h=${spacingH}
+                mode="ios"
+                lines="none">
+                <ion-label>Texto Primario</ion-label>
+                <ion-button slot="end" ds-size="xxs" mode="ios" fill="clear" icon-only>
+                  <ion-icon class="med-icon" slot="icon-only" name="med-direita"></ion-icon>
+                </ion-button>
+              </ion-item>
+
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+
+             <ion-label token="h24">Radio</ion-label>
+
+              <ion-radio-group value="Value 1">
+                <ion-item
+                  ds-color=${dsColor}
+                  radius=${radius}
+                  gap=${gap}
+                  spacing-v=${spacingV}
+                  spacing-h=${spacingH}
+                  mode="ios"
+                  lines="none">
+                    <ion-radio slot="start" value="value-1" mode="md"></ion-radio>
+                    <ion-label>Value 1</ion-label>
+                </ion-item>
+
+                <ion-item
+                  ds-color=${dsColor}
+                  radius=${radius}
+                  gap=${gap}
+                  spacing-v=${spacingV}
+                  spacing-h=${spacingH}
+                  mode="ios"
+                  lines="none">
+                    <ion-label>Value 2</ion-label>
+                    <ion-radio slot="end" value="value-2" mode="md"></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+
+              <ion-label token="h24">Checkbox</ion-label>
+
+              <ion-item
+                ds-color=${dsColor}
+                radius=${radius}
+                gap=${gap}
+                spacing-v=${spacingV}
+                spacing-h=${spacingH}
+                mode="ios"
+                lines="none">
+                <ion-checkbox slot="start" value="value-1" mode="md"></ion-checkbox>
+                <ion-label>Value 1</ion-label>
+              </ion-item>
+
+              <ion-item
+                ds-color=${dsColor}
+                radius=${radius}
+                gap=${gap}
+                spacing-v=${spacingV}
+                spacing-h=${spacingH}
+                mode="ios"
+                lines="none">
+                <ion-label>Value 2</ion-label>
+                <ion-checkbox slot="end" value="value-2" mode="md"></ion-checkbox>
+              </ion-item>
+
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+
+              <ion-label token="h24">Toogle</ion-label>
+
+              <ion-item
+                ds-color=${dsColor}
+                radius=${radius}
+                gap=${gap}
+                spacing-v=${spacingV}
+                spacing-h=${spacingH}
+                mode="ios"
+                lines="none">
+                <ion-label ds-color="neutral-10">Value 1</ion-label>
+                <ion-toggle slot="start" mode="ios" value="value-1"></ion-toggle>
+              </ion-item>
+
+              <ion-item
+                ds-color=${dsColor}
+                radius=${radius}
+                gap=${gap}
+                spacing-v=${spacingV}
+                spacing-h=${spacingH}
+                mode="ios"
+                lines="none">
+                <ion-label ds-color="neutral-10">Value 2</ion-label>
+                <ion-toggle slot="end" mode="ios" value="value-2"></ion-toggle>
+              </ion-item>
+
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 
       </ion-content>
     </ion-app>
@@ -39,6 +260,46 @@ Default.argTypes = {
     defaultValue: undefined,
     table: {
       type: { summary: Object.values(MedColors).join(' |') },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  radius: {
+    options: [undefined, ...Object.values(BaseRadius)],
+    control: { type: 'select' },
+    description: 'Define o token do componente.',
+    defaultValue: undefined,
+    table: {
+      type: { summary: Object.values(BaseRadius).join(' |') },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  gap: {
+    options: [undefined, ...Object.values(BaseGap)],
+    control: { type: 'select' },
+    description: 'Define o token do componente.',
+    defaultValue: undefined,
+    table: {
+      type: { summary: Object.values(BaseGap).join(' |') },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  'spacing-v': {
+    options: [undefined, ...Object.values(BaseSpacing)],
+    control: { type: 'select' },
+    description: 'Define o token do componente.',
+    defaultValue: undefined,
+    table: {
+      type: { summary: Object.values(BaseSpacing).join(' |') },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  'spacing-h': {
+    options: [undefined, ...Object.values(BaseSpacing)],
+    control: { type: 'select' },
+    description: 'Define o token do componente.',
+    defaultValue: undefined,
+    table: {
+      type: { summary: Object.values(BaseSpacing).join(' |') },
       defaultValue: { summary: 'undefined' },
     },
   },

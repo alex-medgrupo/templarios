@@ -11,22 +11,15 @@ const Template = ({ 'ds-color': dsColor, disabled }) => {
   return html`
     <ion-app>
       <ion-content>
-        <ion-list mode="ios">
-          <ion-item>
-            <ion-label>Pepperoni</ion-label>
-            <ion-toggle slot="end" ds-color=${dsColor} .disabled=${disabled} mode="ios" value="pepperoni" checked></ion-toggle>
-          </ion-item>
+        <ion-item mode="ios">
+          <ion-toggle slot="start" ds-color=${dsColor} .disabled=${disabled} mode="ios" value="value-1" checked></ion-toggle>
+          <ion-label>Value 1</ion-label>
+        </ion-item>
 
-          <ion-item>
-            <ion-label>Sausage</ion-label>
-            <ion-toggle slot="end" ds-color=${dsColor} .disabled=${disabled} mode="ios" value="sausage" disabled></ion-toggle>
-          </ion-item>
-
-          <ion-item>
-            <ion-label>Mushrooms</ion-label>
-            <ion-toggle slot="end" ds-color=${dsColor} .disabled=${disabled} mode="ios" value="mushrooms"></ion-toggle>
-          </ion-item>
-        </ion-list>
+        <ion-item mode="ios">
+          <ion-label>Value 2</ion-label>
+          <ion-toggle slot="end" ds-color=${dsColor} .disabled=${disabled} mode="ios" value="value-2" disabled></ion-toggle>
+        </ion-item>
       </ion-content>
     </ion-app>
   `;

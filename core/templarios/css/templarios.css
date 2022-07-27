@@ -4235,41 +4235,545 @@ ion-item {
   --background-focused-opacity: 1;
   --background-hover-opacity: 1;
   --border-color: transparent;
-  --padding-top: 10px;
+  --padding-top: 16px;
   --padding-end: 16px;
-  --padding-bottom: 10px;
+  --padding-bottom: 16px;
   --padding-start: 16px;
   --min-height: auto;
+}
+
+ion-item[radius=s00] {
+  border-radius: 0;
+}
+
+ion-item[radius=s02] {
+  border-radius: 2px;
+}
+
+ion-item[radius=s04] {
+  border-radius: 4px;
+}
+
+ion-item[radius=s08] {
+  border-radius: 8px;
+}
+
+ion-item[spacing-v=s00] {
+  --padding-bottom: 0;
+  --padding-top: 0;
+}
+
+ion-item[spacing-h=s00] {
+  --padding-end: 0;
+  --padding-start: 0;
+}
+
+ion-item[spacing-v=s02] {
+  --padding-bottom: 2px;
+  --padding-top: 2px;
+}
+
+ion-item[spacing-h=s02] {
+  --padding-end: 2px;
+  --padding-start: 2px;
+}
+
+ion-item[spacing-v=s04] {
+  --padding-bottom: 4px;
+  --padding-top: 4px;
+}
+
+ion-item[spacing-h=s04] {
+  --padding-end: 4px;
+  --padding-start: 4px;
+}
+
+ion-item[spacing-v=s08] {
+  --padding-bottom: 8px;
+  --padding-top: 8px;
+}
+
+ion-item[spacing-h=s08] {
+  --padding-end: 8px;
+  --padding-start: 8px;
+}
+
+ion-item[spacing-v=s12] {
+  --padding-bottom: 12px;
+  --padding-top: 12px;
+}
+
+ion-item[spacing-h=s12] {
+  --padding-end: 12px;
+  --padding-start: 12px;
+}
+
+ion-item[spacing-v=s16] {
+  --padding-bottom: 16px;
+  --padding-top: 16px;
+}
+
+ion-item[spacing-h=s16] {
+  --padding-end: 16px;
+  --padding-start: 16px;
+}
+
+ion-item[spacing-v=s20] {
+  --padding-bottom: 20px;
+  --padding-top: 20px;
+}
+
+ion-item[spacing-h=s20] {
+  --padding-end: 20px;
+  --padding-start: 20px;
+}
+
+ion-item[spacing-v=s24] {
+  --padding-bottom: 24px;
+  --padding-top: 24px;
+}
+
+ion-item[spacing-h=s24] {
+  --padding-end: 24px;
+  --padding-start: 24px;
 }
 
 ion-item.item .sc-ion-label-ios-h {
   --color: hsl(var(--med-color-neutral-10));
   font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
-  margin-top: 0;
-  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0;
 }
 
-ion-item ion-checkbox[slot=start] {
+ion-item ion-icon {
+  font-size: 24px;
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item ion-checkbox[slot=start],
+ion-item ion-radio[slot=start],
+ion-item ion-toggle[slot=start],
+ion-item ion-icon[slot=start],
+ion-item ion-button[slot=start] {
   margin: 0 8px 0 0;
 }
-ion-item ion-checkbox[slot=end] {
+ion-item ion-checkbox[slot=end],
+ion-item ion-radio[slot=end],
+ion-item ion-toggle[slot=end],
+ion-item ion-icon[slot=end],
+ion-item ion-button[slot=end] {
   margin: 0 0 0 8px;
 }
 
-ion-item ion-radio[slot=start] {
+ion-item[gap=s00] ion-checkbox[slot=start],
+ion-item[gap=s00] ion-radio[slot=start],
+ion-item[gap=s00] ion-toggle[slot=start],
+ion-item[gap=s00] ion-icon[slot=start],
+ion-item[gap=s00] ion-button[slot=start] {
+  margin: 0 0 0 0;
+}
+ion-item[gap=s00] ion-checkbox[slot=end],
+ion-item[gap=s00] ion-radio[slot=end],
+ion-item[gap=s00] ion-toggle[slot=end],
+ion-item[gap=s00] ion-icon[slot=end],
+ion-item[gap=s00] ion-button[slot=end] {
+  margin: 0 0 0 0;
+}
+
+ion-item[gap=s02] ion-checkbox[slot=start],
+ion-item[gap=s02] ion-radio[slot=start],
+ion-item[gap=s02] ion-toggle[slot=start],
+ion-item[gap=s02] ion-icon[slot=start],
+ion-item[gap=s02] ion-button[slot=start] {
+  margin: 0 2px 0 0;
+}
+ion-item[gap=s02] ion-checkbox[slot=end],
+ion-item[gap=s02] ion-radio[slot=end],
+ion-item[gap=s02] ion-toggle[slot=end],
+ion-item[gap=s02] ion-icon[slot=end],
+ion-item[gap=s02] ion-button[slot=end] {
+  margin: 0 0 0 2px;
+}
+
+ion-item[gap=s04] ion-checkbox[slot=start],
+ion-item[gap=s04] ion-radio[slot=start],
+ion-item[gap=s04] ion-toggle[slot=start],
+ion-item[gap=s04] ion-icon[slot=start],
+ion-item[gap=s04] ion-button[slot=start] {
+  margin: 0 4px 0 0;
+}
+ion-item[gap=s04] ion-checkbox[slot=end],
+ion-item[gap=s04] ion-radio[slot=end],
+ion-item[gap=s04] ion-toggle[slot=end],
+ion-item[gap=s04] ion-icon[slot=end],
+ion-item[gap=s04] ion-button[slot=end] {
+  margin: 0 0 0 4px;
+}
+
+ion-item[gap=s08] ion-checkbox[slot=start],
+ion-item[gap=s08] ion-radio[slot=start],
+ion-item[gap=s08] ion-toggle[slot=start],
+ion-item[gap=s08] ion-icon[slot=start],
+ion-item[gap=s08] ion-button[slot=start] {
   margin: 0 8px 0 0;
 }
-ion-item ion-radio[slot=end] {
+ion-item[gap=s08] ion-checkbox[slot=end],
+ion-item[gap=s08] ion-radio[slot=end],
+ion-item[gap=s08] ion-toggle[slot=end],
+ion-item[gap=s08] ion-icon[slot=end],
+ion-item[gap=s08] ion-button[slot=end] {
   margin: 0 0 0 8px;
 }
 
-ion-item ion-toggle[slot=start] {
-  padding: 0 8px 0 0;
+ion-item[gap=s12] ion-checkbox[slot=start],
+ion-item[gap=s12] ion-radio[slot=start],
+ion-item[gap=s12] ion-toggle[slot=start],
+ion-item[gap=s12] ion-icon[slot=start],
+ion-item[gap=s12] ion-button[slot=start] {
+  margin: 0 12px 0 0;
 }
-ion-item ion-toggle[slot=end] {
-  padding: 0 0 0 8px;
+ion-item[gap=s12] ion-checkbox[slot=end],
+ion-item[gap=s12] ion-radio[slot=end],
+ion-item[gap=s12] ion-toggle[slot=end],
+ion-item[gap=s12] ion-icon[slot=end],
+ion-item[gap=s12] ion-button[slot=end] {
+  margin: 0 0 0 12px;
+}
+
+ion-item[gap=s16] ion-checkbox[slot=start],
+ion-item[gap=s16] ion-radio[slot=start],
+ion-item[gap=s16] ion-toggle[slot=start],
+ion-item[gap=s16] ion-icon[slot=start],
+ion-item[gap=s16] ion-button[slot=start] {
+  margin: 0 16px 0 0;
+}
+ion-item[gap=s16] ion-checkbox[slot=end],
+ion-item[gap=s16] ion-radio[slot=end],
+ion-item[gap=s16] ion-toggle[slot=end],
+ion-item[gap=s16] ion-icon[slot=end],
+ion-item[gap=s16] ion-button[slot=end] {
+  margin: 0 0 0 16px;
+}
+
+ion-item[gap=s20] ion-checkbox[slot=start],
+ion-item[gap=s20] ion-radio[slot=start],
+ion-item[gap=s20] ion-toggle[slot=start],
+ion-item[gap=s20] ion-icon[slot=start],
+ion-item[gap=s20] ion-button[slot=start] {
+  margin: 0 20px 0 0;
+}
+ion-item[gap=s20] ion-checkbox[slot=end],
+ion-item[gap=s20] ion-radio[slot=end],
+ion-item[gap=s20] ion-toggle[slot=end],
+ion-item[gap=s20] ion-icon[slot=end],
+ion-item[gap=s20] ion-button[slot=end] {
+  margin: 0 0 0 20px;
+}
+
+ion-item[gap=s24] ion-checkbox[slot=start],
+ion-item[gap=s24] ion-radio[slot=start],
+ion-item[gap=s24] ion-toggle[slot=start],
+ion-item[gap=s24] ion-icon[slot=start],
+ion-item[gap=s24] ion-button[slot=start] {
+  margin: 0 24px 0 0;
+}
+ion-item[gap=s24] ion-checkbox[slot=end],
+ion-item[gap=s24] ion-radio[slot=end],
+ion-item[gap=s24] ion-toggle[slot=end],
+ion-item[gap=s24] ion-icon[slot=end],
+ion-item[gap=s24] ion-button[slot=end] {
+  margin: 0 0 0 24px;
+}
+
+ion-item[ds-color=brand] {
+  --background: hsl(var(--med-color-brand-3));
+}
+ion-item[ds-color=brand].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=brand] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item[ds-color=aula] {
+  --background: hsl(var(--med-color-aula-3));
+}
+ion-item[ds-color=aula].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=aula] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item[ds-color=material] {
+  --background: hsl(var(--med-color-material-3));
+}
+ion-item[ds-color=material].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=material] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item[ds-color=questoes] {
+  --background: hsl(var(--med-color-questoes-3));
+}
+ion-item[ds-color=questoes].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=questoes] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item[ds-color=revalida] {
+  --background: hsl(var(--med-color-revalida-3));
+}
+ion-item[ds-color=revalida].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=revalida] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item[ds-color=provas] {
+  --background: hsl(var(--med-color-provas-3));
+}
+ion-item[ds-color=provas].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=provas] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item[ds-color=neutral-1] {
+  --background: hsl(var(--med-color-neutral-1));
+}
+ion-item[ds-color=neutral-1].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=neutral-1] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item[ds-color=neutral-2] {
+  --background: hsl(var(--med-color-neutral-2));
+}
+ion-item[ds-color=neutral-2].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=neutral-2] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item[ds-color=neutral-3] {
+  --background: hsl(var(--med-color-neutral-3));
+}
+ion-item[ds-color=neutral-3].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=neutral-3] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item[ds-color=neutral-4] {
+  --background: hsl(var(--med-color-neutral-4));
+}
+ion-item[ds-color=neutral-4].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=neutral-4] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item[ds-color=neutral-5] {
+  --background: hsl(var(--med-color-neutral-5));
+}
+ion-item[ds-color=neutral-5].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=neutral-5] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item[ds-color=neutral-6] {
+  --background: hsl(var(--med-color-neutral-6));
+}
+ion-item[ds-color=neutral-6].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-item[ds-color=neutral-6] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-item[ds-color=neutral-7] {
+  --background: hsl(var(--med-color-neutral-7));
+}
+ion-item[ds-color=neutral-7].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-item[ds-color=neutral-7] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-item[ds-color=neutral-8] {
+  --background: hsl(var(--med-color-neutral-8));
+}
+ion-item[ds-color=neutral-8].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-item[ds-color=neutral-8] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-item[ds-color=neutral-9] {
+  --background: hsl(var(--med-color-neutral-9));
+}
+ion-item[ds-color=neutral-9].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-item[ds-color=neutral-9] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-item[ds-color=neutral-10] {
+  --background: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=neutral-10].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-item[ds-color=neutral-10] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-item[ds-color=neutral-15] {
+  --background: hsl(var(--med-color-neutral-15));
+}
+ion-item[ds-color=neutral-15].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=neutral-15] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item[ds-color=neutral-25] {
+  --background: hsl(var(--med-color-neutral-25));
+}
+ion-item[ds-color=neutral-25].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=neutral-25] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item[ds-color=neutral-35] {
+  --background: hsl(var(--med-color-neutral-35));
+}
+ion-item[ds-color=neutral-35].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=neutral-35] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item[ds-color=neutral-45] {
+  --background: hsl(var(--med-color-neutral-45));
+}
+ion-item[ds-color=neutral-45].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=neutral-45] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item[ds-color=neutral-55] {
+  --background: hsl(var(--med-color-neutral-55));
+}
+ion-item[ds-color=neutral-55].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-item[ds-color=neutral-55] ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-item[ds-color=neutral-65] {
+  --background: hsl(var(--med-color-neutral-65));
+}
+ion-item[ds-color=neutral-65].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-item[ds-color=neutral-65] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-item[ds-color=neutral-75] {
+  --background: hsl(var(--med-color-neutral-75));
+}
+ion-item[ds-color=neutral-75].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-item[ds-color=neutral-75] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-item[ds-color=neutral-85] {
+  --background: hsl(var(--med-color-neutral-85));
+}
+ion-item[ds-color=neutral-85].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-item[ds-color=neutral-85] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-item[ds-color=neutral-95] {
+  --background: hsl(var(--med-color-neutral-95));
+}
+ion-item[ds-color=neutral-95].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-item[ds-color=neutral-95] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-item[ds-color=fb-attention] {
+  --background: hsl(var(--med-color-fb-attention));
+}
+ion-item[ds-color=fb-attention].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-item[ds-color=fb-attention] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-item[ds-color=fb-caution] {
+  --background: hsl(var(--med-color-fb-caution));
+}
+ion-item[ds-color=fb-caution].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-item[ds-color=fb-caution] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-item[ds-color=fb-warning] {
+  --background: hsl(var(--med-color-fb-warning));
+}
+ion-item[ds-color=fb-warning].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-item[ds-color=fb-warning] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-item[ds-color=fb-success] {
+  --background: hsl(var(--med-color-fb-success));
+}
+ion-item[ds-color=fb-success].item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-item[ds-color=fb-success] ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
 }
 
 ion-label {
@@ -4279,104 +4783,104 @@ ion-label {
   line-height: 20px;
 }
 ion-label[token=h48] {
-  font-size: 48px !important;
-  font-weight: 600 !important;
-  line-height: 48px !important;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 48px;
 }
 ion-label[token=h32] {
-  font-size: 32px !important;
-  font-weight: 600 !important;
-  line-height: 32px !important;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 32px;
 }
 ion-label[token=h24] {
-  font-size: 24px !important;
-  font-weight: 600 !important;
-  line-height: 24px !important;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
 }
 ion-label[token=h24x] {
-  font-size: 24px !important;
-  font-weight: 600 !important;
-  line-height: 32px !important;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
 }
 ion-label[token=h20] {
-  font-size: 20px !important;
-  font-weight: 600 !important;
-  line-height: 20px !important;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;
 }
 ion-label[token=h20x] {
-  font-size: 20px !important;
-  font-weight: 600 !important;
-  line-height: 24px !important;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
 }
 ion-label[token=p16] {
-  font-size: 16px !important;
-  font-weight: 400 !important;
-  line-height: 16px !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
 }
 ion-label[token=p16b] {
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  line-height: 16px !important;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
 }
 ion-label[token=p16x] {
-  font-size: 16px !important;
-  font-weight: 400 !important;
-  line-height: 24px !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 ion-label[token=p16xb] {
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  line-height: 24px !important;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
 }
 ion-label[token=p14] {
-  font-size: 14px !important;
-  font-weight: 400 !important;
-  line-height: 16px !important;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
 }
 ion-label[token=p14b] {
-  font-size: 14px !important;
-  font-weight: 600 !important;
-  line-height: 16px !important;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
 }
 ion-label[token=p14x] {
-  font-size: 14px !important;
-  font-weight: 400 !important;
-  line-height: 20px !important;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
 }
 ion-label[token=p14xb] {
-  font-size: 14px !important;
-  font-weight: 600 !important;
-  line-height: 20px !important;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
 }
 ion-label[token=p12] {
-  font-size: 12px !important;
-  font-weight: 400 !important;
-  line-height: 12px !important;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
 }
 ion-label[token=p12b] {
-  font-size: 12px !important;
-  font-weight: 600 !important;
-  line-height: 12px !important;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 12px;
 }
 ion-label[token=p12x] {
-  font-size: 12px !important;
-  font-weight: 400 !important;
-  line-height: 16px !important;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
 }
 ion-label[token=p12xb] {
-  font-size: 12px !important;
-  font-weight: 600 !important;
-  line-height: 16px !important;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
 }
 ion-label[token=p10] {
-  font-size: 10px !important;
-  font-weight: 400 !important;
-  line-height: 12px !important;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
 }
 ion-label[token=p10b] {
-  font-size: 10px !important;
-  font-weight: 600 !important;
-  line-height: 12px !important;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
 }
 
 ion-label ~ ion-textarea.sc-ion-textarea-md-h,
@@ -4387,126 +4891,640 @@ ion-label ~ .sc-tp-input-container-h {
 }
 
 ion-label[ds-color=brand] {
-  color: hsl(var(--med-color-brand-3)) !important;
+  color: hsl(var(--med-color-brand-3));
 }
 
 ion-label[ds-color=aula] {
-  color: hsl(var(--med-color-aula-3)) !important;
+  color: hsl(var(--med-color-aula-3));
 }
 
 ion-label[ds-color=material] {
-  color: hsl(var(--med-color-material-3)) !important;
+  color: hsl(var(--med-color-material-3));
 }
 
 ion-label[ds-color=questoes] {
-  color: hsl(var(--med-color-questoes-3)) !important;
+  color: hsl(var(--med-color-questoes-3));
 }
 
 ion-label[ds-color=revalida] {
-  color: hsl(var(--med-color-revalida-3)) !important;
+  color: hsl(var(--med-color-revalida-3));
 }
 
 ion-label[ds-color=provas] {
-  color: hsl(var(--med-color-provas-3)) !important;
+  color: hsl(var(--med-color-provas-3));
 }
 
 ion-label[ds-color=neutral-1] {
-  color: hsl(var(--med-color-neutral-1)) !important;
+  color: hsl(var(--med-color-neutral-1));
 }
 
 ion-label[ds-color=neutral-2] {
-  color: hsl(var(--med-color-neutral-2)) !important;
+  color: hsl(var(--med-color-neutral-2));
 }
 
 ion-label[ds-color=neutral-3] {
-  color: hsl(var(--med-color-neutral-3)) !important;
+  color: hsl(var(--med-color-neutral-3));
 }
 
 ion-label[ds-color=neutral-4] {
-  color: hsl(var(--med-color-neutral-4)) !important;
+  color: hsl(var(--med-color-neutral-4));
 }
 
 ion-label[ds-color=neutral-5] {
-  color: hsl(var(--med-color-neutral-5)) !important;
+  color: hsl(var(--med-color-neutral-5));
 }
 
 ion-label[ds-color=neutral-6] {
-  color: hsl(var(--med-color-neutral-6)) !important;
+  color: hsl(var(--med-color-neutral-6));
 }
 
 ion-label[ds-color=neutral-7] {
-  color: hsl(var(--med-color-neutral-7)) !important;
+  color: hsl(var(--med-color-neutral-7));
 }
 
 ion-label[ds-color=neutral-8] {
-  color: hsl(var(--med-color-neutral-8)) !important;
+  color: hsl(var(--med-color-neutral-8));
 }
 
 ion-label[ds-color=neutral-9] {
-  color: hsl(var(--med-color-neutral-9)) !important;
+  color: hsl(var(--med-color-neutral-9));
 }
 
 ion-label[ds-color=neutral-10] {
-  color: hsl(var(--med-color-neutral-10)) !important;
+  color: hsl(var(--med-color-neutral-10));
 }
 
 ion-label[ds-color=neutral-15] {
-  color: hsl(var(--med-color-neutral-15)) !important;
+  color: hsl(var(--med-color-neutral-15));
 }
 
 ion-label[ds-color=neutral-25] {
-  color: hsl(var(--med-color-neutral-25)) !important;
+  color: hsl(var(--med-color-neutral-25));
 }
 
 ion-label[ds-color=neutral-35] {
-  color: hsl(var(--med-color-neutral-35)) !important;
+  color: hsl(var(--med-color-neutral-35));
 }
 
 ion-label[ds-color=neutral-45] {
-  color: hsl(var(--med-color-neutral-45)) !important;
+  color: hsl(var(--med-color-neutral-45));
 }
 
 ion-label[ds-color=neutral-55] {
-  color: hsl(var(--med-color-neutral-55)) !important;
+  color: hsl(var(--med-color-neutral-55));
 }
 
 ion-label[ds-color=neutral-65] {
-  color: hsl(var(--med-color-neutral-65)) !important;
+  color: hsl(var(--med-color-neutral-65));
 }
 
 ion-label[ds-color=neutral-75] {
-  color: hsl(var(--med-color-neutral-75)) !important;
+  color: hsl(var(--med-color-neutral-75));
 }
 
 ion-label[ds-color=neutral-85] {
-  color: hsl(var(--med-color-neutral-85)) !important;
+  color: hsl(var(--med-color-neutral-85));
 }
 
 ion-label[ds-color=neutral-95] {
-  color: hsl(var(--med-color-neutral-95)) !important;
+  color: hsl(var(--med-color-neutral-95));
 }
 
 ion-label[ds-color=fb-attention] {
-  color: hsl(var(--med-color-fb-attention)) !important;
+  color: hsl(var(--med-color-fb-attention));
 }
 
 ion-label[ds-color=fb-caution] {
-  color: hsl(var(--med-color-fb-caution)) !important;
+  color: hsl(var(--med-color-fb-caution));
 }
 
 ion-label[ds-color=fb-warning] {
-  color: hsl(var(--med-color-fb-warning)) !important;
+  color: hsl(var(--med-color-fb-warning));
 }
 
 ion-label[ds-color=fb-success] {
-  color: hsl(var(--med-color-fb-success)) !important;
+  color: hsl(var(--med-color-fb-success));
 }
 
 ion-list {
   --ion-item-background: hsl(var(--med-color-neutral-2));
+  border-radius: 8px;
+}
+ion-list.list-md {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 ion-list.list-ios {
   background: transparent;
+}
+ion-list ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[radius=s00] {
+  border-radius: 0;
+}
+
+ion-list[radius=s02] {
+  border-radius: 2px;
+}
+
+ion-list[radius=s04] {
+  border-radius: 4px;
+}
+
+ion-list[radius=s08] {
+  border-radius: 8px;
+}
+
+ion-list[spacing-v=s00] ion-item {
+  --padding-bottom: 0;
+  --padding-top: 0;
+}
+
+ion-list[spacing-h=s00] ion-item {
+  --padding-end: 0;
+  --padding-start: 0;
+}
+
+ion-list[spacing-v=s02] ion-item {
+  --padding-bottom: 2px;
+  --padding-top: 2px;
+}
+
+ion-list[spacing-h=s02] ion-item {
+  --padding-end: 2px;
+  --padding-start: 2px;
+}
+
+ion-list[spacing-v=s04] ion-item {
+  --padding-bottom: 4px;
+  --padding-top: 4px;
+}
+
+ion-list[spacing-h=s04] ion-item {
+  --padding-end: 4px;
+  --padding-start: 4px;
+}
+
+ion-list[spacing-v=s08] ion-item {
+  --padding-bottom: 8px;
+  --padding-top: 8px;
+}
+
+ion-list[spacing-h=s08] ion-item {
+  --padding-end: 8px;
+  --padding-start: 8px;
+}
+
+ion-list[spacing-v=s12] ion-item {
+  --padding-bottom: 12px;
+  --padding-top: 12px;
+}
+
+ion-list[spacing-h=s12] ion-item {
+  --padding-end: 12px;
+  --padding-start: 12px;
+}
+
+ion-list[spacing-v=s16] ion-item {
+  --padding-bottom: 16px;
+  --padding-top: 16px;
+}
+
+ion-list[spacing-h=s16] ion-item {
+  --padding-end: 16px;
+  --padding-start: 16px;
+}
+
+ion-list[spacing-v=s20] ion-item {
+  --padding-bottom: 20px;
+  --padding-top: 20px;
+}
+
+ion-list[spacing-h=s20] ion-item {
+  --padding-end: 20px;
+  --padding-start: 20px;
+}
+
+ion-list[spacing-v=s24] ion-item {
+  --padding-bottom: 24px;
+  --padding-top: 24px;
+}
+
+ion-list[spacing-h=s24] ion-item {
+  --padding-end: 24px;
+  --padding-start: 24px;
+}
+
+ion-list[gap=s00] ion-item ion-checkbox[slot=start],
+ion-list[gap=s00] ion-item ion-radio[slot=start],
+ion-list[gap=s00] ion-item ion-toggle[slot=start],
+ion-list[gap=s00] ion-item ion-icon[slot=start],
+ion-list[gap=s00] ion-item ion-button[slot=start] {
+  margin: 0 0 0 0;
+}
+ion-list[gap=s00] ion-item ion-checkbox[slot=end],
+ion-list[gap=s00] ion-item ion-radio[slot=end],
+ion-list[gap=s00] ion-item ion-toggle[slot=end],
+ion-list[gap=s00] ion-item ion-icon[slot=end],
+ion-list[gap=s00] ion-item ion-button[slot=end] {
+  margin: 0 0 0 0;
+}
+
+ion-list[gap=s02] ion-item ion-checkbox[slot=start],
+ion-list[gap=s02] ion-item ion-radio[slot=start],
+ion-list[gap=s02] ion-item ion-toggle[slot=start],
+ion-list[gap=s02] ion-item ion-icon[slot=start],
+ion-list[gap=s02] ion-item ion-button[slot=start] {
+  margin: 0 2px 0 0;
+}
+ion-list[gap=s02] ion-item ion-checkbox[slot=end],
+ion-list[gap=s02] ion-item ion-radio[slot=end],
+ion-list[gap=s02] ion-item ion-toggle[slot=end],
+ion-list[gap=s02] ion-item ion-icon[slot=end],
+ion-list[gap=s02] ion-item ion-button[slot=end] {
+  margin: 0 0 0 2px;
+}
+
+ion-list[gap=s04] ion-item ion-checkbox[slot=start],
+ion-list[gap=s04] ion-item ion-radio[slot=start],
+ion-list[gap=s04] ion-item ion-toggle[slot=start],
+ion-list[gap=s04] ion-item ion-icon[slot=start],
+ion-list[gap=s04] ion-item ion-button[slot=start] {
+  margin: 0 4px 0 0;
+}
+ion-list[gap=s04] ion-item ion-checkbox[slot=end],
+ion-list[gap=s04] ion-item ion-radio[slot=end],
+ion-list[gap=s04] ion-item ion-toggle[slot=end],
+ion-list[gap=s04] ion-item ion-icon[slot=end],
+ion-list[gap=s04] ion-item ion-button[slot=end] {
+  margin: 0 0 0 4px;
+}
+
+ion-list[gap=s08] ion-item ion-checkbox[slot=start],
+ion-list[gap=s08] ion-item ion-radio[slot=start],
+ion-list[gap=s08] ion-item ion-toggle[slot=start],
+ion-list[gap=s08] ion-item ion-icon[slot=start],
+ion-list[gap=s08] ion-item ion-button[slot=start] {
+  margin: 0 8px 0 0;
+}
+ion-list[gap=s08] ion-item ion-checkbox[slot=end],
+ion-list[gap=s08] ion-item ion-radio[slot=end],
+ion-list[gap=s08] ion-item ion-toggle[slot=end],
+ion-list[gap=s08] ion-item ion-icon[slot=end],
+ion-list[gap=s08] ion-item ion-button[slot=end] {
+  margin: 0 0 0 8px;
+}
+
+ion-list[gap=s12] ion-item ion-checkbox[slot=start],
+ion-list[gap=s12] ion-item ion-radio[slot=start],
+ion-list[gap=s12] ion-item ion-toggle[slot=start],
+ion-list[gap=s12] ion-item ion-icon[slot=start],
+ion-list[gap=s12] ion-item ion-button[slot=start] {
+  margin: 0 12px 0 0;
+}
+ion-list[gap=s12] ion-item ion-checkbox[slot=end],
+ion-list[gap=s12] ion-item ion-radio[slot=end],
+ion-list[gap=s12] ion-item ion-toggle[slot=end],
+ion-list[gap=s12] ion-item ion-icon[slot=end],
+ion-list[gap=s12] ion-item ion-button[slot=end] {
+  margin: 0 0 0 12px;
+}
+
+ion-list[gap=s16] ion-item ion-checkbox[slot=start],
+ion-list[gap=s16] ion-item ion-radio[slot=start],
+ion-list[gap=s16] ion-item ion-toggle[slot=start],
+ion-list[gap=s16] ion-item ion-icon[slot=start],
+ion-list[gap=s16] ion-item ion-button[slot=start] {
+  margin: 0 16px 0 0;
+}
+ion-list[gap=s16] ion-item ion-checkbox[slot=end],
+ion-list[gap=s16] ion-item ion-radio[slot=end],
+ion-list[gap=s16] ion-item ion-toggle[slot=end],
+ion-list[gap=s16] ion-item ion-icon[slot=end],
+ion-list[gap=s16] ion-item ion-button[slot=end] {
+  margin: 0 0 0 16px;
+}
+
+ion-list[gap=s20] ion-item ion-checkbox[slot=start],
+ion-list[gap=s20] ion-item ion-radio[slot=start],
+ion-list[gap=s20] ion-item ion-toggle[slot=start],
+ion-list[gap=s20] ion-item ion-icon[slot=start],
+ion-list[gap=s20] ion-item ion-button[slot=start] {
+  margin: 0 20px 0 0;
+}
+ion-list[gap=s20] ion-item ion-checkbox[slot=end],
+ion-list[gap=s20] ion-item ion-radio[slot=end],
+ion-list[gap=s20] ion-item ion-toggle[slot=end],
+ion-list[gap=s20] ion-item ion-icon[slot=end],
+ion-list[gap=s20] ion-item ion-button[slot=end] {
+  margin: 0 0 0 20px;
+}
+
+ion-list[gap=s24] ion-item ion-checkbox[slot=start],
+ion-list[gap=s24] ion-item ion-radio[slot=start],
+ion-list[gap=s24] ion-item ion-toggle[slot=start],
+ion-list[gap=s24] ion-item ion-icon[slot=start],
+ion-list[gap=s24] ion-item ion-button[slot=start] {
+  margin: 0 24px 0 0;
+}
+ion-list[gap=s24] ion-item ion-checkbox[slot=end],
+ion-list[gap=s24] ion-item ion-radio[slot=end],
+ion-list[gap=s24] ion-item ion-toggle[slot=end],
+ion-list[gap=s24] ion-item ion-icon[slot=end],
+ion-list[gap=s24] ion-item ion-button[slot=end] {
+  margin: 0 0 0 24px;
+}
+
+ion-list[ds-color=brand] {
+  --ion-item-background: hsl(var(--med-color-brand-3));
+}
+ion-list[ds-color=brand] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=brand] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[ds-color=aula] {
+  --ion-item-background: hsl(var(--med-color-aula-3));
+}
+ion-list[ds-color=aula] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=aula] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[ds-color=material] {
+  --ion-item-background: hsl(var(--med-color-material-3));
+}
+ion-list[ds-color=material] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=material] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[ds-color=questoes] {
+  --ion-item-background: hsl(var(--med-color-questoes-3));
+}
+ion-list[ds-color=questoes] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=questoes] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[ds-color=revalida] {
+  --ion-item-background: hsl(var(--med-color-revalida-3));
+}
+ion-list[ds-color=revalida] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=revalida] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[ds-color=provas] {
+  --ion-item-background: hsl(var(--med-color-provas-3));
+}
+ion-list[ds-color=provas] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=provas] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[ds-color=neutral-1] {
+  --ion-item-background: hsl(var(--med-color-neutral-1));
+}
+ion-list[ds-color=neutral-1] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=neutral-1] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[ds-color=neutral-2] {
+  --ion-item-background: hsl(var(--med-color-neutral-2));
+}
+ion-list[ds-color=neutral-2] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=neutral-2] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[ds-color=neutral-3] {
+  --ion-item-background: hsl(var(--med-color-neutral-3));
+}
+ion-list[ds-color=neutral-3] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=neutral-3] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[ds-color=neutral-4] {
+  --ion-item-background: hsl(var(--med-color-neutral-4));
+}
+ion-list[ds-color=neutral-4] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=neutral-4] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[ds-color=neutral-5] {
+  --ion-item-background: hsl(var(--med-color-neutral-5));
+}
+ion-list[ds-color=neutral-5] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=neutral-5] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[ds-color=neutral-6] {
+  --ion-item-background: hsl(var(--med-color-neutral-6));
+}
+ion-list[ds-color=neutral-6] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-list[ds-color=neutral-6] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-list[ds-color=neutral-7] {
+  --ion-item-background: hsl(var(--med-color-neutral-7));
+}
+ion-list[ds-color=neutral-7] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-list[ds-color=neutral-7] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-list[ds-color=neutral-8] {
+  --ion-item-background: hsl(var(--med-color-neutral-8));
+}
+ion-list[ds-color=neutral-8] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-list[ds-color=neutral-8] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-list[ds-color=neutral-9] {
+  --ion-item-background: hsl(var(--med-color-neutral-9));
+}
+ion-list[ds-color=neutral-9] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-list[ds-color=neutral-9] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-list[ds-color=neutral-10] {
+  --ion-item-background: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=neutral-10] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-list[ds-color=neutral-10] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-list[ds-color=neutral-15] {
+  --ion-item-background: hsl(var(--med-color-neutral-15));
+}
+ion-list[ds-color=neutral-15] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=neutral-15] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[ds-color=neutral-25] {
+  --ion-item-background: hsl(var(--med-color-neutral-25));
+}
+ion-list[ds-color=neutral-25] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=neutral-25] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[ds-color=neutral-35] {
+  --ion-item-background: hsl(var(--med-color-neutral-35));
+}
+ion-list[ds-color=neutral-35] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=neutral-35] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[ds-color=neutral-45] {
+  --ion-item-background: hsl(var(--med-color-neutral-45));
+}
+ion-list[ds-color=neutral-45] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=neutral-45] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[ds-color=neutral-55] {
+  --ion-item-background: hsl(var(--med-color-neutral-55));
+}
+ion-list[ds-color=neutral-55] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-10));
+}
+ion-list[ds-color=neutral-55] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-10));
+}
+
+ion-list[ds-color=neutral-65] {
+  --ion-item-background: hsl(var(--med-color-neutral-65));
+}
+ion-list[ds-color=neutral-65] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-list[ds-color=neutral-65] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-list[ds-color=neutral-75] {
+  --ion-item-background: hsl(var(--med-color-neutral-75));
+}
+ion-list[ds-color=neutral-75] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-list[ds-color=neutral-75] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-list[ds-color=neutral-85] {
+  --ion-item-background: hsl(var(--med-color-neutral-85));
+}
+ion-list[ds-color=neutral-85] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-list[ds-color=neutral-85] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-list[ds-color=neutral-95] {
+  --ion-item-background: hsl(var(--med-color-neutral-95));
+}
+ion-list[ds-color=neutral-95] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-list[ds-color=neutral-95] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-list[ds-color=fb-attention] {
+  --ion-item-background: hsl(var(--med-color-fb-attention));
+}
+ion-list[ds-color=fb-attention] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-list[ds-color=fb-attention] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-list[ds-color=fb-caution] {
+  --ion-item-background: hsl(var(--med-color-fb-caution));
+}
+ion-list[ds-color=fb-caution] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-list[ds-color=fb-caution] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-list[ds-color=fb-warning] {
+  --ion-item-background: hsl(var(--med-color-fb-warning));
+}
+ion-list[ds-color=fb-warning] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-list[ds-color=fb-warning] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
+}
+
+ion-list[ds-color=fb-success] {
+  --ion-item-background: hsl(var(--med-color-fb-success));
+}
+ion-list[ds-color=fb-success] ion-item.item .sc-ion-label-ios-h {
+  --color: hsl(var(--med-color-neutral-1));
+}
+ion-list[ds-color=fb-success] ion-item ion-icon {
+  stroke: hsl(var(--med-color-neutral-1));
 }
 
 ion-radio {
@@ -6258,6 +7276,7 @@ ion-toggle {
   --handle-height: 18px;
   width: 34px;
   height: 22px;
+  padding: 0;
 }
 ion-toggle.toggle-disabled {
   opacity: 0.5;

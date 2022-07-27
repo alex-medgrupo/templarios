@@ -7,58 +7,175 @@ ion-item {
   --background-focused-opacity: 1;
   --background-hover-opacity: 1;
   --border-color: transparent;
-  --padding-top: 10px;
+  --padding-top: 16px;
   --padding-end: 16px;
-  --padding-bottom: 10px;
+  --padding-bottom: 16px;
   --padding-start: 16px;
   --min-height: auto;
 }
+
+//
+// radius
+//
+// $tp-base-radius in src/@templarios/styles/variables/_components.scss
+@each $radius-value, $radius in $tp-base-radius {
+  ion-item[radius='#{$radius-value}'] {
+    border-radius: #{$radius};
+  }
+}
+
+//
+// spacing
+//
+// $tp-base-spacing in src/@templarios/styles/variables/_components.scss
+@each $spacing-value, $spacing in $tp-base-spacing {
+  ion-item[spacing-v='#{$spacing-value}'] {
+    --padding-bottom: #{$spacing};
+    --padding-top: #{$spacing};
+  }
+
+  ion-item[spacing-h='#{$spacing-value}'] {
+    --padding-end: #{$spacing};
+    --padding-start: #{$spacing};
+  }
+}
+
 
 // slotted label
 ion-item {
   &.item {
     .sc-ion-label-ios-h {
       --color: hsl(var(--med-color-neutral-10));
-
       font-weight: 400;
-      font-size: 16px;
-      line-height: 16px;
-      margin-top: 0;
-      margin-bottom: 0;
+      font-size: 14px;
+      line-height: 14px;
+      margin: 0;
     }
   }
 }
 
-// slotted checkbox
+// slotted icon
 ion-item {
-  ion-checkbox[slot="start"] {
+  ion-icon {
+    font-size: 24px;
+    stroke: hsl(var(--med-color-neutral-10));
+  }
+}
+
+// slotted checkbox/radio/toggle
+ion-item {
+  ion-checkbox[slot="start"],
+  ion-radio[slot="start"],
+  ion-toggle[slot="start"],
+  ion-icon[slot="start"],
+  ion-button[slot="start"] {
     margin: 0 8px 0 0;
   }
 
-  ion-checkbox[slot="end"] {
+  ion-checkbox[slot="end"],
+  ion-radio[slot="end"],
+  ion-toggle[slot="end"],
+  ion-icon[slot="end"],
+  ion-button[slot="end"] {
     margin: 0 0 0 8px;
   }
 }
 
+//
+// gap
+//
+// $tp-base-gap in src/@templarios/styles/variables/_components.scss
+@each $gap-value, $gap in $tp-base-gap {
+  // slotted checkbox/radio/toggle
+  ion-item[gap='#{$gap-value}'] {
+    ion-checkbox[slot="start"],
+    ion-radio[slot="start"],
+    ion-toggle[slot="start"],
+    ion-icon[slot="start"],
+    ion-button[slot="start"] {
+      margin: 0 $gap 0 0;
+    }
 
-// slotted radio
-ion-item {
-  ion-radio[slot="start"] {
-    margin: 0 8px 0 0;
-  }
-
-  ion-radio[slot="end"] {
-    margin: 0 0 0 8px;
+    ion-checkbox[slot="end"],
+    ion-radio[slot="end"],
+    ion-toggle[slot="end"],
+    ion-icon[slot="end"],
+    ion-button[slot="end"] {
+      margin: 0 0 0 $gap;
+    }
   }
 }
 
-// slotted toggle
-ion-item {
-  ion-toggle[slot="start"] {
-    padding: 0 8px 0 0;
-  }
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-item, $color, $i) {
+      --background: #{tp-color($color, $i)};
 
-  ion-toggle[slot="end"] {
-    padding: 0 0 0 8px;
+      // slotted label
+      &.item .sc-ion-label-ios-h {
+        --color: #{tp-contrast-color($i)};
+      }
+
+      // slotted icon
+      ion-icon {
+        stroke: #{tp-contrast-color($i)};
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-item, neutral-#{$i}, $i) {
+    --background: #{tp-neutral($i)};
+
+    // slotted label
+    &.item .sc-ion-label-ios-h {
+      --color: #{tp-contrast-neutral($i)};
+    }
+
+    // slotted icon
+    ion-icon {
+      stroke: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-item, neutral-#{$i}#{5}, $i) {
+    --background: #{tp-neutral($i, 5)};
+
+    // slotted label
+    &.item .sc-ion-label-ios-h {
+      --color: #{tp-contrast-neutral($i)};
+    }
+
+    // slotted icon
+    ion-icon {
+      stroke: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-item, fb-#{$color}, $color) {
+    --background: #{tp-feedback($color)};
+
+    // slotted label
+    &.item .sc-ion-label-ios-h {
+      --color: hsl(var(--med-color-neutral-1));
+    }
+
+    // slotted icon
+    ion-icon {
+      stroke: hsl(var(--med-color-neutral-1));
+    }
   }
 }

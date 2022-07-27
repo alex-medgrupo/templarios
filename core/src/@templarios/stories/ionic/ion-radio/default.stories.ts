@@ -13,18 +13,13 @@ const Template = ({ 'ds-color': dsColor, 'ds-name': dsName, disabled }) => {
       <ion-content>
         <ion-radio-group value="Value 1">
           <ion-item mode="ios">
-            <ion-label ds-color="neutral-10">Value 1</ion-label>
+            <ion-label>Value 1</ion-label>
             <ion-radio ds-color=${dsColor} ds-name=${dsName} .disabled=${disabled} slot="start" value="value-1" mode="md"></ion-radio>
           </ion-item>
 
           <ion-item mode="ios">
-            <ion-label ds-color="neutral-10">Value 2</ion-label>
-            <ion-radio ds-color=${dsColor} ds-name=${dsName} .disabled=${disabled} slot="start" value="value-2" mode="md"></ion-radio>
-          </ion-item>
-
-          <ion-item mode="ios">
-            <ion-label ds-color="neutral-10">Value 3</ion-label>
-            <ion-radio ds-color=${dsColor} ds-name=${dsName} .disabled=${disabled} slot="start" value="value-3" mode="md"></ion-radio>
+            <ion-label>Value 2</ion-label>
+            <ion-radio ds-color=${dsColor} ds-name=${dsName} .disabled=${disabled} slot="end" value="value-2" mode="md"></ion-radio>
           </ion-item>
         </ion-radio-group>
       </ion-content>

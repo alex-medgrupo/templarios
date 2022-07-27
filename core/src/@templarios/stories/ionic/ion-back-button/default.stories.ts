@@ -47,7 +47,7 @@ Default.argTypes = {
     options: Object.values(TemplariosButtonSize),
     control: { type: 'select' },
     description: 'Define a variação de tamanho do.',
-    defaultValue: 'md',
+    defaultValue: 'xs',
     table: {
       type: { summary: Object.values(TemplariosButtonSize).join(' |') },
       defaultValue: { summary: 'undefined' },

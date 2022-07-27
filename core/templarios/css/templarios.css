@@ -10,12 +10,12 @@ ion-back-button {
   --padding-bottom: 0;
   --padding-start: 0;
   --padding-end: 0;
-  --min-width: 48px;
-  --min-height: 48px;
+  --min-width: 32px;
+  --min-height: 32px;
   display: inline-block;
 }
 ion-back-button ion-icon {
-  font-size: 32px;
+  font-size: 24px;
   stroke: var(--color);
 }
 ion-back-button[disabled] {
@@ -31,40 +31,24 @@ ion-back-button:hover ion-icon {
   stroke: var(--color-hover);
 }
 ion-back-button[ds-size=lg] {
-  --padding-top: 0;
-  --padding-bottom: 0;
-  --padding-start: 0;
-  --padding-end: 0;
   --min-width: 64px;
   --min-height: 64px;
 }
 ion-back-button[ds-size=lg] ion-icon {
   font-size: 48px;
 }
+ion-back-button [ds-size=md] {
+  --min-width: 48px;
+  --min-height: 48px;
+}
+ion-back-button [ds-size=md] ion-icon {
+  font-size: 32px;
+}
 ion-back-button[ds-size=sm] {
-  --padding-top: 0;
-  --padding-bottom: 0;
-  --padding-start: 0;
-  --padding-end: 0;
   --min-width: 40px;
   --min-height: 40px;
 }
-ion-back-button[ds-size=xs] {
-  --padding-top: 0;
-  --padding-bottom: 0;
-  --padding-start: 0;
-  --padding-end: 0;
-  --min-width: 32px;
-  --min-height: 32px;
-}
-ion-back-button[ds-size=xs] ion-icon {
-  font-size: 24px;
-}
 ion-back-button[ds-size=xxs] {
-  --padding-top: 0;
-  --padding-bottom: 0;
-  --padding-start: 0;
-  --padding-end: 0;
   --min-width: 24px;
   --min-height: 24px;
 }
@@ -72,10 +56,6 @@ ion-back-button[ds-size=xxs] ion-icon {
   font-size: 24px;
 }
 ion-back-button[ds-size=xxxs] {
-  --padding-top: 0;
-  --padding-bottom: 0;
-  --padding-start: 0;
-  --padding-end: 0;
   --min-width: 16px;
   --min-height: 16px;
 }
@@ -6962,625 +6942,445 @@ ion-select[ds-color=fb-success][ds-name=secondary] {
 ion-tab-bar {
   --background: hsl(var(--med-color-neutral-1));
 }
-ion-tab-bar ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar ion-label {
-  color: hsl(var(--med-color-neutral-10));
-}
 
 ion-tab-bar[ds-color=brand] {
   --background: hsl(var(--med-color-brand-3));
+}
+ion-tab-bar[ds-color=brand] ion-tab-button {
   --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=brand] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=brand] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-brand-5));
+  --color-focused: hsl(var(--med-color-brand-4));
 }
 
 ion-tab-bar[ds-color=aula] {
   --background: hsl(var(--med-color-aula-3));
+}
+ion-tab-bar[ds-color=aula] ion-tab-button {
   --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=aula] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=aula] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-aula-5));
+  --color-focused: hsl(var(--med-color-aula-4));
 }
 
 ion-tab-bar[ds-color=material] {
   --background: hsl(var(--med-color-material-3));
+}
+ion-tab-bar[ds-color=material] ion-tab-button {
   --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=material] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=material] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-material-5));
+  --color-focused: hsl(var(--med-color-material-4));
 }
 
 ion-tab-bar[ds-color=questoes] {
   --background: hsl(var(--med-color-questoes-3));
+}
+ion-tab-bar[ds-color=questoes] ion-tab-button {
   --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=questoes] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=questoes] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-questoes-5));
+  --color-focused: hsl(var(--med-color-questoes-4));
 }
 
 ion-tab-bar[ds-color=revalida] {
   --background: hsl(var(--med-color-revalida-3));
+}
+ion-tab-bar[ds-color=revalida] ion-tab-button {
   --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=revalida] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=revalida] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-revalida-5));
+  --color-focused: hsl(var(--med-color-revalida-4));
 }
 
 ion-tab-bar[ds-color=provas] {
   --background: hsl(var(--med-color-provas-3));
+}
+ion-tab-bar[ds-color=provas] ion-tab-button {
   --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=provas] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=provas] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-provas-5));
+  --color-focused: hsl(var(--med-color-provas-4));
 }
 
 ion-tab-bar[ds-color=neutral-1] {
   --background: hsl(var(--med-color-neutral-1));
+}
+ion-tab-bar[ds-color=neutral-1] ion-tab-button {
   --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-1] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-1] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
 }
 
 ion-tab-bar[ds-color=neutral-2] {
   --background: hsl(var(--med-color-neutral-2));
+}
+ion-tab-bar[ds-color=neutral-2] ion-tab-button {
   --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-2] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-2] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
 }
 
 ion-tab-bar[ds-color=neutral-3] {
   --background: hsl(var(--med-color-neutral-3));
+}
+ion-tab-bar[ds-color=neutral-3] ion-tab-button {
   --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-3] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-3] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
 }
 
 ion-tab-bar[ds-color=neutral-4] {
   --background: hsl(var(--med-color-neutral-4));
+}
+ion-tab-bar[ds-color=neutral-4] ion-tab-button {
   --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-4] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-4] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
 }
 
 ion-tab-bar[ds-color=neutral-5] {
   --background: hsl(var(--med-color-neutral-5));
+}
+ion-tab-bar[ds-color=neutral-5] ion-tab-button {
   --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-5] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-5] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
 }
 
 ion-tab-bar[ds-color=neutral-6] {
   --background: hsl(var(--med-color-neutral-6));
+}
+ion-tab-bar[ds-color=neutral-6] ion-tab-button {
   --color: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-6] ion-icon {
-  stroke: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-6] ion-label {
-  color: hsl(var(--med-color-neutral-1));
+  --color-selected: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
 }
 
 ion-tab-bar[ds-color=neutral-7] {
   --background: hsl(var(--med-color-neutral-7));
+}
+ion-tab-bar[ds-color=neutral-7] ion-tab-button {
   --color: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-7] ion-icon {
-  stroke: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-7] ion-label {
-  color: hsl(var(--med-color-neutral-1));
+  --color-selected: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
 }
 
 ion-tab-bar[ds-color=neutral-8] {
   --background: hsl(var(--med-color-neutral-8));
+}
+ion-tab-bar[ds-color=neutral-8] ion-tab-button {
   --color: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-8] ion-icon {
-  stroke: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-8] ion-label {
-  color: hsl(var(--med-color-neutral-1));
+  --color-selected: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
 }
 
 ion-tab-bar[ds-color=neutral-9] {
   --background: hsl(var(--med-color-neutral-9));
+}
+ion-tab-bar[ds-color=neutral-9] ion-tab-button {
   --color: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-9] ion-icon {
-  stroke: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-9] ion-label {
-  color: hsl(var(--med-color-neutral-1));
+  --color-selected: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
 }
 
 ion-tab-bar[ds-color=neutral-10] {
   --background: hsl(var(--med-color-neutral-10));
+}
+ion-tab-bar[ds-color=neutral-10] ion-tab-button {
   --color: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-10] ion-icon {
-  stroke: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-10] ion-label {
-  color: hsl(var(--med-color-neutral-1));
+  --color-selected: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
 }
 
 ion-tab-bar[ds-color=neutral-15] {
   --background: hsl(var(--med-color-neutral-15));
+}
+ion-tab-bar[ds-color=neutral-15] ion-tab-button {
   --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-15] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-15] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
 }
 
 ion-tab-bar[ds-color=neutral-25] {
   --background: hsl(var(--med-color-neutral-25));
+}
+ion-tab-bar[ds-color=neutral-25] ion-tab-button {
   --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-25] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-25] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
 }
 
 ion-tab-bar[ds-color=neutral-35] {
   --background: hsl(var(--med-color-neutral-35));
+}
+ion-tab-bar[ds-color=neutral-35] ion-tab-button {
   --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-35] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-35] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
 }
 
 ion-tab-bar[ds-color=neutral-45] {
   --background: hsl(var(--med-color-neutral-45));
+}
+ion-tab-bar[ds-color=neutral-45] ion-tab-button {
   --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-45] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-45] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
 }
 
 ion-tab-bar[ds-color=neutral-55] {
   --background: hsl(var(--med-color-neutral-55));
+}
+ion-tab-bar[ds-color=neutral-55] ion-tab-button {
   --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-55] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-bar[ds-color=neutral-55] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-neutral-10));
+  --color-focused: hsl(var(--med-color-neutral-10));
 }
 
 ion-tab-bar[ds-color=neutral-65] {
   --background: hsl(var(--med-color-neutral-65));
+}
+ion-tab-bar[ds-color=neutral-65] ion-tab-button {
   --color: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-65] ion-icon {
-  stroke: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-65] ion-label {
-  color: hsl(var(--med-color-neutral-1));
+  --color-selected: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
 }
 
 ion-tab-bar[ds-color=neutral-75] {
   --background: hsl(var(--med-color-neutral-75));
+}
+ion-tab-bar[ds-color=neutral-75] ion-tab-button {
   --color: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-75] ion-icon {
-  stroke: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-75] ion-label {
-  color: hsl(var(--med-color-neutral-1));
+  --color-selected: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
 }
 
 ion-tab-bar[ds-color=neutral-85] {
   --background: hsl(var(--med-color-neutral-85));
+}
+ion-tab-bar[ds-color=neutral-85] ion-tab-button {
   --color: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-85] ion-icon {
-  stroke: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-85] ion-label {
-  color: hsl(var(--med-color-neutral-1));
+  --color-selected: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
 }
 
 ion-tab-bar[ds-color=neutral-95] {
   --background: hsl(var(--med-color-neutral-95));
+}
+ion-tab-bar[ds-color=neutral-95] ion-tab-button {
   --color: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-95] ion-icon {
-  stroke: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=neutral-95] ion-label {
-  color: hsl(var(--med-color-neutral-1));
+  --color-selected: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
 }
 
 ion-tab-bar[ds-color=fb-attention] {
   --background: hsl(var(--med-color-fb-attention));
+}
+ion-tab-bar[ds-color=fb-attention] ion-tab-button {
   --color: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=fb-attention] ion-icon {
-  stroke: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=fb-attention] ion-label {
-  color: hsl(var(--med-color-neutral-1));
+  --color-selected: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
 }
 
 ion-tab-bar[ds-color=fb-caution] {
   --background: hsl(var(--med-color-fb-caution));
+}
+ion-tab-bar[ds-color=fb-caution] ion-tab-button {
   --color: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=fb-caution] ion-icon {
-  stroke: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=fb-caution] ion-label {
-  color: hsl(var(--med-color-neutral-1));
+  --color-selected: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
 }
 
 ion-tab-bar[ds-color=fb-warning] {
   --background: hsl(var(--med-color-fb-warning));
+}
+ion-tab-bar[ds-color=fb-warning] ion-tab-button {
   --color: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=fb-warning] ion-icon {
-  stroke: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=fb-warning] ion-label {
-  color: hsl(var(--med-color-neutral-1));
+  --color-selected: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
 }
 
 ion-tab-bar[ds-color=fb-success] {
   --background: hsl(var(--med-color-fb-success));
+}
+ion-tab-bar[ds-color=fb-success] ion-tab-button {
   --color: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=fb-success] ion-icon {
-  stroke: hsl(var(--med-color-neutral-1));
-}
-ion-tab-bar[ds-color=fb-success] ion-label {
-  color: hsl(var(--med-color-neutral-1));
+  --color-selected: hsl(var(--med-color-neutral-1));
+  --color-focused: hsl(var(--med-color-neutral-1));
 }
 
+ion-tab-button {
+  --color: hsl(var(--med-color-neutral-5));
+  --color-focused: hsl(var(--med-color-neutral-6));
+  --color-selected: hsl(var(--med-color-brand-4));
+  --background-focused-opacity: 0;
+  justify-content: flex-start;
+}
+@media (min-width: 992px) {
+  ion-tab-button {
+    justify-content: center;
+  }
+}
 ion-tab-button ion-icon {
+  stroke: var(--color);
   width: 24px;
   height: 24px;
 }
+ion-tab-button ion-label {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  color: var(--color);
+  margin: 4px 0 0 0;
+}
+ion-tab-button .tp-tab-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  ion-tab-button .tp-tab-button {
+    flex-direction: row;
+  }
+  ion-tab-button .tp-tab-button ion-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    margin: 0 0 0 6px;
+  }
+}
+
+@media (any-hover: hover) {
+  ion-tab-button:hover ion-icon {
+    stroke: var(--color-focused);
+  }
+  ion-tab-button:hover ion-label {
+    color: var(--color-focused);
+  }
+}
+ion-tab-button.ion-focused ion-icon {
+  stroke: var(--color-focused);
+}
+ion-tab-button.ion-focused ion-label {
+  color: var(--color-focused);
+}
+
+ion-tab-button.tab-selected ion-icon {
+  stroke: var(--color-selected);
+}
+ion-tab-button.tab-selected ion-label {
+  color: var(--color-selected);
+}
 
 ion-tab-button[ds-color=brand] {
-  --color: hsl(var(--med-color-brand-3));
-}
-ion-tab-button[ds-color=brand] ion-icon {
-  stroke: hsl(var(--med-color-brand-3));
-}
-ion-tab-button[ds-color=brand] ion-label {
-  color: hsl(var(--med-color-brand-3));
+  --color-selected: hsl(var(--med-color-brand-3));
 }
 
 ion-tab-button[ds-color=aula] {
-  --color: hsl(var(--med-color-aula-3));
-}
-ion-tab-button[ds-color=aula] ion-icon {
-  stroke: hsl(var(--med-color-aula-3));
-}
-ion-tab-button[ds-color=aula] ion-label {
-  color: hsl(var(--med-color-aula-3));
+  --color-selected: hsl(var(--med-color-aula-3));
 }
 
 ion-tab-button[ds-color=material] {
-  --color: hsl(var(--med-color-material-3));
-}
-ion-tab-button[ds-color=material] ion-icon {
-  stroke: hsl(var(--med-color-material-3));
-}
-ion-tab-button[ds-color=material] ion-label {
-  color: hsl(var(--med-color-material-3));
+  --color-selected: hsl(var(--med-color-material-3));
 }
 
 ion-tab-button[ds-color=questoes] {
-  --color: hsl(var(--med-color-questoes-3));
-}
-ion-tab-button[ds-color=questoes] ion-icon {
-  stroke: hsl(var(--med-color-questoes-3));
-}
-ion-tab-button[ds-color=questoes] ion-label {
-  color: hsl(var(--med-color-questoes-3));
+  --color-selected: hsl(var(--med-color-questoes-3));
 }
 
 ion-tab-button[ds-color=revalida] {
-  --color: hsl(var(--med-color-revalida-3));
-}
-ion-tab-button[ds-color=revalida] ion-icon {
-  stroke: hsl(var(--med-color-revalida-3));
-}
-ion-tab-button[ds-color=revalida] ion-label {
-  color: hsl(var(--med-color-revalida-3));
+  --color-selected: hsl(var(--med-color-revalida-3));
 }
 
 ion-tab-button[ds-color=provas] {
-  --color: hsl(var(--med-color-provas-3));
-}
-ion-tab-button[ds-color=provas] ion-icon {
-  stroke: hsl(var(--med-color-provas-3));
-}
-ion-tab-button[ds-color=provas] ion-label {
-  color: hsl(var(--med-color-provas-3));
+  --color-selected: hsl(var(--med-color-provas-3));
 }
 
 ion-tab-button[ds-color=neutral-1] {
-  --color: hsl(var(--med-color-neutral-1));
-}
-ion-tab-button[ds-color=neutral-1] ion-icon {
-  stroke: hsl(var(--med-color-neutral-1));
-}
-ion-tab-button[ds-color=neutral-1] ion-label {
-  color: hsl(var(--med-color-neutral-1));
+  --color-selected: hsl(var(--med-color-neutral-1));
 }
 
 ion-tab-button[ds-color=neutral-2] {
-  --color: hsl(var(--med-color-neutral-2));
-}
-ion-tab-button[ds-color=neutral-2] ion-icon {
-  stroke: hsl(var(--med-color-neutral-2));
-}
-ion-tab-button[ds-color=neutral-2] ion-label {
-  color: hsl(var(--med-color-neutral-2));
+  --color-selected: hsl(var(--med-color-neutral-2));
 }
 
 ion-tab-button[ds-color=neutral-3] {
-  --color: hsl(var(--med-color-neutral-3));
-}
-ion-tab-button[ds-color=neutral-3] ion-icon {
-  stroke: hsl(var(--med-color-neutral-3));
-}
-ion-tab-button[ds-color=neutral-3] ion-label {
-  color: hsl(var(--med-color-neutral-3));
+  --color-selected: hsl(var(--med-color-neutral-3));
 }
 
 ion-tab-button[ds-color=neutral-4] {
-  --color: hsl(var(--med-color-neutral-4));
-}
-ion-tab-button[ds-color=neutral-4] ion-icon {
-  stroke: hsl(var(--med-color-neutral-4));
-}
-ion-tab-button[ds-color=neutral-4] ion-label {
-  color: hsl(var(--med-color-neutral-4));
+  --color-selected: hsl(var(--med-color-neutral-4));
 }
 
 ion-tab-button[ds-color=neutral-5] {
-  --color: hsl(var(--med-color-neutral-5));
-}
-ion-tab-button[ds-color=neutral-5] ion-icon {
-  stroke: hsl(var(--med-color-neutral-5));
-}
-ion-tab-button[ds-color=neutral-5] ion-label {
-  color: hsl(var(--med-color-neutral-5));
+  --color-selected: hsl(var(--med-color-neutral-5));
 }
 
 ion-tab-button[ds-color=neutral-6] {
-  --color: hsl(var(--med-color-neutral-6));
-}
-ion-tab-button[ds-color=neutral-6] ion-icon {
-  stroke: hsl(var(--med-color-neutral-6));
-}
-ion-tab-button[ds-color=neutral-6] ion-label {
-  color: hsl(var(--med-color-neutral-6));
+  --color-selected: hsl(var(--med-color-neutral-6));
 }
 
 ion-tab-button[ds-color=neutral-7] {
-  --color: hsl(var(--med-color-neutral-7));
-}
-ion-tab-button[ds-color=neutral-7] ion-icon {
-  stroke: hsl(var(--med-color-neutral-7));
-}
-ion-tab-button[ds-color=neutral-7] ion-label {
-  color: hsl(var(--med-color-neutral-7));
+  --color-selected: hsl(var(--med-color-neutral-7));
 }
 
 ion-tab-button[ds-color=neutral-8] {
-  --color: hsl(var(--med-color-neutral-8));
-}
-ion-tab-button[ds-color=neutral-8] ion-icon {
-  stroke: hsl(var(--med-color-neutral-8));
-}
-ion-tab-button[ds-color=neutral-8] ion-label {
-  color: hsl(var(--med-color-neutral-8));
+  --color-selected: hsl(var(--med-color-neutral-8));
 }
 
 ion-tab-button[ds-color=neutral-9] {
-  --color: hsl(var(--med-color-neutral-9));
-}
-ion-tab-button[ds-color=neutral-9] ion-icon {
-  stroke: hsl(var(--med-color-neutral-9));
-}
-ion-tab-button[ds-color=neutral-9] ion-label {
-  color: hsl(var(--med-color-neutral-9));
+  --color-selected: hsl(var(--med-color-neutral-9));
 }
 
 ion-tab-button[ds-color=neutral-10] {
-  --color: hsl(var(--med-color-neutral-10));
-}
-ion-tab-button[ds-color=neutral-10] ion-icon {
-  stroke: hsl(var(--med-color-neutral-10));
-}
-ion-tab-button[ds-color=neutral-10] ion-label {
-  color: hsl(var(--med-color-neutral-10));
+  --color-selected: hsl(var(--med-color-neutral-10));
 }
 
 ion-tab-button[ds-color=neutral-15] {
-  --color: hsl(var(--med-color-neutral-15));
-}
-ion-tab-button[ds-color=neutral-15] ion-icon {
-  stroke: hsl(var(--med-color-neutral-15));
-}
-ion-tab-button[ds-color=neutral-15] ion-label {
-  color: hsl(var(--med-color-neutral-15));
+  --color-selected: hsl(var(--med-color-neutral-15));
 }
 
 ion-tab-button[ds-color=neutral-25] {
-  --color: hsl(var(--med-color-neutral-25));
-}
-ion-tab-button[ds-color=neutral-25] ion-icon {
-  stroke: hsl(var(--med-color-neutral-25));
-}
-ion-tab-button[ds-color=neutral-25] ion-label {
-  color: hsl(var(--med-color-neutral-25));
+  --color-selected: hsl(var(--med-color-neutral-25));
 }
 
 ion-tab-button[ds-color=neutral-35] {
-  --color: hsl(var(--med-color-neutral-35));
-}
-ion-tab-button[ds-color=neutral-35] ion-icon {
-  stroke: hsl(var(--med-color-neutral-35));
-}
-ion-tab-button[ds-color=neutral-35] ion-label {
-  color: hsl(var(--med-color-neutral-35));
+  --color-selected: hsl(var(--med-color-neutral-35));
 }
 
 ion-tab-button[ds-color=neutral-45] {
-  --color: hsl(var(--med-color-neutral-45));
-}
-ion-tab-button[ds-color=neutral-45] ion-icon {
-  stroke: hsl(var(--med-color-neutral-45));
-}
-ion-tab-button[ds-color=neutral-45] ion-label {
-  color: hsl(var(--med-color-neutral-45));
+  --color-selected: hsl(var(--med-color-neutral-45));
 }
 
 ion-tab-button[ds-color=neutral-55] {
-  --color: hsl(var(--med-color-neutral-55));
-}
-ion-tab-button[ds-color=neutral-55] ion-icon {
-  stroke: hsl(var(--med-color-neutral-55));
-}
-ion-tab-button[ds-color=neutral-55] ion-label {
-  color: hsl(var(--med-color-neutral-55));
+  --color-selected: hsl(var(--med-color-neutral-55));
 }
 
 ion-tab-button[ds-color=neutral-65] {
-  --color: hsl(var(--med-color-neutral-65));
-}
-ion-tab-button[ds-color=neutral-65] ion-icon {
-  stroke: hsl(var(--med-color-neutral-65));
-}
-ion-tab-button[ds-color=neutral-65] ion-label {
-  color: hsl(var(--med-color-neutral-65));
+  --color-selected: hsl(var(--med-color-neutral-65));
 }
 
 ion-tab-button[ds-color=neutral-75] {
-  --color: hsl(var(--med-color-neutral-75));
-}
-ion-tab-button[ds-color=neutral-75] ion-icon {
-  stroke: hsl(var(--med-color-neutral-75));
-}
-ion-tab-button[ds-color=neutral-75] ion-label {
-  color: hsl(var(--med-color-neutral-75));
+  --color-selected: hsl(var(--med-color-neutral-75));
 }
 
 ion-tab-button[ds-color=neutral-85] {
-  --color: hsl(var(--med-color-neutral-85));
-}
-ion-tab-button[ds-color=neutral-85] ion-icon {
-  stroke: hsl(var(--med-color-neutral-85));
-}
-ion-tab-button[ds-color=neutral-85] ion-label {
-  color: hsl(var(--med-color-neutral-85));
+  --color-selected: hsl(var(--med-color-neutral-85));
 }
 
 ion-tab-button[ds-color=neutral-95] {
-  --color: hsl(var(--med-color-neutral-95));
-}
-ion-tab-button[ds-color=neutral-95] ion-icon {
-  stroke: hsl(var(--med-color-neutral-95));
-}
-ion-tab-button[ds-color=neutral-95] ion-label {
-  color: hsl(var(--med-color-neutral-95));
+  --color-selected: hsl(var(--med-color-neutral-95));
 }
 
 ion-tab-button[ds-color=fb-attention] {
-  --color: hsl(var(--med-color-fb-attention));
-}
-ion-tab-button[ds-color=fb-attention] ion-icon {
-  stroke: hsl(var(--med-color-fb-attention));
-}
-ion-tab-button[ds-color=fb-attention] ion-label {
-  color: hsl(var(--med-color-fb-attention));
+  --color-selected: hsl(var(--med-color-fb-attention));
 }
 
 ion-tab-button[ds-color=fb-caution] {
-  --color: hsl(var(--med-color-fb-caution));
-}
-ion-tab-button[ds-color=fb-caution] ion-icon {
-  stroke: hsl(var(--med-color-fb-caution));
-}
-ion-tab-button[ds-color=fb-caution] ion-label {
-  color: hsl(var(--med-color-fb-caution));
+  --color-selected: hsl(var(--med-color-fb-caution));
 }
 
 ion-tab-button[ds-color=fb-warning] {
-  --color: hsl(var(--med-color-fb-warning));
-}
-ion-tab-button[ds-color=fb-warning] ion-icon {
-  stroke: hsl(var(--med-color-fb-warning));
-}
-ion-tab-button[ds-color=fb-warning] ion-label {
-  color: hsl(var(--med-color-fb-warning));
+  --color-selected: hsl(var(--med-color-fb-warning));
 }
 
 ion-tab-button[ds-color=fb-success] {
-  --color: hsl(var(--med-color-fb-success));
-}
-ion-tab-button[ds-color=fb-success] ion-icon {
-  stroke: hsl(var(--med-color-fb-success));
-}
-ion-tab-button[ds-color=fb-success] ion-label {
-  color: hsl(var(--med-color-fb-success));
+  --color-selected: hsl(var(--med-color-fb-success));
 }
 
 ion-textarea.sc-ion-textarea-md-h {

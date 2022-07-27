@@ -35,28 +35,38 @@ const Template = ({ 'ds-color': dsColor }) => {
 
         <ion-tab-bar slot="bottom" ds-color=${dsColor}>
           <ion-tab-button mode="ios" tab="questao">
-            <ion-icon class="med-icon" name="med-questao"></ion-icon>
-            <ion-label token="p10">Questão</ion-label>
+            <div class="tp-tab-button">
+              <ion-icon class="med-icon" name="med-questao"></ion-icon>
+              <ion-label>Questão</ion-label>
+            </div>
           </ion-tab-button>
 
           <ion-tab-button mode="ios" tab="gabarito-comentado">
-            <ion-icon class="med-icon" name="med-gabarito"></ion-icon>
-            <ion-label token="p10">Gabarito Comentado</ion-label>
+            <div class="tp-tab-button">
+              <ion-icon class="med-icon" name="med-gabarito"></ion-icon>
+              <ion-label>Gabarito Comentado</ion-label>
+            </div>
           </ion-tab-button>
 
           <ion-tab-button mode="ios" tab="cartao-resposta">
-            <ion-icon class="med-icon" name="med-cartao"></ion-icon>
-            <ion-label token="p10">Cartão Resposta</ion-label>
+            <div class="tp-tab-button">
+              <ion-icon class="med-icon" name="med-cartao"></ion-icon>
+              <ion-label>Cartão Resposta</ion-label>
+            </div>
           </ion-tab-button>
 
           <ion-tab-button mode="ios" tab="duvidas">
-            <ion-icon class="med-icon" name="med-duvidas"></ion-icon>
-            <ion-label token="p10">Dúvidas</ion-label>
+            <div class="tp-tab-button">
+              <ion-icon class="med-icon" name="med-duvidas"></ion-icon>
+              <ion-label>Dúvidas</ion-label>
+            </div>
           </ion-tab-button>
 
           <ion-tab-button mode="ios" tab="recursos">
-            <ion-icon  class="med-icon" name="med-recursos"></ion-icon>
-            <ion-label token="p10">Recursos</ion-label>
+            <div class="tp-tab-button">
+              <ion-icon class="med-icon" name="med-recursos"></ion-icon>
+              <ion-label>Recursos</ion-label>
+            </div>
           </ion-tab-button>
         </ion-tab-bar>
 

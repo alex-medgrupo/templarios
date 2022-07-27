@@ -1,13 +1,5 @@
 ion-tab-bar {
   --background: hsl(var(--med-color-neutral-1));
-
-  ion-icon {
-    stroke: hsl(var(--med-color-neutral-10));
-  }
-
-  ion-label {
-    color: hsl(var(--med-color-neutral-10));
-  }
 }
 
 //
@@ -17,14 +9,11 @@ ion-tab-bar {
   @for $i from 1 through 5 {
     @include generate-component-color(ion-tab-bar, $color, $i) {
       --background: #{tp-color($color, $i)};
-      --color: #{tp-contrast-color($i)};
 
-      ion-icon {
-        stroke: #{tp-contrast-color($i)};
-      }
-
-      ion-label {
-        color: #{tp-contrast-color($i)};
+      ion-tab-button {
+        --color: #{tp-contrast-color($i)};
+        --color-selected: #{tp-color($color, 5)};
+        --color-focused: #{tp-color($color, 4)};
       }
     }
   }
@@ -36,28 +25,22 @@ ion-tab-bar {
 @for $i from 1 through 10 {
   @include generate-component-neutral(ion-tab-bar, neutral-#{$i}, $i) {
     --background: #{tp-neutral($i)};
-    --color: #{tp-contrast-neutral($i)};
 
-    ion-icon {
-      stroke: #{tp-contrast-neutral($i)};
-    }
-
-    ion-label {
-      color: #{tp-contrast-neutral($i)};
+    ion-tab-button {
+      --color: #{tp-contrast-neutral($i)};
+      --color-selected: #{tp-contrast-neutral($i)};
+      --color-focused: #{tp-contrast-neutral($i)};
     }
   }
 }
 @for $i from 1 through 9 {
   @include generate-component-neutral(ion-tab-bar, neutral-#{$i}#{5}, $i) {
     --background: #{tp-neutral($i, 5)};
-    --color: #{tp-contrast-neutral($i)};
 
-    ion-icon {
-      stroke: #{tp-contrast-neutral($i)};
-    }
-
-    ion-label {
-      color: #{tp-contrast-neutral($i)};
+    ion-tab-button {
+      --color: #{tp-contrast-neutral($i)};
+      --color-selected: #{tp-contrast-neutral($i)};
+      --color-focused: #{tp-contrast-neutral($i)};
     }
   }
 }
@@ -68,14 +51,11 @@ ion-tab-bar {
 @each $color in $tp-feedback {
   @include generate-component-feedback(ion-tab-bar, fb-#{$color}, $color) {
     --background: #{tp-feedback($color)};
-    --color: hsl(var(--med-color-neutral-1));
 
-    ion-icon {
-      stroke: hsl(var(--med-color-neutral-1));
-    }
-
-    ion-label {
-      color: hsl(var(--med-color-neutral-1));
+    ion-tab-button {
+      --color: hsl(var(--med-color-neutral-1));
+      --color-selected: hsl(var(--med-color-neutral-1));
+      --color-focused: hsl(var(--med-color-neutral-1));
     }
   }
 }

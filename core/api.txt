@@ -1002,6 +1002,17 @@ ion-searchbar,event,ionChange,SearchbarChangeEventDetail,true
 ion-searchbar,event,ionClear,void,true
 ion-searchbar,event,ionFocus,void,true
 ion-searchbar,event,ionInput,KeyboardEvent,true
+ion-searchbar,css-prop,--background
+ion-searchbar,css-prop,--border-radius
+ion-searchbar,css-prop,--box-shadow
+ion-searchbar,css-prop,--cancel-button-color
+ion-searchbar,css-prop,--clear-button-color
+ion-searchbar,css-prop,--color
+ion-searchbar,css-prop,--icon-color
+ion-searchbar,css-prop,--placeholder-color
+ion-searchbar,css-prop,--placeholder-font-style
+ion-searchbar,css-prop,--placeholder-font-weight
+ion-searchbar,css-prop,--placeholder-opacity
 
 ion-segment,shadow
 ion-segment,prop,color,string | undefined,undefined,false,false

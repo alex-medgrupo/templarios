@@ -1,0 +1,116 @@
+ion-searchbar {
+  &.sc-ion-searchbar-md-h {
+    --background: hsl(var(--med-color-neutral-2));
+    --color: hsl(var(--med-color-neutral-10));
+
+    --border-radius: 8px;
+    --box-shadow: none;
+
+    --placeholder-color: hsl(var(--med-color-neutral-5));
+    --placeholder-font-weight: 400;
+    --placeholder-opacity: 1;
+
+    --icon-color: hsl(var(--med-color-neutral-5));
+    --clear-button-color: hsl(var(--med-color-neutral-5));
+
+    height: 40px;
+    padding: 0px;
+  }
+
+  .searchbar-input.sc-ion-searchbar-md {
+    font-size: 14px;
+    height: 40px;
+    padding-inline-start: 40px;
+    padding-inline-end: 40px;
+  }
+
+  .searchbar-input-container.sc-ion-searchbar-md {
+    height: 40px;
+  }
+
+  .searchbar-search-icon.sc-ion-searchbar-md {
+    left: 8px;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    stroke: var(--icon-color);
+  }
+
+  .searchbar-clear-button.sc-ion-searchbar-md {
+    right: 8px;
+  }
+
+  .searchbar-clear-icon.sc-ion-searchbar-md {
+    width: 24px;
+    height: 24px;
+    stroke: var(--clear-button-color);
+  }
+}
+
+//
+// name
+//
+ion-searchbar[ds-name='secondary'] {
+  &.sc-ion-searchbar-md-h {
+    --background: hsl(var(--med-color-neutral-3));
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-searchbar, $color, $i) {
+      &.sc-ion-searchbar-md-h {
+        --background: #{tp-color($color, $i)};
+        --color: #{tp-contrast-color($i)};
+        --placeholder-color: #{tp-contrast-color($i)};
+        --icon-color: #{tp-contrast-color($i)};
+        --clear-button-color: #{tp-contrast-color($i)};
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-searchbar, neutral-#{$i}, $i) {
+    &.sc-ion-searchbar-md-h {
+      --background: #{tp-neutral($i)};
+      --color: #{tp-contrast-neutral($i)};
+      --placeholder-color: #{tp-contrast-neutral($i)};
+      --icon-color: #{tp-contrast-neutral($i)};
+      --clear-button-color: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-searchbar, neutral-#{$i}#{5}, $i) {
+    &.sc-ion-searchbar-md-h {
+      --background: #{tp-neutral($i, 5)};
+      --color: #{tp-contrast-neutral($i)};
+      --placeholder-color: #{tp-contrast-neutral($i)};
+      --placeholder-color: #{tp-contrast-neutral($i)};
+      --icon-color: #{tp-contrast-neutral($i)};
+      --clear-button-color: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-searchbar, fb-#{$color}, $color) {
+    &.sc-ion-searchbar-md-h {
+      --background: #{tp-feedback($color)};
+      --color: hsl(var(--med-color-neutral-1));
+      --placeholder-color: hsl(var(--med-color-neutral-1));
+      --icon-color: hsl(var(--med-color-neutral-1));
+      --clear-button-color: hsl(var(--med-color-neutral-1));
+    }
+  }
+}

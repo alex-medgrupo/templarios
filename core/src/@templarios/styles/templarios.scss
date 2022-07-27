@@ -35,6 +35,10 @@
 // checkbox
 @import './components/ionic/ion-checkbox/checkbox';
 
+// datetime
+@import './components/ionic/ion-datetime/datetime';
+@import './components/ionic/ion-datetime/datetime-modal';
+
 // fab-button
 @import './components/ionic/ion-fab-button/fab-button';
 
@@ -59,6 +63,9 @@
 // radio
 @import './components/ionic/ion-radio/radio';
 
+// searchbar
+@import './components/ionic/ion-searchbar/searchbar';
+
 // select
 @import './components/ionic/ion-select/select';
 
@@ -81,7 +88,6 @@
 @import "./components/utils/utils";
 
 // Global
-@import "./components/global/datetime";
 @import "./components/global/dialog";
 @import "./components/global/font-zoom-popover";
 @import "./components/global/intro-tooltip";

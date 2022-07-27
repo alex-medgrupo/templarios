@@ -123,6 +123,6 @@
   &::slotted(ion-icon) {
     --color: #{curr-color('feedback', null, 'contrast')} !important;
 
-    stroke: #{color('neutral', '6')} !important;
+    stroke: #{curr-color('feedback', null, 'contrast')} !important;
   }
 }

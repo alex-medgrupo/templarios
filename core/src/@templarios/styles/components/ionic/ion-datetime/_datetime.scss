@@ -1,0 +1,60 @@
+ion-datetime {
+  --padding-end: 16px;
+  --padding-start: 16px;
+  --padding-bottom: 12px;
+  --padding-top: 12px;
+  --placeholder-color: hsl(var(--med-color-neutral-5));
+
+  width: 100%;
+  margin-top: 0px;
+  font-size: 14px;
+  background: hsl(var(--med-color-neutral-2));
+  border-radius: 8px;
+  height: 40px;
+  color: var(--placeholder-color);
+}
+
+//
+// name
+//
+ion-datetime[ds-name='secondary'] {
+  background: hsl(var(--med-color-neutral-3));
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-datetime, $color, $i) {
+      --placeholder-color: #{tp-contrast-color($i)};
+      background: #{tp-color($color, $i)};
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-datetime, neutral-#{$i}, $i) {
+    --placeholder-color: #{tp-contrast-neutral($i)};
+    background: #{tp-neutral($i)};
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-datetime, neutral-#{$i}#{5}, $i) {
+    --placeholder-color: #{tp-contrast-neutral($i)};
+    background: #{tp-neutral($i, 5)};
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-datetime, fb-#{$color}, $color) {
+    --placeholder-color: hsl(var(--med-color-neutral-1));
+    background: #{tp-feedback($color)};
+  }
+}

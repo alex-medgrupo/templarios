@@ -25,7 +25,7 @@ import { mdLeaveAnimation } from './animations/md.leave';
     ios: 'toast.ios.scss',
     md: 'toast.md.scss'
   },
-  shadow: true
+  scoped: true // templarios
 })
 export class Toast implements ComponentInterface, OverlayInterface {
 
@@ -243,7 +243,7 @@ export class Toast implements ComponentInterface, OverlayInterface {
                 <ion-icon
                   icon={b.icon}
                   slot={b.text === undefined ? 'icon-only' : undefined}
-                  class="toast-icon"
+                  class="med-icon toast-icon"
                 />}
               {b.text}
             </div>

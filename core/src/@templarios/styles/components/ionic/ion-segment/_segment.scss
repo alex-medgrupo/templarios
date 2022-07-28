@@ -1,0 +1,41 @@
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-segment, $color, $i) {
+      ion-segment-button {
+        --indicator-color: #{tp-color($color, $i)};
+      }
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-segment, neutral-#{$i}, $i) {
+    ion-segment-button {
+      --indicator-color: #{tp-neutral($i)};
+    }
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-segment, neutral-#{$i}#{5}, $i) {
+    ion-segment-button {
+      --indicator-color: #{tp-neutral($i, 5)};
+    }
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-segment, fb-#{$color}, $color) {
+    ion-segment-button {
+      --indicator-color: #{tp-feedback($color)};
+    }
+  }
+}

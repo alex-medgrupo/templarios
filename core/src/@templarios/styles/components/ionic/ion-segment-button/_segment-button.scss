@@ -1,0 +1,45 @@
+ion-segment-button {
+  --color: hsl(var(--med-color-neutral-5));
+  --color-checked: hsl(var(--med-color-neutral-10));
+  --indicator-color: hsl(var(--med-color-brand-3));
+
+  ion-label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-segment-button, $color, $i) {
+      --indicator-color: #{tp-color($color, $i)};
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-segment-button, neutral-#{$i}, $i) {
+    --indicator-color: #{tp-neutral($i)};
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-segment-button, neutral-#{$i}#{5}, $i) {
+    --indicator-color: #{tp-neutral($i, 5)};
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-segment-button, fb-#{$color}, $color) {
+    --indicator-color: #{tp-feedback($color)};
+  }
+}

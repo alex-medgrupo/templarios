@@ -243,7 +243,7 @@ export class Toast implements ComponentInterface, OverlayInterface {
                 <ion-icon
                   icon={b.icon}
                   slot={b.text === undefined ? 'icon-only' : undefined}
-                  class="med-icon toast-icon"
+                  class="med-icon toast-icon" // templarios
                 />}
               {b.text}
             </div>

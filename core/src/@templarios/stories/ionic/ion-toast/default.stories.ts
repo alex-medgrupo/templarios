@@ -1,15 +1,13 @@
 import { html } from 'lit-html';
 import { withDesign } from 'storybook-addon-designs';
 import { toastController } from '../../../../../dist/ionic/index.esm.js';
-import { MedColors } from '../../../templarios';
-import { generateMedColor } from '../../../../@templarios/utilities/color';
 
 export default {
   title: 'Components/Ionic/Toast',
   decorators: [withDesign],
 };
 
-const Template = ({'color-modifiers': colorModifiers}) => {
+const Template = ({'color-modifiers': colorModifiers, icons}) => {
 
   const openToast = async () => {
     toastController.create({
@@ -20,7 +18,7 @@ const Template = ({'color-modifiers': colorModifiers}) => {
       buttons: [
       {
         side: 'end',
-        icon: 'med-fechar',
+        icon: icons,
         role: 'cancel',
         handler: () => {
           console.log('Cancel clicked');
@@ -58,6 +56,16 @@ Default.argTypes = {
     defaultValue: undefined,
     table: {
       type: { summary: 'tp-toast--success | tp-toast--warning' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  icons: {
+    options: [undefined, 'med-fechar', 'med-checkcirculo', 'med-alerta'],
+    control: { type: 'select' },
+    description: 'Define a cor do componente.',
+    defaultValue: undefined,
+    table: {
+      type: { summary: 'med-fechar | med-checkcirculo | med-alerta' },
       defaultValue: { summary: 'undefined' },
     },
   },

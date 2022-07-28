@@ -7,12 +7,12 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ 'ds-color': dsColor, value }) => {
+const Template = ({ 'ds-color': dsColor, value = 50 }) => {
   return html`
     <ion-app>
       <ion-content>
 
-        <ion-progress-bar .ds-color=${dsColor} value=${value / 100}></ion-progress-bar>
+        <ion-progress-bar ds-color=${dsColor} value=${value / 100}></ion-progress-bar>
 
       </ion-content>
     </ion-app>
@@ -38,7 +38,7 @@ Default.argTypes = {
     },
   },
   value: {
-    defaultValue: '50',
+    defaultValue: 50,
     control: { type: 'range', min: 0, max: 100, step: 1 },
     description: 'Define a porcentagem a ser mostrada.'
   },

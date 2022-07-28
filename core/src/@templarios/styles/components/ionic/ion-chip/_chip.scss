@@ -1,16 +1,119 @@
 ion-chip {
-  --background: hsl(var(--med-color-brand-3));
-  --color: hsl(var(--med-color-neutral-10));
+  --background: transparent;
+  --color: hsl(var(--med-color-brand-3));
 
+  --background-active: hsl(var(--med-color-brand-3));
+  --color-active: hsl(var(--med-color-brand-3));
+
+  border: 1px solid var(--color);
   font-weight: 600;
   font-size: 12px;
-  line-height: 600;
+  line-height: 12px;
+  height: 28px;
+  padding: 7px;
+
+  ion-label {
+    color: var(--color);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+  }
 
   ion-icon {
-    stroke: hsl(var(--med-color-brand-3));
-    background-color: hsl(var(--med-color-neutral-10));
+    stroke: hsl(var(--med-color-neutral-1));
+    background-color: var(--color);
     border-radius: 50%;
     font-size: 16px;
     padding: 2px;
+  }
+}
+
+
+// size
+ion-chip {
+  &[ds-size="md"] {
+    height: 32px;
+
+    ion-label {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    ion-icon {
+      padding: 4px;
+    }
+  }
+}
+
+
+// states
+
+ion-chip {
+  &[active],
+  &.ion-focused,
+  &.ion-activated {
+    --background: var(--background-active);
+    --color: var(--color-active);
+
+    ion-icon {
+      stroke: var(--background-active);
+      background-color: var(--color-active);
+    }
+  }
+}
+
+@media (any-hover: hover) {
+  ion-chip:hover {
+    --background: var(--background-active);
+    --color: var(--color-active);
+
+    ion-icon {
+      stroke: var(--background-active);
+      background-color: var(--color-active);
+    }
+  }
+}
+
+ion-chip {
+  &[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-chip, $color, $i) {
+      --color: #{tp-color($color, $i)};
+      --background-active:#{tp-color($color, $i)};
+      --color-active: hsl(var(--med-color-neutral-10));
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-chip, neutral-#{$i}, $i) {
+    --color-selected: #{tp-neutral($i)};
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-chip, neutral-#{$i}#{5}, $i) {
+    --color-selected: #{tp-neutral($i, 5)};
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-chip, fb-#{$color}, $color) {
+    --color-selected: #{tp-feedback($color)};
   }
 }

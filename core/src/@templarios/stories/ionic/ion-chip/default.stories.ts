@@ -7,12 +7,26 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ 'ds-color': dsColor, 'ds-size': dsSize, slot }) => {
+const Template = ({ 'ds-color': dsColor, 'ds-size': dsSize, active, disabled, slot }) => {
   return html`
     <ion-app>
       <ion-content>
 
-        <ion-chip ds-color=${dsColor} ds-size=${dsSize}>
+        <ion-chip ds-color=${dsColor} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
+          <ion-label> ${slot} </ion-label>
+        </ion-chip>
+
+        <ion-chip ds-color=${dsColor} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
+          <ion-icon class="med-icon" name="med-star-filled"></ion-icon>
+          <ion-label> ${slot} </ion-label>
+        </ion-chip>
+
+        <ion-chip ds-color=${dsColor} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
+          <ion-label> ${slot} </ion-label>
+          <ion-icon class="med-icon" name="med-star-filled"></ion-icon>
+        </ion-chip>
+
+        <ion-chip ds-color=${dsColor} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
           <ion-icon class="med-icon" name="med-star-filled"></ion-icon>
           <ion-label> ${slot} </ion-label>
           <ion-icon class="med-icon" name="med-star-filled"></ion-icon>
@@ -48,6 +62,24 @@ Default.argTypes = {
     defaultValue: 'sm',
     table: {
       type: { summary: Object.values(TemplariosChipSize).join(' |') },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  active: {
+    disabled: false,
+    control: { type: 'boolean' },
+    description: 'Define o estado disabled do componente.',
+    table: {
+      type: { summary: 'boolean' },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  disabled: {
+    disabled: false,
+    control: { type: 'boolean' },
+    description: 'Define o estado disabled do componente.',
+    table: {
+      type: { summary: 'boolean' },
       defaultValue: { summary: 'undefined' },
     },
   },

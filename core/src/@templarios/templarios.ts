@@ -1,3 +1,4 @@
+export * from './enums/avatar.enum';
 export * from './enums/badge.enum';
 export * from './enums/base.enum';
 export * from './enums/button.enum';

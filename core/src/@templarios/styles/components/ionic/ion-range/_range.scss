@@ -1,0 +1,50 @@
+ion-range {
+  --bar-background: hsl(var(--med-color-neutral-7));
+  --bar-background-active: hsl(var(--med-color-brand-4));
+  --knob-size: 24px;
+  --height: 24px;
+
+  padding: 0;
+
+  ion-icon[slot="start"] {
+    margin-right: 8px;
+  }
+
+  ion-icon[slot="end"] {
+    margin-left: 8px;
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-range, $color, $i) {
+      --bar-background-active: #{tp-color($color, $i)};
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-range, neutral-#{$i}, $i) {
+    --bar-background-active: #{tp-neutral($i)};
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-range, neutral-#{$i}#{5}, $i) {
+    --bar-background-active: #{tp-neutral($i, 5)};
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-range, fb-#{$color}, $color) {
+    --bar-background-active: #{tp-feedback($color)};
+  }
+}

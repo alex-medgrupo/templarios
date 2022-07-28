@@ -1,0 +1,82 @@
+ion-avatar {
+  width: 48px;
+  height: 48px;
+  background: hsl(var(--med-color-brand-4));
+  color: hsl(var(--med-color-brand-10));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &[ds-size='xxl'] {
+    width: 80px;
+    height: 80px;
+  }
+
+  &[ds-size='xl'] {
+    width: 72px;
+    height: 72px;
+  }
+
+  [ds-size='lg'] {
+    width: 64px;
+    height: 64px;
+  }
+
+  [ds-size='md'] {
+    width: 56px;
+    height: 56px;
+  }
+
+  &[ds-size='sm'] {
+    width: 40px;
+    height: 40px;
+  }
+
+  &[ds-size='xxs'] {
+    width: 32px;
+    height: 32px;
+  }
+
+  &[ds-size='xxxs'] {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-avatar, $color, $i) {
+      background: #{tp-color($color, $i)};
+      color: #{tp-contrast-neutral($i)};
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-avatar, neutral-#{$i}, $i) {
+    background: #{tp-neutral($i)};
+    color: #{tp-contrast-neutral($i)};
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-avatar, neutral-#{$i}#{5}, $i) {
+    background: #{tp-neutral($i, 5)};
+    color: #{tp-contrast-neutral($i)};
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-avatar, fb-#{$color}, $color) {
+    background: #{tp-feedback($color)};
+    color: hsl(var(--med-color-neutral-1));
+  }
+}

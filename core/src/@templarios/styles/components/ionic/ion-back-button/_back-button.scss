@@ -52,7 +52,7 @@ ion-back-button {
     }
   }
 
-  [ds-size='md'] {
+  &[ds-size='md'] {
     --min-width: 48px;
     --min-height: 48px;
 

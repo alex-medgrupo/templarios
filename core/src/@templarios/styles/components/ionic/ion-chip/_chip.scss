@@ -1,0 +1,16 @@
+ion-chip {
+  --background: hsl(var(--med-color-brand-3));
+  --color: hsl(var(--med-color-neutral-10));
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 600;
+
+  ion-icon {
+    stroke: hsl(var(--med-color-brand-3));
+    background-color: hsl(var(--med-color-neutral-10));
+    border-radius: 50%;
+    font-size: 16px;
+    padding: 2px;
+  }
+}

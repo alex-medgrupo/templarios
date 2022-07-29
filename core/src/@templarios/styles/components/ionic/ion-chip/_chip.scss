@@ -7,6 +7,8 @@ ion-chip {
   --color-hover: hsl(var(--med-color-neutral-10));
   --background-active: hsl(var(--med-color-brand-3));
   --color-active: hsl(var(--med-color-neutral-10));
+  --icon-color: hsl(var(--med-color-neutral-1));
+  --icon-background: hsl(var(--med-color-brand-3));
 
   border: 1px solid var(--border-color);
   font-weight: 600;
@@ -23,8 +25,8 @@ ion-chip {
   }
 
   ion-icon {
-    stroke: hsl(var(--med-color-neutral-1));
-    background-color: var(--color);
+    stroke: var(--icon-color);
+    background-color: var(--icon-background);
     border-radius: 50%;
     font-size: 16px;
     padding: 2px;
@@ -32,7 +34,9 @@ ion-chip {
 }
 
 
+//
 // size
+//
 ion-chip {
   &[ds-size="md"] {
     height: 32px;
@@ -49,6 +53,14 @@ ion-chip {
   }
 }
 
+//
+// name
+//
+ion-chip {
+  &[ds-name="secondary"] {
+    --icon-color: hsl(var(--med-color-neutral-2));
+  }
+}
 
 //
 // states
@@ -105,6 +117,7 @@ ion-chip {
       --border-color: #{tp-color($color, $i)};
       --background-hover: #{tp-color($color, $i)};
       --background-active: #{tp-color($color, $i)};
+      --icon-background: #{tp-color($color, $i)};
     }
   }
 }
@@ -119,6 +132,7 @@ ion-chip {
     --border-color: #{tp-neutral($i)};
     --background-hover: #{tp-neutral($i)};
     --background-active: #{tp-neutral($i)};
+    --icon-background: #{tp-neutral($i)};
   }
 }
 @for $i from 1 through 9 {
@@ -128,6 +142,7 @@ ion-chip {
     --border-color: #{tp-neutral($i, 5)};
     --background-hover: #{tp-neutral($i, 5)};
     --background-active: #{tp-neutral($i, 5)};
+    --icon-background: #{tp-neutral($i)};
   }
 }
 
@@ -141,5 +156,6 @@ ion-chip {
     --border-color: #{tp-feedback($color)};
     --background-hover: #{tp-feedback($color)};
     --background-active: #{tp-feedback($color)};
+    --icon-background: #{tp-feedback($color)};
   }
 }

@@ -1,0 +1,50 @@
+ion-title {
+  --color: hsl(var(--med-color-neutral-10));
+
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: initial;
+
+  @each $type-value, $type in $tp-type {
+    &[token='#{$type-value}'] {
+      @each $property, $value in $type {
+        #{$property}: #{$value};
+      }
+    }
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-title, $color, $i) {
+      --color: #{tp-color($color, $i)};
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-title, neutral-#{$i}, $i) {
+    --color: #{tp-neutral($i)};
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-title, neutral-#{$i}#{5}, $i) {
+    --color: #{tp-neutral($i, 5)};
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-title, fb-#{$color}, $color) {
+    --color: #{tp-feedback($color)};
+  }
+}

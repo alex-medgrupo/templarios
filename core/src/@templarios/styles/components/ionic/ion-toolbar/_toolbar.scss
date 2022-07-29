@@ -1,0 +1,53 @@
+ion-toolbar {
+  --background: hsl(var(--med-color-neutral-1));
+  --color: hsl(var(--med-color-neutral-10));
+  --min-height: 48px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    ion-buttons {
+      justify-content: center;
+    }
+  }
+}
+
+//
+// color
+//
+@each $color in $tp-color {
+  @for $i from 1 through 5 {
+    @include generate-component-color(ion-toolbar, $color, $i) {
+      --background: #{tp-color($color, $i)};
+      --color: #{tp-contrast-color($i)};
+    }
+  }
+}
+
+//
+// neutral
+//
+@for $i from 1 through 10 {
+  @include generate-component-neutral(ion-toolbar, neutral-#{$i}, $i) {
+    --background: #{tp-neutral($i)};
+    --color: #{tp-contrast-neutral($i)};
+  }
+}
+@for $i from 1 through 9 {
+  @include generate-component-neutral(ion-toolbar, neutral-#{$i}#{5}, $i) {
+    --background: #{tp-neutral($i, 5)};
+    --color: #{tp-contrast-neutral($i)};
+  }
+}
+
+//
+// feedback
+//
+@each $color in $tp-feedback {
+  @include generate-component-feedback(ion-toolbar, fb-#{$color}, $color) {
+    --background: #{tp-feedback($color)};
+    --color: hsl(var(--med-color-neutral-1));
+  }
+}

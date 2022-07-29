@@ -7,26 +7,26 @@ export default {
   decorators: [withDesign],
 };
 
-const Template = ({ 'ds-color': dsColor, 'ds-size': dsSize, active, disabled, slot }) => {
+const Template = ({ 'ds-color': dsColor, 'ds-name': dsName, 'ds-size': dsSize, active, disabled, slot }) => {
   return html`
     <ion-app>
       <ion-content>
 
-        <ion-chip mode="ios" ds-color=${dsColor} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
+        <ion-chip mode="ios" ds-color=${dsColor} ds-name=${dsName} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
           <ion-label> ${slot} </ion-label>
         </ion-chip>
 
-        <ion-chip mode="ios" ds-color=${dsColor} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
+        <ion-chip mode="ios" ds-color=${dsColor} ds-name=${dsName} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
           <ion-icon class="med-icon" name="med-star-filled"></ion-icon>
           <ion-label> ${slot} </ion-label>
         </ion-chip>
 
-        <ion-chip mode="ios" ds-color=${dsColor} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
+        <ion-chip mode="ios" ds-color=${dsColor} ds-name=${dsName} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
           <ion-label> ${slot} </ion-label>
           <ion-icon class="med-icon" name="med-star-filled"></ion-icon>
         </ion-chip>
 
-        <ion-chip mode="ios" ds-color=${dsColor} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
+        <ion-chip mode="ios" ds-color=${dsColor} ds-name=${dsName} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
           <ion-icon class="med-icon" name="med-star-filled"></ion-icon>
           <ion-label> ${slot} </ion-label>
           <ion-icon class="med-icon" name="med-star-filled"></ion-icon>
@@ -52,6 +52,16 @@ Default.argTypes = {
     defaultValue: undefined,
     table: {
       type: { summary: Object.values(MedColors).join(' |') },
+      defaultValue: { summary: 'undefined' },
+    },
+  },
+  'ds-name': {
+    options: [undefined, 'secondary'],
+    control: { type: 'inline-radio' },
+    description: 'Define a variação do componente.',
+    defaultValue: undefined,
+    table: {
+      type: { summary: 'secondary | undefined' },
       defaultValue: { summary: 'undefined' },
     },
   },

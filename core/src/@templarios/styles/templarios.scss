@@ -35,6 +35,9 @@
 @import './components/ionic/ion-button/secondary';
 @import './components/ionic/ion-button/tertiary';
 
+// buttons
+@import './components/ionic/ion-buttons/buttons';
+
 // checkbox
 @import './components/ionic/ion-checkbox/checkbox';
 
@@ -50,6 +53,9 @@
 
 // fab-list
 @import './components/ionic/ion-fab-list/fab-list';
+
+// header
+@import './components/ionic/ion-header/header';
 
 // icon
 // @import './components/ionic/icon/icon';
@@ -96,11 +102,18 @@
 // textarea
 @import './components/ionic/ion-textarea/textarea';
 
+// title
+@import './components/ionic/ion-title/title';
+
 // toast
 @import './components/ionic/ion-toast/toast';
 
 // toggle
 @import './components/ionic/ion-toggle/toggle';
+
+// toolbar
+@import './components/ionic/ion-toolbar/toolbar';
+
 
 //
 // components legado

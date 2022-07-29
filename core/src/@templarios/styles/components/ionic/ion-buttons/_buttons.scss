@@ -1,0 +1,10 @@
+ion-buttons {
+  &.sc-ion-buttons-ios-s ion-button:not(.button-round) {
+    --border-radius: 50%;
+  }
+
+  &.sc-ion-buttons-ios-s ion-button {
+    height: auto;
+  }
+}
+

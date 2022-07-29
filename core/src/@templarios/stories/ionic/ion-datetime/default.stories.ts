@@ -21,7 +21,6 @@ const Template = ({ 'ds-color': dsColor, 'ds-name': dsName, disabled, pickerOpti
             .pickerOptions=${pickerOptions}
             mode="ios"
             placeholder="dd/mm/aaaa">
-            >
           </ion-datetime>
           <ion-icon class="med-icon" slot="end" name="med-cronograma"></ion-icon>
         </tp-input-container>

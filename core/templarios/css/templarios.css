@@ -3332,9 +3332,12 @@ ion-checkbox[ds-color=fb-success]:hover, ion-checkbox[ds-color=fb-success]:focus
 ion-chip {
   --background: transparent;
   --color: hsl(var(--med-color-brand-3));
+  --border-color: hsl(var(--med-color-brand-3));
+  --background-hover: hsl(var(--med-color-brand-3));
+  --color-hover: hsl(var(--med-color-neutral-10));
   --background-active: hsl(var(--med-color-brand-3));
-  --color-active: hsl(var(--med-color-brand-3));
-  border: 1px solid var(--color);
+  --color-active: hsl(var(--med-color-neutral-10));
+  border: 1px solid var(--border-color);
   font-weight: 600;
   font-size: 12px;
   line-height: 12px;
@@ -3368,8 +3371,11 @@ ion-chip[ds-size=md] ion-icon {
 }
 
 ion-chip[active], ion-chip.ion-focused, ion-chip.ion-activated {
-  --background: var(--background-active);
-  --color: var(--color-active);
+  background: var(--background-active);
+  color: var(--color-active);
+}
+ion-chip[active] ion-label, ion-chip.ion-focused ion-label, ion-chip.ion-activated ion-label {
+  color: var(--color-active);
 }
 ion-chip[active] ion-icon, ion-chip.ion-focused ion-icon, ion-chip.ion-activated ion-icon {
   stroke: var(--background-active);
@@ -3378,12 +3384,15 @@ ion-chip[active] ion-icon, ion-chip.ion-focused ion-icon, ion-chip.ion-activated
 
 @media (any-hover: hover) {
   ion-chip:hover {
-    --background: var(--background-active);
-    --color: var(--color-active);
+    background: var(--background-hover);
+    color: var(--color-hover);
+  }
+  ion-chip:hover ion-label {
+    color: var(--color-hover);
   }
   ion-chip:hover ion-icon {
-    stroke: var(--background-active);
-    background-color: var(--color-active);
+    stroke: var(--background-hover);
+    background-color: var(--color-hover);
   }
 }
 ion-chip[disabled] {
@@ -3393,130 +3402,205 @@ ion-chip[disabled] {
 
 ion-chip[ds-color=brand] {
   --color: hsl(var(--med-color-brand-3));
-  --background-active:hsl(var(--med-color-brand-3));
-  --color-active: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-brand-3));
+  --background-hover: hsl(var(--med-color-brand-3));
+  --background-active: hsl(var(--med-color-brand-3));
 }
 
 ion-chip[ds-color=aula] {
   --color: hsl(var(--med-color-aula-3));
-  --background-active:hsl(var(--med-color-aula-3));
-  --color-active: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-aula-3));
+  --background-hover: hsl(var(--med-color-aula-3));
+  --background-active: hsl(var(--med-color-aula-3));
 }
 
 ion-chip[ds-color=material] {
   --color: hsl(var(--med-color-material-3));
-  --background-active:hsl(var(--med-color-material-3));
-  --color-active: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-material-3));
+  --background-hover: hsl(var(--med-color-material-3));
+  --background-active: hsl(var(--med-color-material-3));
 }
 
 ion-chip[ds-color=questoes] {
   --color: hsl(var(--med-color-questoes-3));
-  --background-active:hsl(var(--med-color-questoes-3));
-  --color-active: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-questoes-3));
+  --background-hover: hsl(var(--med-color-questoes-3));
+  --background-active: hsl(var(--med-color-questoes-3));
 }
 
 ion-chip[ds-color=revalida] {
   --color: hsl(var(--med-color-revalida-3));
-  --background-active:hsl(var(--med-color-revalida-3));
-  --color-active: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-revalida-3));
+  --background-hover: hsl(var(--med-color-revalida-3));
+  --background-active: hsl(var(--med-color-revalida-3));
 }
 
 ion-chip[ds-color=provas] {
   --color: hsl(var(--med-color-provas-3));
-  --background-active:hsl(var(--med-color-provas-3));
-  --color-active: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-provas-3));
+  --background-hover: hsl(var(--med-color-provas-3));
+  --background-active: hsl(var(--med-color-provas-3));
 }
 
 ion-chip[ds-color=neutral-1] {
-  --color-selected: hsl(var(--med-color-neutral-1));
+  --color: hsl(var(--med-color-neutral-1));
+  --border-color: hsl(var(--med-color-neutral-1));
+  --background-hover: hsl(var(--med-color-neutral-1));
+  --background-active: hsl(var(--med-color-neutral-1));
 }
 
 ion-chip[ds-color=neutral-2] {
-  --color-selected: hsl(var(--med-color-neutral-2));
+  --color: hsl(var(--med-color-neutral-2));
+  --border-color: hsl(var(--med-color-neutral-2));
+  --background-hover: hsl(var(--med-color-neutral-2));
+  --background-active: hsl(var(--med-color-neutral-2));
 }
 
 ion-chip[ds-color=neutral-3] {
-  --color-selected: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-3));
+  --border-color: hsl(var(--med-color-neutral-3));
+  --background-hover: hsl(var(--med-color-neutral-3));
+  --background-active: hsl(var(--med-color-neutral-3));
 }
 
 ion-chip[ds-color=neutral-4] {
-  --color-selected: hsl(var(--med-color-neutral-4));
+  --color: hsl(var(--med-color-neutral-4));
+  --border-color: hsl(var(--med-color-neutral-4));
+  --background-hover: hsl(var(--med-color-neutral-4));
+  --background-active: hsl(var(--med-color-neutral-4));
 }
 
 ion-chip[ds-color=neutral-5] {
-  --color-selected: hsl(var(--med-color-neutral-5));
+  --color: hsl(var(--med-color-neutral-5));
+  --border-color: hsl(var(--med-color-neutral-5));
+  --background-hover: hsl(var(--med-color-neutral-5));
+  --background-active: hsl(var(--med-color-neutral-5));
 }
 
 ion-chip[ds-color=neutral-6] {
-  --color-selected: hsl(var(--med-color-neutral-6));
+  --color: hsl(var(--med-color-neutral-6));
+  --border-color: hsl(var(--med-color-neutral-6));
+  --background-hover: hsl(var(--med-color-neutral-6));
+  --background-active: hsl(var(--med-color-neutral-6));
 }
 
 ion-chip[ds-color=neutral-7] {
-  --color-selected: hsl(var(--med-color-neutral-7));
+  --color: hsl(var(--med-color-neutral-7));
+  --border-color: hsl(var(--med-color-neutral-7));
+  --background-hover: hsl(var(--med-color-neutral-7));
+  --background-active: hsl(var(--med-color-neutral-7));
 }
 
 ion-chip[ds-color=neutral-8] {
-  --color-selected: hsl(var(--med-color-neutral-8));
+  --color: hsl(var(--med-color-neutral-8));
+  --border-color: hsl(var(--med-color-neutral-8));
+  --background-hover: hsl(var(--med-color-neutral-8));
+  --background-active: hsl(var(--med-color-neutral-8));
 }
 
 ion-chip[ds-color=neutral-9] {
-  --color-selected: hsl(var(--med-color-neutral-9));
+  --color: hsl(var(--med-color-neutral-9));
+  --border-color: hsl(var(--med-color-neutral-9));
+  --background-hover: hsl(var(--med-color-neutral-9));
+  --background-active: hsl(var(--med-color-neutral-9));
 }
 
 ion-chip[ds-color=neutral-10] {
-  --color-selected: hsl(var(--med-color-neutral-10));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-neutral-10));
+  --background-hover: hsl(var(--med-color-neutral-10));
+  --background-active: hsl(var(--med-color-neutral-10));
 }
 
 ion-chip[ds-color=neutral-15] {
-  --color-selected: hsl(var(--med-color-neutral-15));
+  --color: hsl(var(--med-color-neutral-15));
+  --border-color: hsl(var(--med-color-neutral-15));
+  --background-hover: hsl(var(--med-color-neutral-15));
+  --background-active: hsl(var(--med-color-neutral-15));
 }
 
 ion-chip[ds-color=neutral-25] {
-  --color-selected: hsl(var(--med-color-neutral-25));
+  --color: hsl(var(--med-color-neutral-25));
+  --border-color: hsl(var(--med-color-neutral-25));
+  --background-hover: hsl(var(--med-color-neutral-25));
+  --background-active: hsl(var(--med-color-neutral-25));
 }
 
 ion-chip[ds-color=neutral-35] {
-  --color-selected: hsl(var(--med-color-neutral-35));
+  --color: hsl(var(--med-color-neutral-35));
+  --border-color: hsl(var(--med-color-neutral-35));
+  --background-hover: hsl(var(--med-color-neutral-35));
+  --background-active: hsl(var(--med-color-neutral-35));
 }
 
 ion-chip[ds-color=neutral-45] {
-  --color-selected: hsl(var(--med-color-neutral-45));
+  --color: hsl(var(--med-color-neutral-45));
+  --border-color: hsl(var(--med-color-neutral-45));
+  --background-hover: hsl(var(--med-color-neutral-45));
+  --background-active: hsl(var(--med-color-neutral-45));
 }
 
 ion-chip[ds-color=neutral-55] {
-  --color-selected: hsl(var(--med-color-neutral-55));
+  --color: hsl(var(--med-color-neutral-55));
+  --border-color: hsl(var(--med-color-neutral-55));
+  --background-hover: hsl(var(--med-color-neutral-55));
+  --background-active: hsl(var(--med-color-neutral-55));
 }
 
 ion-chip[ds-color=neutral-65] {
-  --color-selected: hsl(var(--med-color-neutral-65));
+  --color: hsl(var(--med-color-neutral-65));
+  --border-color: hsl(var(--med-color-neutral-65));
+  --background-hover: hsl(var(--med-color-neutral-65));
+  --background-active: hsl(var(--med-color-neutral-65));
 }
 
 ion-chip[ds-color=neutral-75] {
-  --color-selected: hsl(var(--med-color-neutral-75));
+  --color: hsl(var(--med-color-neutral-75));
+  --border-color: hsl(var(--med-color-neutral-75));
+  --background-hover: hsl(var(--med-color-neutral-75));
+  --background-active: hsl(var(--med-color-neutral-75));
 }
 
 ion-chip[ds-color=neutral-85] {
-  --color-selected: hsl(var(--med-color-neutral-85));
+  --color: hsl(var(--med-color-neutral-85));
+  --border-color: hsl(var(--med-color-neutral-85));
+  --background-hover: hsl(var(--med-color-neutral-85));
+  --background-active: hsl(var(--med-color-neutral-85));
 }
 
 ion-chip[ds-color=neutral-95] {
-  --color-selected: hsl(var(--med-color-neutral-95));
+  --color: hsl(var(--med-color-neutral-95));
+  --border-color: hsl(var(--med-color-neutral-95));
+  --background-hover: hsl(var(--med-color-neutral-95));
+  --background-active: hsl(var(--med-color-neutral-95));
 }
 
 ion-chip[ds-color=fb-attention] {
-  --color-selected: hsl(var(--med-color-fb-attention));
+  --color: hsl(var(--med-color-fb-attention));
+  --border-color: hsl(var(--med-color-fb-attention));
+  --background-hover: hsl(var(--med-color-fb-attention));
+  --background-active: hsl(var(--med-color-fb-attention));
 }
 
 ion-chip[ds-color=fb-caution] {
-  --color-selected: hsl(var(--med-color-fb-caution));
+  --color: hsl(var(--med-color-fb-caution));
+  --border-color: hsl(var(--med-color-fb-caution));
+  --background-hover: hsl(var(--med-color-fb-caution));
+  --background-active: hsl(var(--med-color-fb-caution));
 }
 
 ion-chip[ds-color=fb-warning] {
-  --color-selected: hsl(var(--med-color-fb-warning));
+  --color: hsl(var(--med-color-fb-warning));
+  --border-color: hsl(var(--med-color-fb-warning));
+  --background-hover: hsl(var(--med-color-fb-warning));
+  --background-active: hsl(var(--med-color-fb-warning));
 }
 
 ion-chip[ds-color=fb-success] {
-  --color-selected: hsl(var(--med-color-fb-success));
+  --color: hsl(var(--med-color-fb-success));
+  --border-color: hsl(var(--med-color-fb-success));
+  --background-hover: hsl(var(--med-color-fb-success));
+  --background-active: hsl(var(--med-color-fb-success));
 }
 
 ion-datetime {

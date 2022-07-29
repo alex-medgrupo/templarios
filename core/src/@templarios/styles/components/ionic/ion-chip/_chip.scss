@@ -2,10 +2,13 @@ ion-chip {
   --background: transparent;
   --color: hsl(var(--med-color-brand-3));
 
+  --border-color: hsl(var(--med-color-brand-3));
+  --background-hover: hsl(var(--med-color-brand-3));
+  --color-hover: hsl(var(--med-color-neutral-10));
   --background-active: hsl(var(--med-color-brand-3));
-  --color-active: hsl(var(--med-color-brand-3));
+  --color-active: hsl(var(--med-color-neutral-10));
 
-  border: 1px solid var(--color);
+  border: 1px solid var(--border-color);
   font-weight: 600;
   font-size: 12px;
   line-height: 12px;
@@ -47,14 +50,19 @@ ion-chip {
 }
 
 
+//
 // states
-
+//
 ion-chip {
   &[active],
   &.ion-focused,
   &.ion-activated {
-    --background: var(--background-active);
-    --color: var(--color-active);
+    background: var(--background-active);
+    color: var(--color-active);
+
+    ion-label {
+      color: var(--color-active);
+    }
 
     ion-icon {
       stroke: var(--background-active);
@@ -65,12 +73,16 @@ ion-chip {
 
 @media (any-hover: hover) {
   ion-chip:hover {
-    --background: var(--background-active);
-    --color: var(--color-active);
+    background: var(--background-hover);
+    color: var(--color-hover);
+
+    ion-label {
+      color: var(--color-hover);
+    }
 
     ion-icon {
-      stroke: var(--background-active);
-      background-color: var(--color-active);
+      stroke: var(--background-hover);
+      background-color: var(--color-hover);
     }
   }
 }
@@ -89,8 +101,10 @@ ion-chip {
   @for $i from 1 through 5 {
     @include generate-component-color(ion-chip, $color, $i) {
       --color: #{tp-color($color, $i)};
-      --background-active:#{tp-color($color, $i)};
-      --color-active: hsl(var(--med-color-neutral-10));
+
+      --border-color: #{tp-color($color, $i)};
+      --background-hover: #{tp-color($color, $i)};
+      --background-active: #{tp-color($color, $i)};
     }
   }
 }
@@ -100,12 +114,20 @@ ion-chip {
 //
 @for $i from 1 through 10 {
   @include generate-component-neutral(ion-chip, neutral-#{$i}, $i) {
-    --color-selected: #{tp-neutral($i)};
+    --color: #{tp-neutral($i)};
+
+    --border-color: #{tp-neutral($i)};
+    --background-hover: #{tp-neutral($i)};
+    --background-active: #{tp-neutral($i)};
   }
 }
 @for $i from 1 through 9 {
   @include generate-component-neutral(ion-chip, neutral-#{$i}#{5}, $i) {
-    --color-selected: #{tp-neutral($i, 5)};
+    --color: #{tp-neutral($i, 5)};
+
+    --border-color: #{tp-neutral($i, 5)};
+    --background-hover: #{tp-neutral($i, 5)};
+    --background-active: #{tp-neutral($i, 5)};
   }
 }
 
@@ -114,6 +136,10 @@ ion-chip {
 //
 @each $color in $tp-feedback {
   @include generate-component-feedback(ion-chip, fb-#{$color}, $color) {
-    --color-selected: #{tp-feedback($color)};
+    --color: #{tp-feedback($color)};
+
+    --border-color: #{tp-feedback($color)};
+    --background-hover: #{tp-feedback($color)};
+    --background-active: #{tp-feedback($color)};
   }
 }

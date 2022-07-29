@@ -12,21 +12,21 @@ const Template = ({ 'ds-color': dsColor, 'ds-size': dsSize, active, disabled, sl
     <ion-app>
       <ion-content>
 
-        <ion-chip ds-color=${dsColor} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
+        <ion-chip mode="ios" ds-color=${dsColor} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
           <ion-label> ${slot} </ion-label>
         </ion-chip>
 
-        <ion-chip ds-color=${dsColor} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
+        <ion-chip mode="ios" ds-color=${dsColor} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
           <ion-icon class="med-icon" name="med-star-filled"></ion-icon>
           <ion-label> ${slot} </ion-label>
         </ion-chip>
 
-        <ion-chip ds-color=${dsColor} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
+        <ion-chip mode="ios" ds-color=${dsColor} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
           <ion-label> ${slot} </ion-label>
           <ion-icon class="med-icon" name="med-star-filled"></ion-icon>
         </ion-chip>
 
-        <ion-chip ds-color=${dsColor} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
+        <ion-chip mode="ios" ds-color=${dsColor} ds-size=${dsSize} ?active=${active} .disabled=${disabled}>
           <ion-icon class="med-icon" name="med-star-filled"></ion-icon>
           <ion-label> ${slot} </ion-label>
           <ion-icon class="med-icon" name="med-star-filled"></ion-icon>

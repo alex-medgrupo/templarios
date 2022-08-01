@@ -3340,10 +3340,6 @@ ion-chip {
   --background: transparent;
   --color: hsl(var(--med-color-brand-3));
   --border-color: hsl(var(--med-color-brand-3));
-  --background-hover: hsl(var(--med-color-brand-3));
-  --color-hover: hsl(var(--med-color-neutral-10));
-  --background-active: hsl(var(--med-color-brand-3));
-  --color-active: hsl(var(--med-color-neutral-10));
   --icon-color: hsl(var(--med-color-neutral-1));
   --icon-background: hsl(var(--med-color-brand-3));
   border: 1px solid var(--border-color);
@@ -3367,6 +3363,10 @@ ion-chip ion-icon {
   padding: 2px;
 }
 
+ion-chip[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-2));
+}
+
 ion-chip[ds-size=md] {
   height: 32px;
 }
@@ -3379,38 +3379,17 @@ ion-chip[ds-size=md] ion-icon {
   padding: 4px;
 }
 
-ion-chip[ds-name=secondary] {
-  --icon-color: hsl(var(--med-color-neutral-2));
-}
-
-ion-chip[active], ion-chip.ion-focused, ion-chip.ion-activated {
-  background: var(--background-active);
-  color: var(--color-active);
-}
-ion-chip[active] ion-label, ion-chip.ion-focused ion-label, ion-chip.ion-activated ion-label {
-  color: var(--color-active);
-}
-ion-chip[active] ion-icon, ion-chip.ion-focused ion-icon, ion-chip.ion-activated ion-icon {
-  stroke: var(--background-active);
-  background-color: var(--color-active);
-}
-
-@media (any-hover: hover) {
-  ion-chip:hover {
-    background: var(--background-hover);
-    color: var(--color-hover);
-  }
-  ion-chip:hover ion-label {
-    color: var(--color-hover);
-  }
-  ion-chip:hover ion-icon {
-    stroke: var(--background-hover);
-    background-color: var(--color-hover);
-  }
-}
 ion-chip[disabled] {
   opacity: 0.5;
   pointer-events: none;
+}
+
+ion-chip[active], ion-chip.ion-focused, ion-chip.ion-activated {
+  --background: hsl(var(--med-color-brand-3));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-brand-3));
+  --icon-color: hsl(var(--med-color-brand-3));
+  --icon-background: hsl(var(--med-color-neutral-10));
 }
 
 ion-chip[ds-color=brand] {
@@ -3420,6 +3399,13 @@ ion-chip[ds-color=brand] {
   --background-active: hsl(var(--med-color-brand-3));
   --icon-background: hsl(var(--med-color-brand-3));
 }
+ion-chip[ds-color=brand][active], ion-chip[ds-color=brand].ion-focused, ion-chip[ds-color=brand].ion-activated {
+  --background: hsl(var(--med-color-brand-3));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-brand-3));
+  --icon-color: hsl(var(--med-color-brand-3));
+  --icon-background: hsl(var(--med-color-neutral-10));
+}
 
 ion-chip[ds-color=aula] {
   --color: hsl(var(--med-color-aula-3));
@@ -3427,6 +3413,13 @@ ion-chip[ds-color=aula] {
   --background-hover: hsl(var(--med-color-aula-3));
   --background-active: hsl(var(--med-color-aula-3));
   --icon-background: hsl(var(--med-color-aula-3));
+}
+ion-chip[ds-color=aula][active], ion-chip[ds-color=aula].ion-focused, ion-chip[ds-color=aula].ion-activated {
+  --background: hsl(var(--med-color-aula-3));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-aula-3));
+  --icon-color: hsl(var(--med-color-aula-3));
+  --icon-background: hsl(var(--med-color-neutral-10));
 }
 
 ion-chip[ds-color=material] {
@@ -3436,6 +3429,13 @@ ion-chip[ds-color=material] {
   --background-active: hsl(var(--med-color-material-3));
   --icon-background: hsl(var(--med-color-material-3));
 }
+ion-chip[ds-color=material][active], ion-chip[ds-color=material].ion-focused, ion-chip[ds-color=material].ion-activated {
+  --background: hsl(var(--med-color-material-3));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-material-3));
+  --icon-color: hsl(var(--med-color-material-3));
+  --icon-background: hsl(var(--med-color-neutral-10));
+}
 
 ion-chip[ds-color=questoes] {
   --color: hsl(var(--med-color-questoes-3));
@@ -3443,6 +3443,13 @@ ion-chip[ds-color=questoes] {
   --background-hover: hsl(var(--med-color-questoes-3));
   --background-active: hsl(var(--med-color-questoes-3));
   --icon-background: hsl(var(--med-color-questoes-3));
+}
+ion-chip[ds-color=questoes][active], ion-chip[ds-color=questoes].ion-focused, ion-chip[ds-color=questoes].ion-activated {
+  --background: hsl(var(--med-color-questoes-3));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-questoes-3));
+  --icon-color: hsl(var(--med-color-questoes-3));
+  --icon-background: hsl(var(--med-color-neutral-10));
 }
 
 ion-chip[ds-color=revalida] {
@@ -3452,6 +3459,13 @@ ion-chip[ds-color=revalida] {
   --background-active: hsl(var(--med-color-revalida-3));
   --icon-background: hsl(var(--med-color-revalida-3));
 }
+ion-chip[ds-color=revalida][active], ion-chip[ds-color=revalida].ion-focused, ion-chip[ds-color=revalida].ion-activated {
+  --background: hsl(var(--med-color-revalida-3));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-revalida-3));
+  --icon-color: hsl(var(--med-color-revalida-3));
+  --icon-background: hsl(var(--med-color-neutral-10));
+}
 
 ion-chip[ds-color=provas] {
   --color: hsl(var(--med-color-provas-3));
@@ -3459,6 +3473,13 @@ ion-chip[ds-color=provas] {
   --background-hover: hsl(var(--med-color-provas-3));
   --background-active: hsl(var(--med-color-provas-3));
   --icon-background: hsl(var(--med-color-provas-3));
+}
+ion-chip[ds-color=provas][active], ion-chip[ds-color=provas].ion-focused, ion-chip[ds-color=provas].ion-activated {
+  --background: hsl(var(--med-color-provas-3));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-provas-3));
+  --icon-color: hsl(var(--med-color-provas-3));
+  --icon-background: hsl(var(--med-color-neutral-10));
 }
 
 ion-chip[ds-color=neutral-1] {
@@ -3468,12 +3489,34 @@ ion-chip[ds-color=neutral-1] {
   --background-active: hsl(var(--med-color-neutral-1));
   --icon-background: hsl(var(--med-color-neutral-1));
 }
+ion-chip[ds-color=neutral-1][active], ion-chip[ds-color=neutral-1].ion-focused, ion-chip[ds-color=neutral-1].ion-activated {
+  --background: hsl(var(--med-color-neutral-1));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-neutral-1));
+  --icon-color: hsl(var(--med-color-neutral-1));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-1][active][ds-name=secondary], ion-chip[ds-color=neutral-1].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-1].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-1));
+  --icon-background: hsl(var(--med-color-neutral-2));
+}
 
 ion-chip[ds-color=neutral-2] {
   --color: hsl(var(--med-color-neutral-2));
   --border-color: hsl(var(--med-color-neutral-2));
   --background-hover: hsl(var(--med-color-neutral-2));
   --background-active: hsl(var(--med-color-neutral-2));
+  --icon-background: hsl(var(--med-color-neutral-2));
+}
+ion-chip[ds-color=neutral-2][active], ion-chip[ds-color=neutral-2].ion-focused, ion-chip[ds-color=neutral-2].ion-activated {
+  --background: hsl(var(--med-color-neutral-2));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-neutral-2));
+  --icon-color: hsl(var(--med-color-neutral-2));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-2][active][ds-name=secondary], ion-chip[ds-color=neutral-2].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-2].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-2));
   --icon-background: hsl(var(--med-color-neutral-2));
 }
 
@@ -3484,6 +3527,17 @@ ion-chip[ds-color=neutral-3] {
   --background-active: hsl(var(--med-color-neutral-3));
   --icon-background: hsl(var(--med-color-neutral-3));
 }
+ion-chip[ds-color=neutral-3][active], ion-chip[ds-color=neutral-3].ion-focused, ion-chip[ds-color=neutral-3].ion-activated {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-neutral-3));
+  --icon-color: hsl(var(--med-color-neutral-3));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-3][active][ds-name=secondary], ion-chip[ds-color=neutral-3].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-3].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-3));
+  --icon-background: hsl(var(--med-color-neutral-2));
+}
 
 ion-chip[ds-color=neutral-4] {
   --color: hsl(var(--med-color-neutral-4));
@@ -3491,6 +3545,17 @@ ion-chip[ds-color=neutral-4] {
   --background-hover: hsl(var(--med-color-neutral-4));
   --background-active: hsl(var(--med-color-neutral-4));
   --icon-background: hsl(var(--med-color-neutral-4));
+}
+ion-chip[ds-color=neutral-4][active], ion-chip[ds-color=neutral-4].ion-focused, ion-chip[ds-color=neutral-4].ion-activated {
+  --background: hsl(var(--med-color-neutral-4));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-neutral-4));
+  --icon-color: hsl(var(--med-color-neutral-4));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-4][active][ds-name=secondary], ion-chip[ds-color=neutral-4].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-4].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-4));
+  --icon-background: hsl(var(--med-color-neutral-2));
 }
 
 ion-chip[ds-color=neutral-5] {
@@ -3500,6 +3565,17 @@ ion-chip[ds-color=neutral-5] {
   --background-active: hsl(var(--med-color-neutral-5));
   --icon-background: hsl(var(--med-color-neutral-5));
 }
+ion-chip[ds-color=neutral-5][active], ion-chip[ds-color=neutral-5].ion-focused, ion-chip[ds-color=neutral-5].ion-activated {
+  --background: hsl(var(--med-color-neutral-5));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-neutral-5));
+  --icon-color: hsl(var(--med-color-neutral-5));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-5][active][ds-name=secondary], ion-chip[ds-color=neutral-5].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-5].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-5));
+  --icon-background: hsl(var(--med-color-neutral-2));
+}
 
 ion-chip[ds-color=neutral-6] {
   --color: hsl(var(--med-color-neutral-6));
@@ -3507,6 +3583,17 @@ ion-chip[ds-color=neutral-6] {
   --background-hover: hsl(var(--med-color-neutral-6));
   --background-active: hsl(var(--med-color-neutral-6));
   --icon-background: hsl(var(--med-color-neutral-6));
+}
+ion-chip[ds-color=neutral-6][active], ion-chip[ds-color=neutral-6].ion-focused, ion-chip[ds-color=neutral-6].ion-activated {
+  --background: hsl(var(--med-color-neutral-6));
+  --color: hsl(var(--med-color-neutral-1));
+  --border-color: hsl(var(--med-color-neutral-6));
+  --icon-color: hsl(var(--med-color-neutral-6));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-6][active][ds-name=secondary], ion-chip[ds-color=neutral-6].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-6].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-6));
+  --icon-background: hsl(var(--med-color-neutral-2));
 }
 
 ion-chip[ds-color=neutral-7] {
@@ -3516,6 +3603,17 @@ ion-chip[ds-color=neutral-7] {
   --background-active: hsl(var(--med-color-neutral-7));
   --icon-background: hsl(var(--med-color-neutral-7));
 }
+ion-chip[ds-color=neutral-7][active], ion-chip[ds-color=neutral-7].ion-focused, ion-chip[ds-color=neutral-7].ion-activated {
+  --background: hsl(var(--med-color-neutral-7));
+  --color: hsl(var(--med-color-neutral-1));
+  --border-color: hsl(var(--med-color-neutral-7));
+  --icon-color: hsl(var(--med-color-neutral-7));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-7][active][ds-name=secondary], ion-chip[ds-color=neutral-7].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-7].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-7));
+  --icon-background: hsl(var(--med-color-neutral-2));
+}
 
 ion-chip[ds-color=neutral-8] {
   --color: hsl(var(--med-color-neutral-8));
@@ -3523,6 +3621,17 @@ ion-chip[ds-color=neutral-8] {
   --background-hover: hsl(var(--med-color-neutral-8));
   --background-active: hsl(var(--med-color-neutral-8));
   --icon-background: hsl(var(--med-color-neutral-8));
+}
+ion-chip[ds-color=neutral-8][active], ion-chip[ds-color=neutral-8].ion-focused, ion-chip[ds-color=neutral-8].ion-activated {
+  --background: hsl(var(--med-color-neutral-8));
+  --color: hsl(var(--med-color-neutral-1));
+  --border-color: hsl(var(--med-color-neutral-8));
+  --icon-color: hsl(var(--med-color-neutral-8));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-8][active][ds-name=secondary], ion-chip[ds-color=neutral-8].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-8].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-8));
+  --icon-background: hsl(var(--med-color-neutral-2));
 }
 
 ion-chip[ds-color=neutral-9] {
@@ -3532,6 +3641,17 @@ ion-chip[ds-color=neutral-9] {
   --background-active: hsl(var(--med-color-neutral-9));
   --icon-background: hsl(var(--med-color-neutral-9));
 }
+ion-chip[ds-color=neutral-9][active], ion-chip[ds-color=neutral-9].ion-focused, ion-chip[ds-color=neutral-9].ion-activated {
+  --background: hsl(var(--med-color-neutral-9));
+  --color: hsl(var(--med-color-neutral-1));
+  --border-color: hsl(var(--med-color-neutral-9));
+  --icon-color: hsl(var(--med-color-neutral-9));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-9][active][ds-name=secondary], ion-chip[ds-color=neutral-9].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-9].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-9));
+  --icon-background: hsl(var(--med-color-neutral-2));
+}
 
 ion-chip[ds-color=neutral-10] {
   --color: hsl(var(--med-color-neutral-10));
@@ -3539,6 +3659,17 @@ ion-chip[ds-color=neutral-10] {
   --background-hover: hsl(var(--med-color-neutral-10));
   --background-active: hsl(var(--med-color-neutral-10));
   --icon-background: hsl(var(--med-color-neutral-10));
+}
+ion-chip[ds-color=neutral-10][active], ion-chip[ds-color=neutral-10].ion-focused, ion-chip[ds-color=neutral-10].ion-activated {
+  --background: hsl(var(--med-color-neutral-10));
+  --color: hsl(var(--med-color-neutral-1));
+  --border-color: hsl(var(--med-color-neutral-10));
+  --icon-color: hsl(var(--med-color-neutral-10));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-10][active][ds-name=secondary], ion-chip[ds-color=neutral-10].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-10].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-10));
+  --icon-background: hsl(var(--med-color-neutral-2));
 }
 
 ion-chip[ds-color=neutral-15] {
@@ -3548,12 +3679,34 @@ ion-chip[ds-color=neutral-15] {
   --background-active: hsl(var(--med-color-neutral-15));
   --icon-background: hsl(var(--med-color-neutral-1));
 }
+ion-chip[ds-color=neutral-15][active], ion-chip[ds-color=neutral-15].ion-focused, ion-chip[ds-color=neutral-15].ion-activated {
+  --background: hsl(var(--med-color-neutral-1));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-neutral-1));
+  --icon-color: hsl(var(--med-color-neutral-1));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-15][active][ds-name=secondary], ion-chip[ds-color=neutral-15].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-15].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-1));
+  --icon-background: hsl(var(--med-color-neutral-2));
+}
 
 ion-chip[ds-color=neutral-25] {
   --color: hsl(var(--med-color-neutral-25));
   --border-color: hsl(var(--med-color-neutral-25));
   --background-hover: hsl(var(--med-color-neutral-25));
   --background-active: hsl(var(--med-color-neutral-25));
+  --icon-background: hsl(var(--med-color-neutral-2));
+}
+ion-chip[ds-color=neutral-25][active], ion-chip[ds-color=neutral-25].ion-focused, ion-chip[ds-color=neutral-25].ion-activated {
+  --background: hsl(var(--med-color-neutral-2));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-neutral-2));
+  --icon-color: hsl(var(--med-color-neutral-2));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-25][active][ds-name=secondary], ion-chip[ds-color=neutral-25].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-25].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-2));
   --icon-background: hsl(var(--med-color-neutral-2));
 }
 
@@ -3564,6 +3717,17 @@ ion-chip[ds-color=neutral-35] {
   --background-active: hsl(var(--med-color-neutral-35));
   --icon-background: hsl(var(--med-color-neutral-3));
 }
+ion-chip[ds-color=neutral-35][active], ion-chip[ds-color=neutral-35].ion-focused, ion-chip[ds-color=neutral-35].ion-activated {
+  --background: hsl(var(--med-color-neutral-3));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-neutral-3));
+  --icon-color: hsl(var(--med-color-neutral-3));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-35][active][ds-name=secondary], ion-chip[ds-color=neutral-35].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-35].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-3));
+  --icon-background: hsl(var(--med-color-neutral-2));
+}
 
 ion-chip[ds-color=neutral-45] {
   --color: hsl(var(--med-color-neutral-45));
@@ -3571,6 +3735,17 @@ ion-chip[ds-color=neutral-45] {
   --background-hover: hsl(var(--med-color-neutral-45));
   --background-active: hsl(var(--med-color-neutral-45));
   --icon-background: hsl(var(--med-color-neutral-4));
+}
+ion-chip[ds-color=neutral-45][active], ion-chip[ds-color=neutral-45].ion-focused, ion-chip[ds-color=neutral-45].ion-activated {
+  --background: hsl(var(--med-color-neutral-4));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-neutral-4));
+  --icon-color: hsl(var(--med-color-neutral-4));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-45][active][ds-name=secondary], ion-chip[ds-color=neutral-45].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-45].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-4));
+  --icon-background: hsl(var(--med-color-neutral-2));
 }
 
 ion-chip[ds-color=neutral-55] {
@@ -3580,6 +3755,17 @@ ion-chip[ds-color=neutral-55] {
   --background-active: hsl(var(--med-color-neutral-55));
   --icon-background: hsl(var(--med-color-neutral-5));
 }
+ion-chip[ds-color=neutral-55][active], ion-chip[ds-color=neutral-55].ion-focused, ion-chip[ds-color=neutral-55].ion-activated {
+  --background: hsl(var(--med-color-neutral-5));
+  --color: hsl(var(--med-color-neutral-10));
+  --border-color: hsl(var(--med-color-neutral-5));
+  --icon-color: hsl(var(--med-color-neutral-5));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-55][active][ds-name=secondary], ion-chip[ds-color=neutral-55].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-55].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-5));
+  --icon-background: hsl(var(--med-color-neutral-2));
+}
 
 ion-chip[ds-color=neutral-65] {
   --color: hsl(var(--med-color-neutral-65));
@@ -3587,6 +3773,17 @@ ion-chip[ds-color=neutral-65] {
   --background-hover: hsl(var(--med-color-neutral-65));
   --background-active: hsl(var(--med-color-neutral-65));
   --icon-background: hsl(var(--med-color-neutral-6));
+}
+ion-chip[ds-color=neutral-65][active], ion-chip[ds-color=neutral-65].ion-focused, ion-chip[ds-color=neutral-65].ion-activated {
+  --background: hsl(var(--med-color-neutral-6));
+  --color: hsl(var(--med-color-neutral-1));
+  --border-color: hsl(var(--med-color-neutral-6));
+  --icon-color: hsl(var(--med-color-neutral-6));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-65][active][ds-name=secondary], ion-chip[ds-color=neutral-65].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-65].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-6));
+  --icon-background: hsl(var(--med-color-neutral-2));
 }
 
 ion-chip[ds-color=neutral-75] {
@@ -3596,6 +3793,17 @@ ion-chip[ds-color=neutral-75] {
   --background-active: hsl(var(--med-color-neutral-75));
   --icon-background: hsl(var(--med-color-neutral-7));
 }
+ion-chip[ds-color=neutral-75][active], ion-chip[ds-color=neutral-75].ion-focused, ion-chip[ds-color=neutral-75].ion-activated {
+  --background: hsl(var(--med-color-neutral-7));
+  --color: hsl(var(--med-color-neutral-1));
+  --border-color: hsl(var(--med-color-neutral-7));
+  --icon-color: hsl(var(--med-color-neutral-7));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-75][active][ds-name=secondary], ion-chip[ds-color=neutral-75].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-75].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-7));
+  --icon-background: hsl(var(--med-color-neutral-2));
+}
 
 ion-chip[ds-color=neutral-85] {
   --color: hsl(var(--med-color-neutral-85));
@@ -3603,6 +3811,17 @@ ion-chip[ds-color=neutral-85] {
   --background-hover: hsl(var(--med-color-neutral-85));
   --background-active: hsl(var(--med-color-neutral-85));
   --icon-background: hsl(var(--med-color-neutral-8));
+}
+ion-chip[ds-color=neutral-85][active], ion-chip[ds-color=neutral-85].ion-focused, ion-chip[ds-color=neutral-85].ion-activated {
+  --background: hsl(var(--med-color-neutral-8));
+  --color: hsl(var(--med-color-neutral-1));
+  --border-color: hsl(var(--med-color-neutral-8));
+  --icon-color: hsl(var(--med-color-neutral-8));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-85][active][ds-name=secondary], ion-chip[ds-color=neutral-85].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-85].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-8));
+  --icon-background: hsl(var(--med-color-neutral-2));
 }
 
 ion-chip[ds-color=neutral-95] {
@@ -3612,6 +3831,17 @@ ion-chip[ds-color=neutral-95] {
   --background-active: hsl(var(--med-color-neutral-95));
   --icon-background: hsl(var(--med-color-neutral-9));
 }
+ion-chip[ds-color=neutral-95][active], ion-chip[ds-color=neutral-95].ion-focused, ion-chip[ds-color=neutral-95].ion-activated {
+  --background: hsl(var(--med-color-neutral-9));
+  --color: hsl(var(--med-color-neutral-1));
+  --border-color: hsl(var(--med-color-neutral-9));
+  --icon-color: hsl(var(--med-color-neutral-9));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=neutral-95][active][ds-name=secondary], ion-chip[ds-color=neutral-95].ion-focused[ds-name=secondary], ion-chip[ds-color=neutral-95].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-neutral-9));
+  --icon-background: hsl(var(--med-color-neutral-2));
+}
 
 ion-chip[ds-color=fb-attention] {
   --color: hsl(var(--med-color-fb-attention));
@@ -3619,6 +3849,17 @@ ion-chip[ds-color=fb-attention] {
   --background-hover: hsl(var(--med-color-fb-attention));
   --background-active: hsl(var(--med-color-fb-attention));
   --icon-background: hsl(var(--med-color-fb-attention));
+}
+ion-chip[ds-color=fb-attention][active], ion-chip[ds-color=fb-attention].ion-focused, ion-chip[ds-color=fb-attention].ion-activated {
+  --background: hsl(var(--med-color-fb-attention));
+  --color: hsl(var(--med-color-neutral-1));
+  --border-color: hsl(var(--med-color-fb-attention));
+  --icon-color: hsl(var(--med-color-fb-attention));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=fb-attention][active][ds-name=secondary], ion-chip[ds-color=fb-attention].ion-focused[ds-name=secondary], ion-chip[ds-color=fb-attention].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-fb-attention));
+  --icon-background: hsl(var(--med-color-neutral-2));
 }
 
 ion-chip[ds-color=fb-caution] {
@@ -3628,6 +3869,17 @@ ion-chip[ds-color=fb-caution] {
   --background-active: hsl(var(--med-color-fb-caution));
   --icon-background: hsl(var(--med-color-fb-caution));
 }
+ion-chip[ds-color=fb-caution][active], ion-chip[ds-color=fb-caution].ion-focused, ion-chip[ds-color=fb-caution].ion-activated {
+  --background: hsl(var(--med-color-fb-caution));
+  --color: hsl(var(--med-color-neutral-1));
+  --border-color: hsl(var(--med-color-fb-caution));
+  --icon-color: hsl(var(--med-color-fb-caution));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=fb-caution][active][ds-name=secondary], ion-chip[ds-color=fb-caution].ion-focused[ds-name=secondary], ion-chip[ds-color=fb-caution].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-fb-caution));
+  --icon-background: hsl(var(--med-color-neutral-2));
+}
 
 ion-chip[ds-color=fb-warning] {
   --color: hsl(var(--med-color-fb-warning));
@@ -3636,6 +3888,17 @@ ion-chip[ds-color=fb-warning] {
   --background-active: hsl(var(--med-color-fb-warning));
   --icon-background: hsl(var(--med-color-fb-warning));
 }
+ion-chip[ds-color=fb-warning][active], ion-chip[ds-color=fb-warning].ion-focused, ion-chip[ds-color=fb-warning].ion-activated {
+  --background: hsl(var(--med-color-fb-warning));
+  --color: hsl(var(--med-color-neutral-1));
+  --border-color: hsl(var(--med-color-fb-warning));
+  --icon-color: hsl(var(--med-color-fb-warning));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=fb-warning][active][ds-name=secondary], ion-chip[ds-color=fb-warning].ion-focused[ds-name=secondary], ion-chip[ds-color=fb-warning].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-fb-warning));
+  --icon-background: hsl(var(--med-color-neutral-2));
+}
 
 ion-chip[ds-color=fb-success] {
   --color: hsl(var(--med-color-fb-success));
@@ -3643,6 +3906,17 @@ ion-chip[ds-color=fb-success] {
   --background-hover: hsl(var(--med-color-fb-success));
   --background-active: hsl(var(--med-color-fb-success));
   --icon-background: hsl(var(--med-color-fb-success));
+}
+ion-chip[ds-color=fb-success][active], ion-chip[ds-color=fb-success].ion-focused, ion-chip[ds-color=fb-success].ion-activated {
+  --background: hsl(var(--med-color-fb-success));
+  --color: hsl(var(--med-color-neutral-1));
+  --border-color: hsl(var(--med-color-fb-success));
+  --icon-color: hsl(var(--med-color-fb-success));
+  --icon-background: hsl(var(--med-color-neutral-1));
+}
+ion-chip[ds-color=fb-success][active][ds-name=secondary], ion-chip[ds-color=fb-success].ion-focused[ds-name=secondary], ion-chip[ds-color=fb-success].ion-activated[ds-name=secondary] {
+  --icon-color: hsl(var(--med-color-fb-success));
+  --icon-background: hsl(var(--med-color-neutral-2));
 }
 
 ion-datetime {

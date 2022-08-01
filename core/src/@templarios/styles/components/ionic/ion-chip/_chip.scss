@@ -3,10 +3,6 @@ ion-chip {
   --color: hsl(var(--med-color-brand-3));
 
   --border-color: hsl(var(--med-color-brand-3));
-  --background-hover: hsl(var(--med-color-brand-3));
-  --color-hover: hsl(var(--med-color-neutral-10));
-  --background-active: hsl(var(--med-color-brand-3));
-  --color-active: hsl(var(--med-color-neutral-10));
   --icon-color: hsl(var(--med-color-neutral-1));
   --icon-background: hsl(var(--med-color-brand-3));
 
@@ -33,10 +29,16 @@ ion-chip {
   }
 }
 
+//
+// ds-name
+//
+ion-chip {
+  &[ds-name="secondary"] {
+    --icon-color: hsl(var(--med-color-neutral-2));
+  }
+}
 
-//
-// size
-//
+// ds-size
 ion-chip {
   &[ds-size="md"] {
     height: 32px;
@@ -53,58 +55,26 @@ ion-chip {
   }
 }
 
-//
-// name
-//
-ion-chip {
-  &[ds-name="secondary"] {
-    --icon-color: hsl(var(--med-color-neutral-2));
-  }
-}
-
-//
 // states
-//
-ion-chip {
-  &[active],
-  &.ion-focused,
-  &.ion-activated {
-    background: var(--background-active);
-    color: var(--color-active);
-
-    ion-label {
-      color: var(--color-active);
-    }
-
-    ion-icon {
-      stroke: var(--background-active);
-      background-color: var(--color-active);
-    }
-  }
-}
-
-@media (any-hover: hover) {
-  ion-chip:hover {
-    background: var(--background-hover);
-    color: var(--color-hover);
-
-    ion-label {
-      color: var(--color-hover);
-    }
-
-    ion-icon {
-      stroke: var(--background-hover);
-      background-color: var(--color-hover);
-    }
-  }
-}
-
 ion-chip {
   &[disabled] {
     opacity: 0.5;
     pointer-events: none;
   }
 }
+
+ion-chip {
+  &[active],
+  &.ion-focused,
+  &.ion-activated {
+    --background: hsl(var(--med-color-brand-3));
+    --color: hsl(var(--med-color-neutral-10));
+    --border-color: hsl(var(--med-color-brand-3));
+    --icon-color: hsl(var(--med-color-brand-3));
+    --icon-background: hsl(var(--med-color-neutral-10));
+  }
+}
+
 
 //
 // color
@@ -118,6 +88,16 @@ ion-chip {
       --background-hover: #{tp-color($color, $i)};
       --background-active: #{tp-color($color, $i)};
       --icon-background: #{tp-color($color, $i)};
+
+      &[active],
+      &.ion-focused,
+      &.ion-activated {
+        --background: #{tp-color($color, $i)};
+        --color: #{tp-contrast-color($i)};
+        --border-color: #{tp-color($color, $i)};
+        --icon-color: #{tp-color($color, $i)};
+        --icon-background: hsl(var(--med-color-neutral-10));
+      }
     }
   }
 }
@@ -133,6 +113,24 @@ ion-chip {
     --background-hover: #{tp-neutral($i)};
     --background-active: #{tp-neutral($i)};
     --icon-background: #{tp-neutral($i)};
+
+    &[active],
+    &.ion-focused,
+    &.ion-activated {
+      --background: #{tp-neutral($i)};
+      --color: #{tp-contrast-neutral($i)};
+      --border-color: #{tp-neutral($i)};
+
+      --icon-color: #{tp-neutral($i)};
+      --icon-background: hsl(var(--med-color-neutral-1));
+    }
+
+    &[active][ds-name="secondary"],
+    &.ion-focused[ds-name="secondary"],
+    &.ion-activated[ds-name="secondary"] {
+      --icon-color: #{tp-neutral($i)};
+      --icon-background: hsl(var(--med-color-neutral-2));
+    }
   }
 }
 @for $i from 1 through 9 {
@@ -143,6 +141,24 @@ ion-chip {
     --background-hover: #{tp-neutral($i, 5)};
     --background-active: #{tp-neutral($i, 5)};
     --icon-background: #{tp-neutral($i)};
+
+    &[active],
+    &.ion-focused,
+    &.ion-activated {
+      --background: #{tp-neutral($i)};
+      --color: #{tp-contrast-neutral($i)};
+      --border-color: #{tp-neutral($i)};
+
+      --icon-color: #{tp-neutral($i)};
+      --icon-background: hsl(var(--med-color-neutral-1));
+    }
+
+    &[active][ds-name="secondary"],
+    &.ion-focused[ds-name="secondary"],
+    &.ion-activated[ds-name="secondary"] {
+      --icon-color: #{tp-neutral($i)};
+      --icon-background: hsl(var(--med-color-neutral-2));
+    }
   }
 }
 
@@ -157,5 +173,23 @@ ion-chip {
     --background-hover: #{tp-feedback($color)};
     --background-active: #{tp-feedback($color)};
     --icon-background: #{tp-feedback($color)};
+
+    &[active],
+    &.ion-focused,
+    &.ion-activated {
+      --background: #{tp-feedback($color)};
+      --color: hsl(var(--med-color-neutral-1));
+      --border-color: #{tp-feedback($color)};
+
+      --icon-color: #{tp-feedback($color)};
+      --icon-background: hsl(var(--med-color-neutral-1));
+    }
+
+    &[active][ds-name="secondary"],
+    &.ion-focused[ds-name="secondary"],
+    &.ion-activated[ds-name="secondary"] {
+      --icon-color: #{tp-feedback($color)};
+      --icon-background: hsl(var(--med-color-neutral-2));
+    }
   }
 }
